@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "Sign Up - Simple",
+  title: "Sign Up - ZazuBot",
   description: "Page description",
 };
 
@@ -24,7 +24,7 @@ export default function SignUp() {
               id="name"
               className="form-input w-full py-2"
               type="text"
-              placeholder="Corey Barker"
+              placeholder="Ahmed Khaled"
               required
             />
           </div>
@@ -39,7 +39,7 @@ export default function SignUp() {
               id="email"
               className="form-input w-full py-2"
               type="email"
-              placeholder="corybarker@email.com"
+              placeholder="ahmedkhaled@email.com"
               required
             />
           </div>
