@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Logo01 from "@/public/images/logo-01.svg";
+import Logo00 from "@/public/images/logo.png";
 import Logo02 from "@/public/images/logo-02.svg";
 import Logo03 from "@/public/images/logo-03.svg";
 import Logo04 from "@/public/images/logo-04.svg";
@@ -179,9 +179,9 @@ export default function BusinessCategories() {
                 <div className="flex h-24 w-24 items-center justify-center rounded-full bg-white shadow-lg shadow-black/[0.03] before:absolute before:inset-0 before:m-[8.334%] before:rounded-[inherit] before:border before:border-gray-700/5 before:bg-gray-200/60 before:[mask-image:linear-gradient(to_bottom,black,transparent)]">
                   <Image
                     className="relative"
-                    src={Logo01}
-                    width={32}
-                    height={32}
+                    src={Logo00}
+                    width={80}
+                    height={80}
                     alt="Logo 01"
                   />
                 </div>
