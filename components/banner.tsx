@@ -30,7 +30,7 @@ export default function Banner() {
               </a>
             </div>
             <button
-              className="ml-3 border-l border-gray-700 pl-2 text-slate-500 hover:text-slate-400"
+              className="ml-3 border-l border-neutral-700 pl-2 text-slate-500 hover:text-slate-400"
               onClick={() => setBannerOpen(false)}
             >
               <span className="sr-only">Close</span>

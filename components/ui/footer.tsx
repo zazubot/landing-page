@@ -7,14 +7,18 @@ export default function Footer({ border = false }: { border?: boolean }) {
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         {/* Top area: Blocks */}
         <div
-          className={`grid gap-10 py-8 sm:grid-cols-12 md:py-12 ${border ? "border-t [border-image:linear-gradient(to_right,transparent,var(--color-slate-200),transparent)1]" : ""}`}
+          className={`grid gap-10 py-8 sm:grid-cols-12 md:py-12 ${
+            border
+              ? "border-t [border-image:linear-gradient(to_right,transparent,var(--color-slate-200),transparent)1]"
+              : ""
+          }`}
         >
           {/* 1st block */}
           <div className="space-y-2 sm:col-span-12 lg:col-span-4">
             <div>
               <Logo />
             </div>
-            <div className="text-sm text-gray-600">
+            <div className="text-sm text-neutral-600">
               &copy; zazubot.com - All rights reserved.
             </div>
           </div>
@@ -25,7 +29,7 @@ export default function Footer({ border = false }: { border?: boolean }) {
             <ul className="space-y-2 text-sm">
               <li>
                 <Link
-                  className="text-gray-600 transition hover:text-gray-900"
+                  className="text-neutral-600 transition hover:text-neutral-900"
                   href="#0"
                 >
                   Features
@@ -33,7 +37,7 @@ export default function Footer({ border = false }: { border?: boolean }) {
               </li>
               <li>
                 <Link
-                  className="text-gray-600 transition hover:text-gray-900"
+                  className="text-neutral-600 transition hover:text-neutral-900"
                   href="#0"
                 >
                   Integrations
@@ -41,7 +45,7 @@ export default function Footer({ border = false }: { border?: boolean }) {
               </li>
               <li>
                 <Link
-                  className="text-gray-600 transition hover:text-gray-900"
+                  className="text-neutral-600 transition hover:text-neutral-900"
                   href="#0"
                 >
                   Pricing & Plans
@@ -49,7 +53,7 @@ export default function Footer({ border = false }: { border?: boolean }) {
               </li>
               <li>
                 <Link
-                  className="text-gray-600 transition hover:text-gray-900"
+                  className="text-neutral-600 transition hover:text-neutral-900"
                   href="#0"
                 >
                   Changelog
@@ -57,7 +61,7 @@ export default function Footer({ border = false }: { border?: boolean }) {
               </li>
               <li>
                 <Link
-                  className="text-gray-600 transition hover:text-gray-900"
+                  className="text-neutral-600 transition hover:text-neutral-900"
                   href="#0"
                 >
                   Our method
@@ -72,7 +76,7 @@ export default function Footer({ border = false }: { border?: boolean }) {
             <ul className="space-y-2 text-sm">
               <li>
                 <Link
-                  className="text-gray-600 transition hover:text-gray-900"
+                  className="text-neutral-600 transition hover:text-neutral-900"
                   href="#0"
                 >
                   About us
@@ -80,7 +84,7 @@ export default function Footer({ border = false }: { border?: boolean }) {
               </li>
               <li>
                 <Link
-                  className="text-gray-600 transition hover:text-gray-900"
+                  className="text-neutral-600 transition hover:text-neutral-900"
                   href="#0"
                 >
                   Diversity & Inclusion
@@ -88,7 +92,7 @@ export default function Footer({ border = false }: { border?: boolean }) {
               </li>
               <li>
                 <Link
-                  className="text-gray-600 transition hover:text-gray-900"
+                  className="text-neutral-600 transition hover:text-neutral-900"
                   href="#0"
                 >
                   Blog
@@ -96,7 +100,7 @@ export default function Footer({ border = false }: { border?: boolean }) {
               </li>
               <li>
                 <Link
-                  className="text-gray-600 transition hover:text-gray-900"
+                  className="text-neutral-600 transition hover:text-neutral-900"
                   href="#0"
                 >
                   Careers
@@ -104,7 +108,7 @@ export default function Footer({ border = false }: { border?: boolean }) {
               </li>
               <li>
                 <Link
-                  className="text-gray-600 transition hover:text-gray-900"
+                  className="text-neutral-600 transition hover:text-neutral-900"
                   href="#0"
                 >
                   Financial statements
@@ -119,7 +123,7 @@ export default function Footer({ border = false }: { border?: boolean }) {
             <ul className="space-y-2 text-sm">
               <li>
                 <Link
-                  className="text-gray-600 transition hover:text-gray-900"
+                  className="text-neutral-600 transition hover:text-neutral-900"
                   href="#0"
                 >
                   Community
@@ -127,15 +131,15 @@ export default function Footer({ border = false }: { border?: boolean }) {
               </li>
               <li>
                 <Link
-                  className="text-gray-600 transition hover:text-gray-900"
-                  href="#0"
+                  className="text-neutral-600 transition hover:text-neutral-900"
+                  href="/terms-of-service"
                 >
                   Terms of service
                 </Link>
               </li>
               <li>
                 <Link
-                  className="text-gray-600 transition hover:text-gray-900"
+                  className="text-neutral-600 transition hover:text-neutral-900"
                   href="#0"
                 >
                   Report a vulnerability
@@ -150,7 +154,7 @@ export default function Footer({ border = false }: { border?: boolean }) {
             <ul className="flex gap-1">
               <li>
                 <Link
-                  className="flex items-center justify-center text-blue-500 transition hover:text-blue-600"
+                  className="flex items-center justify-center text-orange-500 transition hover:text-orange-600"
                   href="#0"
                   aria-label="Twitter"
                 >
@@ -165,7 +169,7 @@ export default function Footer({ border = false }: { border?: boolean }) {
               </li>
               <li>
                 <Link
-                  className="flex items-center justify-center text-blue-500 transition hover:text-blue-600"
+                  className="flex items-center justify-center text-orange-500 transition hover:text-orange-600"
                   href="#0"
                   aria-label="Medium"
                 >
@@ -180,8 +184,8 @@ export default function Footer({ border = false }: { border?: boolean }) {
               </li>
               <li>
                 <Link
-                  className="flex items-center justify-center text-blue-500 transition hover:text-blue-600"
-                  href="#0"
+                  className="flex items-center justify-center text-orange-500 transition hover:text-orange-600"
+                  href="https://github.com/zazubot"
                   aria-label="Github"
                 >
                   <svg
@@ -200,13 +204,13 @@ export default function Footer({ border = false }: { border?: boolean }) {
 
       {/* Big text */}
       <div className="relative -mt-16 h-60 w-full" aria-hidden="true">
-        <div className="pointer-events-none absolute left-1/2 -z-10 -translate-x-1/2 text-center text-[348px] font-bold leading-none before:bg-linear-to-b before:from-gray-200 before:to-gray-100/30 before:to-80% before:bg-clip-text before:text-transparent before:content-['Simple'] after:absolute after:inset-0 after:bg-gray-300/70 after:bg-clip-text after:text-transparent after:mix-blend-darken after:content-['Simple'] after:[text-shadow:0_1px_0_white]"></div>
+        <div className="pointer-events-none absolute left-1/2 -z-10 -translate-x-1/2 text-center text-[348px] font-bold leading-none before:bg-linear-to-b before:from-neutral-200 before:to-neutral-100/30 before:to-80% before:bg-clip-text before:text-transparent before:content-['ZazuBot'] after:absolute after:inset-0 after:bg-neutral-300/70 after:bg-clip-text after:text-transparent after:mix-blend-darken after:content-['ZazuBot'] after:[text-shadow:0_1px_0_white]"></div>
         {/* Glow */}
         <div
           className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-2/3"
           aria-hidden="true"
         >
-          <div className="h-56 w-56 rounded-full border-[20px] border-blue-700 blur-[80px]"></div>
+          <div className="h-56 w-56 rounded-full border-[20px] border-orange-700 blur-[80px]"></div>
         </div>
       </div>
     </footer>

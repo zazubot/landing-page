@@ -29,18 +29,15 @@ export default function LargeTestimonial() {
                 alt="Large testimonial"
               />
             </div>
-            <p className="text-2xl font-bold text-gray-900">
+            <p className="text-2xl font-bold text-neutral-900">
               Amazing product! I'm using ZazuBot for everything when it's about
               talking with customers. What's amazing with ZazuBot is that it
               makes a "chat interface effect" without the hassle of being behind
               my computer all day responding to customers. Highly recommend !
             </p>
-            <div className="text-sm font-medium text-gray-500">
-              <span className="text-gray-700">Ahmed Khaled</span>{" "}
-              <span className="text-gray-400">/</span>{" "}
-              <a className="text-blue-500" href="#0">
-                CTO at SFGCO
-              </a>
+            <div className="text-sm font-medium text-neutral-500">
+              <span className="text-neutral-700">Ahmed Khaled</span>{" "}
+              <span className="text-neutral-400">/ Software Engineer</span>{" "}
             </div>
           </div>
         </div>

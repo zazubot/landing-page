@@ -17,7 +17,7 @@ export default function SignIn() {
           <div className="space-y-4">
             <div>
               <label
-                className="mb-1 block text-sm font-medium text-gray-700"
+                className="mb-1 block text-sm font-medium text-neutral-700"
                 htmlFor="email"
               >
                 Email
@@ -32,7 +32,7 @@ export default function SignIn() {
             </div>
             <div>
               <label
-                className="mb-1 block text-sm font-medium text-gray-700"
+                className="mb-1 block text-sm font-medium text-neutral-700"
                 htmlFor="password"
               >
                 Password
@@ -48,7 +48,7 @@ export default function SignIn() {
             </div>
           </div>
           <div className="mt-6">
-            <button className="btn w-full bg-linear-to-t from-blue-600 to-blue-500 bg-[length:100%_100%] bg-[bottom] text-white shadow-sm hover:bg-[length:100%_150%]">
+            <button className="btn w-full bg-linear-to-t from-orange-600 to-orange-500 bg-[length:100%_100%] bg-[bottom] text-white shadow-sm hover:bg-[length:100%_150%]">
               Sign In
             </button>
           </div>
@@ -56,7 +56,7 @@ export default function SignIn() {
         {/* Bottom link */}
         <div className="mt-6 text-center">
           <Link
-            className="text-sm text-gray-700 underline hover:no-underline"
+            className="text-sm text-neutral-700 underline hover:no-underline"
             href="/reset-password"
           >
             Forgot password
