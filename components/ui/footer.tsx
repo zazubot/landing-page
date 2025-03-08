@@ -59,14 +59,6 @@ export default function Footer({ border = false }: { border?: boolean }) {
                   Changelog
                 </Link>
               </li>
-              <li>
-                <Link
-                  className="text-neutral-600 transition hover:text-neutral-900"
-                  href="#0"
-                >
-                  Our method
-                </Link>
-              </li>
             </ul>
           </div>
 
@@ -82,14 +74,7 @@ export default function Footer({ border = false }: { border?: boolean }) {
                   About us
                 </Link>
               </li>
-              <li>
-                <Link
-                  className="text-neutral-600 transition hover:text-neutral-900"
-                  href="#0"
-                >
-                  Diversity & Inclusion
-                </Link>
-              </li>
+
               <li>
                 <Link
                   className="text-neutral-600 transition hover:text-neutral-900"
@@ -104,14 +89,6 @@ export default function Footer({ border = false }: { border?: boolean }) {
                   href="#0"
                 >
                   Careers
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className="text-neutral-600 transition hover:text-neutral-900"
-                  href="#0"
-                >
-                  Financial statements
                 </Link>
               </li>
             </ul>

@@ -37,7 +37,7 @@ export default function LargeTestimonial() {
             </p>
             <div className="text-sm font-medium text-neutral-500">
               <span className="text-neutral-700">Ahmed Khaled</span>{" "}
-              <span className="text-neutral-400">/ Software Engineer</span>{" "}
+              <span className="text-neutral-400">/ Founder</span>{" "}
             </div>
           </div>
         </div>
