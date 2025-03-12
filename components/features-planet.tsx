@@ -103,7 +103,7 @@ export default function FeaturesPlanet() {
               </h3>
               <p className="text-[15px] text-neutral-400">
                 Sharing is caring: invite your teammates to work on your
-                typebots with you
+                ZazuBots with you
               </p>
             </article>
             <article>
