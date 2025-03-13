@@ -1,6 +1,7 @@
 export const metadata = {
-  title: "Home - ZazuBot",
-  description: "Page description",
+  title: "ZazuBot - Build faster, Chat smarter",
+  description:
+    "ZazuBot is a platform that enables you to effortlessly create and integrate advanced chatbots into websites and chat platforms like WhatsApp..",
 };
 
 import Hero from "@/components/hero-home";
