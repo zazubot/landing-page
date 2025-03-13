@@ -15,18 +15,10 @@ export default function Header() {
           <ul className="flex flex-1 items-center justify-end gap-3">
             <li>
               <Link
-                href="/signin"
-                className="btn-sm bg-white text-neutral-800 shadow-sm hover:bg-neutral-50"
-              >
-                Login
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/signup"
+                href="https://app.zazubot.com"
                 className="btn-sm bg-neutral-800 text-neutral-200 shadow-sm hover:bg-neutral-900"
               >
-                Register
+                Go To Dashboard
               </Link>
             </li>
           </ul>
