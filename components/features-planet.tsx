@@ -170,12 +170,10 @@ export default function FeaturesPlanet() {
                 >
                   <path d="M9 1a1 1 0 1 0-2 0v6a1 1 0 0 0 2 0V1ZM4.572 3.08a1 1 0 0 0-1.144-1.64A7.987 7.987 0 0 0 0 8a8 8 0 0 0 16 0c0-2.72-1.36-5.117-3.428-6.56a1 1 0 1 0-1.144 1.64A5.987 5.987 0 0 1 14 8 6 6 0 1 1 2 8a5.987 5.987 0 0 1 2.572-4.92Z" />
                 </svg>
-                <span>Canonical URL</span>
+                <span>Custom domain</span>
               </h3>
               <p className="text-[15px] text-neutral-400">
-                Collect essential insights about how visitors are using your
-                site with in-depth page view metrics like pages, referring
-                sites, and more.
+                Connect your zazubot to the custom URL of your choice
               </p>
             </article>
           </div>

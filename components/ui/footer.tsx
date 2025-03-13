@@ -117,9 +117,9 @@ export default function Footer({ border = false }: { border?: boolean }) {
               <li>
                 <Link
                   className="text-neutral-600 transition hover:text-neutral-900"
-                  href="#0"
+                  href="/privacy-policy"
                 >
-                  Report a vulnerability
+                  Privacy Policy
                 </Link>
               </li>
             </ul>
