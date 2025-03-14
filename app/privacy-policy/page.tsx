@@ -211,10 +211,10 @@ const AppPrivacyPolicy = () => {
           </p>
           <ul className="list-inside list-disc text-lg text-gray-700 mb-4">
             <li>
-              <strong>sfgco</strong>
+              <strong>zazubot.com</strong>
             </li>
             <li>
-              <strong>Email:</strong> info@sfgco.sa
+              <strong>Email:</strong> info@zazubot.com
             </li>
           </ul>
         </div>
