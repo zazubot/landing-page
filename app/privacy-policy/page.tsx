@@ -4,96 +4,223 @@ export const metadata = {
     "In this policy, we lay out what data we collect and why, how your data is handled and your rights to your data. We promise we never sell your data.",
 };
 
-export default function Privacy() {
+import React from "react";
+
+const AppPrivacyPolicy = () => {
   return (
-    <section>
-      <div className="mx-auto max-w-2xl  sm:px-6">
-        <div className="py-8 md:py-20">
-          <div className="py-5">
-            <h3 className="text-2xl  font-bold text-neutral-900">
-              As a user of ZazuBot, the chatbot builder
-            </h3>
-            <hr />
-            <p className="py-8">
-              Our guiding principle is to collect only what we need to provide
-              the best service to you. We use a select number of trusted
-              external service providers for certain service offerings.
-            </p>
-          </div>
+    <div className="min-h-screen bg-gray-50 text-gray-800">
+      <div className="max-w-3xl mx-auto py-12 px-6 sm:px-6 lg:px-8">
+        <div className="bg-white p-8 rounded-lg shadow-lg">
+          <h1 className="text-4xl font-bold text-center text-orange-600 mb-8">
+            App Privacy Policy
+          </h1>
+          <p className="text-lg text-gray-700 mb-4">
+            <strong>Last Updated:</strong> 10 Mar 2025
+          </p>
 
-          <div className="py-5">
-            <h3 className="text-2xl font-bold text-neutral-900">
-              Services we use
-            </h3>
-            <hr />
-            <p className="py-8">
-              A persistent first-party cookie is stored to remember you’re
-              logged in. If you log in to your ZazuBot account, you give us
-              permission to use cookies so you don’t have to log in on each
-              returning session. This makes it easier for you to use our
-              product. A cookie is a piece of text stored by your browser. You
-              can adjust cookie retention settings in your own browser. Cookies
-              that are already stored may be deleted at any time.
-            </p>
-            <p>
-              We use Planetscale for database hosting. The database is
-              ultimately hosted in AWS eu-west-2 (London) region. See
-              Planetscale privacy policy for full details. We use AWS S3 in
-              eu-west-3 (Paris) region for file storage. We use Cloudflare for
-              DDoS protection and CDN services. See Cloudflare privacy policy
-              for full details.
-            </p>
-            <p>
-              We use Sentry for anonymous error tracking only on the server's
-              end. This allows us to meet our software quality standard. See the
-              Sentry privacy policy for full details.
-            </p>
-          </div>
+          <p className="text-lg text-gray-700 mb-4">
+            ZazuBot ("we", "our", or "us") values your privacy. This Privacy
+            Policy explains how we collect, use, and protect your information
+            when you use our app, including when you sign in using Google. By
+            accessing or using our app, you agree to the practices described in
+            this Privacy Policy.
+          </p>
 
-          <div className="py-5">
-            <h3 className="text-2xl font-bold text-neutral-900">
-              As a user of a ZazuBot (the web chatbot itself)
-            </h3>
-            <hr />
-            <p className="py-8">
-              You are bound to what the chatbot creator has set up in terms of
-              data collection and data handling. We do not collect any personal
-              data from chatbot users. We do not use behavioral insights to sell
-              advertisements. We will never collect or store any personally
-              identifiable information and we will never abuse your user’s
-              privacy.
-            </p>
-            <p>
-              If the Remember user setting is on, data is stored to either local
-              or session storage of the browser. This is to remember the user's
-              answers if they leave the chatbot and come back later.
-            </p>
-          </div>
+          <h2 className="text-2xl font-semibold text-gray-800 mt-6 mb-4">
+            1. Information We Collect
+          </h2>
+          <p className="text-lg text-gray-700 mb-4">
+            We collect personal information to provide and improve our services.
+            When you sign in using your Google account, we may access the
+            following information from your Google profile:
+          </p>
+          <ul className="list-inside list-disc text-lg text-gray-700 mb-4">
+            <li>
+              Basic profile information (such as your name, email address, and
+              profile picture)
+            </li>
+            <li>
+              Authentication data (used to verify your identity and ensure
+              secure access to your account)
+            </li>
+          </ul>
+          <p className="text-lg text-gray-700 mb-4">
+            We do not collect or store any sensitive personal data unless
+            explicitly required by you in the course of using the app.
+          </p>
 
-          <div className="py-5">
-            <h3 className="text-2xl font-bold text-neutral-900">
-              Retention of data
-            </h3>
-            <hr />
-            <p className="py-8">
-              We will retain your information as long as your account is active,
-              as necessary to provide you with the services or as otherwise set
-              forth in this policy.
-            </p>
-            <p>
-              We will also retain and use this information as necessary for the
-              purposes set out in this policy and to the extent necessary to
-              comply with our legal obligations, resolve disputes, enforce our
-              agreements and protect ZazuBot’s legal rights.
-            </p>
-            <p className="py-8">
-              You can ask to delete your ZazuBot account at any time by
-              contacting us. All your data will be permanently deleted
-              immediately.
-            </p>
-          </div>
+          <h2 className="text-2xl font-semibold text-gray-800 mt-6 mb-4">
+            2. Use of Information
+          </h2>
+          <p className="text-lg text-gray-700 mb-4">
+            We use the information we collect to:
+          </p>
+          <ul className="list-inside list-disc text-lg text-gray-700 mb-4">
+            <li>
+              Provide and personalize the features and functionality of the app
+            </li>
+            <li>
+              Authenticate and manage your login session through Google Sign-In
+            </li>
+            <li>Improve our services and app functionality</li>
+            <li>
+              Communicate with you regarding updates, support, or relevant
+              information
+            </li>
+          </ul>
+
+          <h2 className="text-2xl font-semibold text-gray-800 mt-6 mb-4">
+            3. Data Storage and Retention
+          </h2>
+          <p className="text-lg text-gray-700 mb-4">
+            We store the information necessary to provide our services,
+            including your Google account information. We retain your data as
+            long as your account is active or as necessary to provide you with
+            services, fulfill legal obligations, resolve disputes, and enforce
+            our agreements.
+          </p>
+
+          <h2 className="text-2xl font-semibold text-gray-800 mt-6 mb-4">
+            4. Third-Party Services
+          </h2>
+          <p className="text-lg text-gray-700 mb-4">
+            We use third-party services that may collect information used to
+            identify you, including:
+          </p>
+          <ul className="list-inside list-disc text-lg text-gray-700 mb-4">
+            <li>
+              <strong>Google:</strong> When you use Google Sign-In, Google may
+              collect personal data as described in its{" "}
+              <a
+                href="https://policies.google.com/privacy"
+                target="_blank"
+                className="text-blue-600 underline"
+              >
+                Privacy Policy
+              </a>
+              .
+            </li>
+          </ul>
+          <p className="text-lg text-gray-700 mb-4">
+            We also use third-party service providers for the following:
+          </p>
+          <ul className="list-inside list-disc text-lg text-gray-700 mb-4">
+            <li>
+              <strong>Database Hosting:</strong> We use{" "}
+              <a
+                href="https://planetscale.com/"
+                target="_blank"
+                className="text-blue-600 underline"
+              >
+                Planetscale
+              </a>{" "}
+              for database hosting, located in the AWS eu-west-2 (London)
+              region.
+            </li>
+            <li>
+              <strong>File Storage:</strong> We use{" "}
+              <a
+                href="https://aws.amazon.com/s3/"
+                target="_blank"
+                className="text-blue-600 underline"
+              >
+                AWS S3
+              </a>{" "}
+              in the eu-west-3 (Paris) region for file storage.
+            </li>
+            <li>
+              <strong>DDoS Protection and CDN:</strong> We use{" "}
+              <a
+                href="https://www.cloudflare.com/"
+                target="_blank"
+                className="text-blue-600 underline"
+              >
+                Cloudflare
+              </a>{" "}
+              for DDoS protection and content delivery services.
+            </li>
+            <li>
+              <strong>Error Tracking:</strong> We use{" "}
+              <a
+                href="https://sentry.io/"
+                target="_blank"
+                className="text-blue-600 underline"
+              >
+                Sentry
+              </a>{" "}
+              for error tracking to monitor and improve our app's performance.
+            </li>
+          </ul>
+
+          <h2 className="text-2xl font-semibold text-gray-800 mt-6 mb-4">
+            5. Cookies and Tracking Technologies
+          </h2>
+          <p className="text-lg text-gray-700 mb-4">
+            We use first-party cookies to remember your login session and
+            enhance your experience with the app. These cookies help us ensure
+            you stay logged in when you return.
+          </p>
+          <p className="text-lg text-gray-700 mb-4">
+            You can manage cookie settings through your browser. You can choose
+            to delete or block cookies, but please note that doing so may affect
+            the functionality of the app.
+          </p>
+
+          <h2 className="text-2xl font-semibold text-gray-800 mt-6 mb-4">
+            6. User Rights and Control
+          </h2>
+          <p className="text-lg text-gray-700 mb-4">You have the right to:</p>
+          <ul className="list-inside list-disc text-lg text-gray-700 mb-4">
+            <li>
+              <strong>Access your data:</strong> You can access and update the
+              information we store about you through your account settings.
+            </li>
+            <li>
+              <strong>Delete your account:</strong> You may request to delete
+              your account at any time by contacting us. All your data will be
+              permanently deleted upon request.
+            </li>
+          </ul>
+
+          <h2 className="text-2xl font-semibold text-gray-800 mt-6 mb-4">
+            7. Security
+          </h2>
+          <p className="text-lg text-gray-700 mb-4">
+            We implement appropriate security measures to protect your
+            information, including encryption and secure authentication methods,
+            to ensure the safety of your data.
+          </p>
+
+          <h2 className="text-2xl font-semibold text-gray-800 mt-6 mb-4">
+            8. Changes to This Privacy Policy
+          </h2>
+          <p className="text-lg text-gray-700 mb-4">
+            We may update this Privacy Policy from time to time. When we do, we
+            will post the updated policy in the app and update the "Last
+            Updated" date at the top of this page. We encourage you to review
+            this policy periodically to stay informed about how we are
+            protecting your data.
+          </p>
+
+          <h2 className="text-2xl font-semibold text-gray-800 mt-6 mb-4">
+            9. Contact Us
+          </h2>
+          <p className="text-lg text-gray-700 mb-4">
+            If you have any questions about this Privacy Policy or our data
+            practices, please contact us at:
+          </p>
+          <ul className="list-inside list-disc text-lg text-gray-700 mb-4">
+            <li>
+              <strong>sfgco</strong>
+            </li>
+            <li>
+              <strong>Email:</strong> info@sfgco.sa
+            </li>
+          </ul>
         </div>
       </div>
-    </section>
+    </div>
   );
-}
+};
+
+export default AppPrivacyPolicy;
