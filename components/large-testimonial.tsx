@@ -30,10 +30,9 @@ export default function LargeTestimonial() {
               />
             </div>
             <p className="text-2xl font-bold text-neutral-900">
-              Amazing product! I'm using ZazuBot for everything when it's about
-              talking with customers. What's amazing with ZazuBot is that it
-              makes a "chat interface effect" without the hassle of being behind
-              my computer all day responding to customers. Highly recommend !
+              What's amazing with ZazuBot is that it makes a "chat interface
+              effect" without the hassle of being behind my computer all day
+              responding to customers.
             </p>
             <div className="text-sm font-medium text-neutral-500">
               <span className="text-neutral-700">Ahmed Khaled</span>{" "}

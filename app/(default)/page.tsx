@@ -17,7 +17,20 @@ export default function Home() {
       <BusinessCategories />
       <FeaturesPlanet />
       <LargeTestimonial />
-      <Cta />
+      <div className="flex flex-nowrap">
+        <Cta
+          title="Marketing"
+          content="Let your bot drive the conversation and turn leads into customers."
+        />
+        <Cta
+          title="Support & Product"
+          content="Deliver 24/7 multichannel support and make your customers happy."
+        />
+        <Cta
+          title="Sales"
+          content="Boost meetings and show rates with highly interested leads"
+        />
+      </div>
     </>
   );
 }

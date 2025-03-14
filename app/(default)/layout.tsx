@@ -7,6 +7,7 @@ import "aos/dist/aos.css";
 
 import Header from "@/components/ui/header";
 import Footer from "@/components/ui/footer";
+import { getCalApi } from "@calcom/embed-react";
 
 export default function DefaultLayout({
   children,
@@ -21,6 +22,18 @@ export default function DefaultLayout({
       easing: "ease-out-cubic",
     });
   });
+
+  useEffect(() => {
+    (async function () {
+      const cal = await getCalApi({ namespace: "zazubot" });
+      cal("floatingButton", {
+        calLink: "ahmedkhaled4d/zazubot",
+        config: { layout: "month_view" },
+        buttonText: "Book a Free Consultation",
+      });
+      cal("ui", { hideEventTypeDetails: false, layout: "month_view" });
+    })();
+  }, []);
 
   return (
     <>

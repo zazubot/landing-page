@@ -1,7 +1,12 @@
 import Image from "next/image";
 import Stripes from "@/public/images/stripes-dark.svg";
 
-export default function Cta() {
+type CtaProps = {
+  readonly title: string;
+  readonly content: string | undefined;
+};
+
+export default function Cta({ title, content }: CtaProps) {
   return (
     <section>
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
@@ -31,21 +36,11 @@ export default function Cta() {
           </div>
           <div className="px-4 py-12 md:px-12 md:py-20">
             <h2 className="mb-6 border-y text-3xl font-bold text-neutral-200 [border-image:linear-gradient(to_right,transparent,--theme(--color-slate-700/.7),transparent)1] md:mb-12 md:text-4xl">
-              Ready to dive into the latest tools and hack your business growth?
+              {title}
             </h2>
-            <div className="mx-auto max-w-xs sm:flex sm:max-w-none sm:justify-center">
-              <a
-                className="btn group mb-4 w-full bg-linear-to-t from-orange-600 to-orange-500 bg-[length:100%_100%] bg-[bottom] text-white shadow-sm hover:bg-[length:100%_150%] sm:mb-0 sm:w-auto"
-                href="https://app.zazubot.com"
-              >
-                <span className="relative inline-flex items-center">
-                  Go to dashboard
-                  <span className="ml-1 tracking-normal text-orange-300 transition-transform group-hover:translate-x-0.5">
-                    -&gt;
-                  </span>
-                </span>
-              </a>
-            </div>
+            <p className="mb-6 border-y  text-neutral-100 [border-image:linear-gradient(to_right,transparent,--theme(--color-slate-700/.7),transparent)1] md:mb-12">
+              {content}
+            </p>
           </div>
         </div>
       </div>
