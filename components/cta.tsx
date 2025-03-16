@@ -9,7 +9,7 @@ type CtaProps = {
 export default function Cta({ title, content }: CtaProps) {
   return (
     <section>
-      <div className="mx-auto max-w-6xl px-4 sm:px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 mb-4 md:mb-6">
         <div
           className="relative overflow-hidden rounded-2xl text-center shadow-xl before:pointer-events-none before:absolute before:inset-0 before:-z-10 before:rounded-2xl before:bg-neutral-900"
           data-aos="zoom-y-out"

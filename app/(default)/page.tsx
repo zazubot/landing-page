@@ -17,7 +17,7 @@ export default function Home() {
       <BusinessCategories />
       <FeaturesPlanet />
       <LargeTestimonial />
-      <div className="flex flex-nowrap">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         <Cta
           title="Marketing"
           content="Let your bot drive the conversation and turn leads into customers."
