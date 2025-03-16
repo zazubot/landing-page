@@ -1,6 +1,7 @@
 export const metadata = {
-  title: "Terms - ZazuBot",
-  description: "Page description",
+  title: "ZazuBot - Terms of Service",
+  description:
+    "Welcome to ZazuBot! By using our platform, you agree to the following terms and conditions. Please read them carefully.",
 };
 
 export default function Terms() {
@@ -10,16 +11,12 @@ export default function Terms() {
         <div className="py-8 md:py-20">
           <div className="py-5">
             <h3 className="text-2xl  font-bold text-neutral-900">
-              ZazuBot Terms of Service
+              Terms of Service for ZazuBot
             </h3>
             <hr />
             <p className="py-8">
-              When we say ”company”, “we”, “our”, “us”, ”service” or ”services”
-              in this document, we are referring to ZazuBot. We may update these
-              Terms of Service in the future. Whenever we make a significant
-              change to our policies, we will also announce them on our blog. If
-              you do not agree to these Terms of Service, do not use this
-              service.
+              Welcome to ZazuBot! By using our platform, you agree to the
+              following terms and conditions. Please read them carefully.
             </p>
             <p className="py-4">
               Violation of any of the terms below may result in the termination

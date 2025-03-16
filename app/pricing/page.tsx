@@ -1,5 +1,6 @@
 "use client";
 
+import FAQAccordion from "@/components/faq";
 import React, { useState } from "react";
 
 const PricingTable = () => {
@@ -14,12 +15,12 @@ const PricingTable = () => {
       monthlyPrice: 9,
       yearlyPrice: 90,
       features: [
-        { name: "Up to 5 projects", included: true },
+        { name: "Unlimited ZazuBots", included: true },
         { name: "5GB storage", included: true },
-        { name: "Basic analytics", included: true },
+        { name: "2000 chats/months", included: true },
         { name: "Email support", included: true },
         { name: "API access", included: false },
-        { name: "Advanced security", included: false },
+        { name: "Native integration", included: false },
         { name: "Custom domain", included: false },
         { name: "Priority support", included: false },
       ],
@@ -31,12 +32,12 @@ const PricingTable = () => {
       monthlyPrice: 29,
       yearlyPrice: 290,
       features: [
-        { name: "Up to 20 projects", included: true },
+        { name: "2,000 chats", included: true },
         { name: "20GB storage", included: true },
         { name: "Advanced analytics", included: true },
         { name: "Email support", included: true },
         { name: "API access", included: true },
-        { name: "Advanced security", included: true },
+        { name: "Native integration", included: true },
         { name: "Custom domain", included: false },
         { name: "Priority support", included: false },
       ],
@@ -69,12 +70,18 @@ const PricingTable = () => {
     <div className="bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         {/* Heading */}
-        <div className="text-center">
+        <div>
           <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
             Choose Your Plan
           </h2>
           <p className="mt-4 text-xl text-gray-600">
-            Select the features that fit your needs
+            Flexible plans that scale with you
+          </p>
+          <p>
+            Whether you're a solo business owner, a growing startup or a large
+            company, Zazu Bot is here to help you build high-performing chat
+            forms for the right price. <br /> Pay for as little or as much usage
+            as you need.
           </p>
         </div>
 
@@ -295,6 +302,7 @@ const PricingTable = () => {
             Get started with {plans.find((p) => p.id === selectedPlan)?.name}
           </button>
         </div>
+        <FAQAccordion />
       </div>
     </div>
   );

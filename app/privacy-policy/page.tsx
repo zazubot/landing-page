@@ -11,8 +11,8 @@ const AppPrivacyPolicy = () => {
     <div className="min-h-screen bg-gray-50 text-gray-800">
       <div className="max-w-3xl mx-auto py-12 px-6 sm:px-6 lg:px-8">
         <div className="bg-white p-8 rounded-lg shadow-lg">
-          <h1 className="text-4xl font-bold text-center text-orange-600 mb-8">
-            App Privacy Policy
+          <h1 className="text-4xl font-bold  text-orange-600 mb-8">
+            Privacy Policy
           </h1>
           <p className="text-lg text-gray-700 mb-4">
             <strong>Last Updated:</strong> 10 Mar 2025
@@ -214,7 +214,7 @@ const AppPrivacyPolicy = () => {
               <strong>zazubot.com</strong>
             </li>
             <li>
-              <strong>Email:</strong> info@zazubot.com
+              <strong>Email:</strong> tech@sfgco.sa
             </li>
           </ul>
         </div>
