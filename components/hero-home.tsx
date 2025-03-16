@@ -103,9 +103,9 @@ export default function HeroHome() {
                   </a>
                   <a
                     className="btn w-full bg-white text-neutral-800 shadow-sm hover:bg-neutral-50 sm:ml-4 sm:w-auto"
-                    href="#0"
+                    href="/pricing"
                   >
-                    Learn More
+                    Pricing Table
                   </a>
                 </div>
               </div>
