@@ -18,7 +18,7 @@ export default function Footer({ border = false }: { border?: boolean }) {
             <div>
               <Logo />
             </div>
-            <div className="text-sm text-neutral-600">Powered by SFGCO.sa</div>
+            {/* <div className="text-sm text-neutral-600">Powered by SFGCO.sa</div> */}
             <div className="text-sm text-neutral-600">
               &copy; zazubot.com - All rights reserved.
             </div>
@@ -45,14 +45,6 @@ export default function Footer({ border = false }: { border?: boolean }) {
                   Pricing & Plans
                 </Link>
               </li>
-              <li>
-                <Link
-                  className="text-neutral-600 transition hover:text-neutral-900"
-                  href="#0"
-                >
-                  Changelog
-                </Link>
-              </li>
             </ul>
           </div>
 
@@ -63,7 +55,7 @@ export default function Footer({ border = false }: { border?: boolean }) {
               <li>
                 <Link
                   className="text-neutral-600 transition hover:text-neutral-900"
-                  href="#0"
+                  href="/about"
                 >
                   About us
                 </Link>
