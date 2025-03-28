@@ -9,59 +9,26 @@ export default function SignIn() {
   return (
     <>
       <>
-        <div className="mb-10">
-          <h1 className="text-4xl font-bold">Sign in to your account</h1>
+        <div className="w-full  text-center lg:text-left">
+          <p className="text-gray-600 text-lg mb-8 leading-relaxed">
+            At <b>ZazuBot</b>, we believe that meaningful conversations are the
+            foundation of successful relationships. Every day, people chat with
+            friends, family, and colleagues on platforms like WhatsApp,
+            Messenger, and more. It’s natural, engaging, and personal.
+          </p>
+          <p className="text-gray-600 text-lg mb-8 leading-relaxed">
+            We believe businesses should harness this same dynamic, because
+            where people love to chat, conversions and customer loyalty soar.
+          </p>
+          <p className="text-gray-600 text-lg mb-8 leading-relaxed">
+            While most chatbots today are limited to basic customer support, we
+            see them as powerful tools for creating dynamic, real-time
+            interactions. Our vision is to go beyond scripted, transactional
+            responses, and enable businesses to craft lively, personalized
+            conversations that truly reflect their brand’s voice.
+          </p>
         </div>
-        {/* Form */}
-        <form>
-          <div className="space-y-4">
-            <div>
-              <label
-                className="mb-1 block text-sm font-medium text-neutral-700"
-                htmlFor="email"
-              >
-                Email
-              </label>
-              <input
-                id="email"
-                className="form-input w-full py-2"
-                type="email"
-                placeholder="username@email.com"
-                required
-              />
-            </div>
-            <div>
-              <label
-                className="mb-1 block text-sm font-medium text-neutral-700"
-                htmlFor="password"
-              >
-                Password
-              </label>
-              <input
-                id="password"
-                className="form-input w-full py-2"
-                type="password"
-                autoComplete="on"
-                placeholder="••••••••"
-                required
-              />
-            </div>
-          </div>
-          <div className="mt-6">
-            <button className="btn w-full bg-linear-to-t from-orange-600 to-orange-500 bg-[length:100%_100%] bg-[bottom] text-white shadow-sm hover:bg-[length:100%_150%]">
-              Sign In
-            </button>
-          </div>
-        </form>
         {/* Bottom link */}
-        <div className="mt-6 text-center">
-          <Link
-            className="text-sm text-neutral-700 underline hover:no-underline"
-            href="/reset-password"
-          >
-            Forgot password
-          </Link>
-        </div>
       </>
     </>
   );

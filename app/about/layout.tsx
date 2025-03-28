@@ -24,8 +24,6 @@ export default function DefaultLayout({
 
   return (
     <>
-      <Header />
-      <div className="mt-20"></div>
       <main className="grow">{children}</main>
       <Footer border={true} />
     </>

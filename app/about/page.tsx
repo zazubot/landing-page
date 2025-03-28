@@ -1,15 +1,17 @@
 import Logo from "@/components/ui/logo";
 
-export default function AboutPage() {
+export const metadata = {
+  title: "About - ZazuBot",
+  description:
+    "we believe that meaningful conversations are the foundation of successful relationships",
+};
+
+export default function AboutUs() {
   return (
     <div className="min-h-screen flex flex-col lg:flex-row items-center justify-center bg-gray-50 p-6">
       <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center space-y-8 lg:space-y-0 lg:space-x-16">
-        {/* Image Section */}
-
-        {/* Text and CTA Section */}
-        <div className="w-full lg:w-3/4 text-center lg:text-left">
-          <Logo width={200} />
-
+        <div className="w-full  text-center lg:text-left">
+          <Logo width={230} />
           <p className="text-gray-600 text-lg mb-8 leading-relaxed">
             At <b>ZazuBot</b>, we believe that meaningful conversations are the
             foundation of successful relationships. Every day, people chat with

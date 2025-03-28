@@ -10,6 +10,12 @@ const inter = Inter({
 
 export const metadata = {
   title: "ZAZUBOT",
+
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+  },
   description:
     "platform that enables you to effortlessly create and integrate advanced chatbots into websites and chat platforms like WhatsApp.",
 };
