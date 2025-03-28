@@ -6,8 +6,8 @@ export const metadata = {
 
 export default function Terms() {
   return (
-    <section>
-      <div className="mx-auto max-w-2xl  sm:px-6">
+    <div className="bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto">
         <div className="py-8 md:py-20">
           <div className="py-5">
             <h3 className="text-2xl  font-bold text-neutral-900">
@@ -134,6 +134,6 @@ export default function Terms() {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 }

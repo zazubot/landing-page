@@ -8,8 +8,8 @@ import React from "react";
 
 const AppPrivacyPolicy = () => {
   return (
-    <div className="min-h-screen bg-gray-50 text-gray-800">
-      <div className="max-w-3xl mx-auto py-12 px-6 sm:px-6 lg:px-8">
+    <div className="bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto">
         <div className="bg-white p-8 rounded-lg shadow-lg">
           <h1 className="text-4xl font-bold  text-orange-600 mb-8">
             Privacy Policy
