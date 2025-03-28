@@ -19,11 +19,7 @@ const FAQAccordion = () => {
       answer:
         "Yes, we offer a 14-day free trial on all our plans. No credit card is required to start your trial - you'll only be asked for payment details when you decide to continue with a paid plan.",
     },
-    {
-      question: "How can I contact customer support?",
-      answer:
-        "Our customer support team is available via live chat on our website, email at tech@sfgco.sa, or by phone at (966) 555930749 during business hours (9am-5pm EST, Monday to Friday).",
-    },
+
     {
       question:
         "Do you offer discounts for non-profits or educational institutions?",
