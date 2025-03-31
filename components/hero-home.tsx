@@ -105,7 +105,9 @@ export default function HeroHome() {
                     className="btn w-full bg-white text-neutral-800 shadow-sm hover:bg-neutral-50 sm:ml-4 sm:w-auto"
                     href="/pricing"
                   >
-                    Pricing Table
+                    <span className="relative inline-flex items-center">
+                      Pricing table
+                    </span>
                   </a>
                 </div>
               </div>

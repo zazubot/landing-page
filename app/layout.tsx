@@ -10,14 +10,24 @@ const inter = Inter({
 
 export const metadata = {
   title: "ZAZUBOT",
-
   icons: {
     icon: "/favicon.ico",
     shortcut: "/favicon.ico",
-    apple: "/apple-touch-icon.png",
+    apple: "/images/logo.png",
+    "og:image": "/yourMagicLinkBanner.png",
+    "twitter:image": "/yourMagicLinkBanner.png",
+  },
+  openGraph: {
+    images: [
+      {
+        url: "/yourMagicLinkBanner.png",
+        width: 1200,
+        height: 630,
+      },
+    ],
   },
   description:
-    "platform that enables you to effortlessly create and integrate advanced chatbots into websites and chat platforms like WhatsApp.",
+    "A user-friendly platform that allows you to seamlessly design, deploy, and integrate advanced chatbots into websites and messaging platforms like WhatsApp, enhancing user engagement and automating communication.",
 };
 
 export default function RootLayout({

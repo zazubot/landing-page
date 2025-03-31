@@ -26,7 +26,11 @@ export default function DefaultLayout({
     <>
       <Header />
       <div className="mt-20"></div>
-      <main className="grow">{children}</main>
+      <main className="grow">
+        <div className="bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">{children}</div>
+        </div>
+      </main>
 
       <Footer border={true} />
     </>
