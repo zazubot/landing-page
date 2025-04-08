@@ -98,8 +98,8 @@ const FAQAccordion = () => {
         <div className="mt-12 text-center">
           <p className="text-gray-600">Still have questions?</p>
           <a
-            href="/support-form"
-            className="mt-3 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-orange-600 hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500"
+            href="/zazubot-support"
+            className="mt-3 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500"
           >
             Contact Support
           </a>

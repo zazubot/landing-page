@@ -9,7 +9,7 @@ import React from "react";
 const AppPrivacyPolicy = () => {
   return (
     <div className="bg-white p-8 rounded-lg shadow-lg">
-      <h1 className="text-4xl font-bold  text-orange-600 mb-8">
+      <h1 className="text-4xl font-bold  text-green-600 mb-8">
         Privacy Policy
       </h1>
       <p className="text-lg text-gray-700 mb-4">

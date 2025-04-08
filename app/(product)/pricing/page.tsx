@@ -4,12 +4,12 @@ import FAQAccordion from "@/components/faq";
 import React, { useState } from "react";
 
 const PricingTable = () => {
-  const [selectedPlan, setSelectedPlan] = useState("professional");
+  const [selectedPlan, setSelectedPlan] = useState("free");
   const [billingCycle, setBillingCycle] = useState("monthly");
 
   const plans = [
     {
-      id: "Free",
+      id: "free",
       name: "Free",
       description: "Everything you need to get started",
       monthlyPrice: 0,
@@ -137,8 +137,8 @@ const PricingTable = () => {
               key={plan.id}
               className={`border rounded-lg shadow-sm divide-y divide-gray-200 ${
                 selectedPlan === plan.id
-                  ? "border-orange-500 ring-2 ring-orange-500"
-                  : "border-gray-200 hover:border-orange-300"
+                  ? "border-green-500 ring-2 ring-green-500"
+                  : "border-gray-200 hover:border-green-300"
               }`}
             >
               <div className="p-6">
@@ -160,8 +160,8 @@ const PricingTable = () => {
                 <button
                   className={`mt-6 w-full inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md ${
                     selectedPlan === plan.id
-                      ? "bg-orange-600 text-white hover:bg-orange-700"
-                      : "bg-orange-50 text-orange-700 hover:bg-orange-100"
+                      ? "bg-green-600 text-white hover:bg-green-700"
+                      : "bg-green-50 text-green-700 hover:bg-green-100"
                   }`}
                   onClick={() => setSelectedPlan(plan.id)}
                 >
@@ -244,7 +244,7 @@ const PricingTable = () => {
                       scope="col"
                       className={`px-6 py-3 text-center text-xs font-medium uppercase tracking-wider ${
                         selectedPlan === plan.id
-                          ? "text-orange-600"
+                          ? "text-green-600"
                           : "text-gray-500"
                       }`}
                     >
@@ -310,7 +310,7 @@ const PricingTable = () => {
 
         {/* CTA */}
         <div className="mt-16 text-center">
-          <button className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-orange-600 hover:bg-orange-700">
+          <button className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-green-600 hover:bg-green-700">
             Get started with {plans.find((p) => p.id === selectedPlan)?.name}
           </button>
         </div>

@@ -33,7 +33,7 @@ input[type="search"]::-webkit-search-results-decoration {
 .form-textarea,
 .form-multiselect,
 .form-select {
-  @apply bg-white text-sm py-2.5 px-4 focus:border-orange-300;
+  @apply bg-white text-sm py-2.5 px-4 focus:border-green-300;
 }
 
 .form-input,
@@ -47,7 +47,7 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .form-checkbox,
 .form-radio {
-  @apply text-neutral-800 checked:bg-orange-500 checked:border-transparent focus-visible:not-checked:border-orange-300;
+  @apply text-neutral-800 checked:bg-green-500 checked:border-transparent focus-visible:not-checked:border-green-300;
 }
 
 .form-checkbox {

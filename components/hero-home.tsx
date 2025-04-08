@@ -5,7 +5,7 @@ import Avatar02 from "@/public/images/ai/mistral.jpg";
 import Avatar03 from "@/public/images/ai/sheet.png";
 import Avatar04 from "@/public/images/ai/openai.jpg";
 import Avatar05 from "@/public/images/ai/zendesk.png";
-import Avatar06 from "@/public/images/ai/zapier.png";
+import Avatar06 from "@/public/images/ai/cal.png";
 
 export default function HeroHome() {
   return (
@@ -91,12 +91,12 @@ export default function HeroHome() {
                   data-aos-delay={450}
                 >
                   <a
-                    className="btn group mb-4 w-full bg-linear-to-t from-orange-600 to-orange-500 bg-[length:100%_100%] bg-[bottom] text-white shadow-sm hover:bg-[length:100%_150%] sm:mb-0 sm:w-auto"
+                    className="btn group mb-4 w-full bg-linear-to-t from-green-600 to-green-500 bg-[length:100%_100%] bg-[bottom] text-white shadow-sm hover:bg-[length:100%_150%] sm:mb-0 sm:w-auto"
                     href="https://app.zazubot.com/"
                   >
                     <span className="relative inline-flex items-center">
                       Go to dashboard
-                      <span className="ml-1 tracking-normal text-orange-300 transition-transform group-hover:translate-x-0.5">
+                      <span className="ml-1 tracking-normal text-green-300 transition-transform group-hover:translate-x-0.5">
                         -&gt;
                       </span>
                     </span>

@@ -15,7 +15,7 @@ export default function FeaturesPage() {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <div className="bg-gradient-to-br from-neutral-50 to-orange-100">
+      <div className="bg-gradient-to-br from-neutral-50 to-green-100">
         <div className="max-w-7xl mx-auto px-4 py-24 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl font-bold text-gray-900 sm:text-5xl md:text-6xl">
@@ -32,7 +32,7 @@ export default function FeaturesPage() {
       <div className="py-12 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h2 className="text-base font-semibold tracking-wide uppercase text-orange-600">
+            <h2 className="text-base font-semibold tracking-wide uppercase text-green-600">
               Features
             </h2>
             <p className="mt-2 text-3xl font-extrabold text-gray-900 sm:text-4xl">
@@ -50,7 +50,7 @@ export default function FeaturesPage() {
               <div className="bg-white overflow-hidden shadow rounded-lg">
                 <div className="px-4 py-5 sm:p-6">
                   <div className="flex items-center">
-                    <div className="flex-shrink-0 bg-orange-500 rounded-md p-3">
+                    <div className="flex-shrink-0 bg-green-500 rounded-md p-3">
                       <Code className="h-6 w-6 text-white" />
                     </div>
                     <h3 className="ml-3 text-lg font-medium text-gray-900">
@@ -64,15 +64,15 @@ export default function FeaturesPage() {
                     </p>
                     <ul className="mt-4 space-y-2">
                       <li className="flex items-start">
-                        <ArrowRight className="h-5 w-5 text-orange-500 mr-2 flex-shrink-0" />
+                        <ArrowRight className="h-5 w-5 text-green-500 mr-2 flex-shrink-0" />
                         <span>Comprehensive documentation</span>
                       </li>
                       <li className="flex items-start">
-                        <ArrowRight className="h-5 w-5 text-orange-500 mr-2 flex-shrink-0" />
+                        <ArrowRight className="h-5 w-5 text-green-500 mr-2 flex-shrink-0" />
                         <span>SDK support for multiple languages</span>
                       </li>
                       <li className="flex items-start">
-                        <ArrowRight className="h-5 w-5 text-orange-500 mr-2 flex-shrink-0" />
+                        <ArrowRight className="h-5 w-5 text-green-500 mr-2 flex-shrink-0" />
                         <span>Consistent request/response patterns</span>
                       </li>
                     </ul>
@@ -84,7 +84,7 @@ export default function FeaturesPage() {
               <div className="bg-white overflow-hidden shadow rounded-lg">
                 <div className="px-4 py-5 sm:p-6">
                   <div className="flex items-center">
-                    <div className="flex-shrink-0 bg-orange-500 rounded-md p-3">
+                    <div className="flex-shrink-0 bg-green-500 rounded-md p-3">
                       <Layers className="h-6 w-6 text-white" />
                     </div>
                     <h3 className="ml-3 text-lg font-medium text-gray-900">
@@ -98,15 +98,15 @@ export default function FeaturesPage() {
                     </p>
                     <ul className="mt-4 space-y-2">
                       <li className="flex items-start">
-                        <ArrowRight className="h-5 w-5 text-orange-500 mr-2 flex-shrink-0" />
+                        <ArrowRight className="h-5 w-5 text-green-500 mr-2 flex-shrink-0" />
                         <span>Seamless provider switching</span>
                       </li>
                       <li className="flex items-start">
-                        <ArrowRight className="h-5 w-5 text-orange-500 mr-2 flex-shrink-0" />
+                        <ArrowRight className="h-5 w-5 text-green-500 mr-2 flex-shrink-0" />
                         <span>Model-agnostic implementations</span>
                       </li>
                       <li className="flex items-start">
-                        <ArrowRight className="h-5 w-5 text-orange-500 mr-2 flex-shrink-0" />
+                        <ArrowRight className="h-5 w-5 text-green-500 mr-2 flex-shrink-0" />
                         <span>Comparative analytics across providers</span>
                       </li>
                     </ul>
@@ -118,7 +118,7 @@ export default function FeaturesPage() {
               <div className="bg-white overflow-hidden shadow rounded-lg">
                 <div className="px-4 py-5 sm:p-6">
                   <div className="flex items-center">
-                    <div className="flex-shrink-0 bg-orange-500 rounded-md p-3">
+                    <div className="flex-shrink-0 bg-green-500 rounded-md p-3">
                       <Zap className="h-6 w-6 text-white" />
                     </div>
                     <h3 className="ml-3 text-lg font-medium text-gray-900">
@@ -132,15 +132,15 @@ export default function FeaturesPage() {
                     </p>
                     <ul className="mt-4 space-y-2">
                       <li className="flex items-start">
-                        <ArrowRight className="h-5 w-5 text-orange-500 mr-2 flex-shrink-0" />
+                        <ArrowRight className="h-5 w-5 text-green-500 mr-2 flex-shrink-0" />
                         <span>Global edge network</span>
                       </li>
                       <li className="flex items-start">
-                        <ArrowRight className="h-5 w-5 text-orange-500 mr-2 flex-shrink-0" />
+                        <ArrowRight className="h-5 w-5 text-green-500 mr-2 flex-shrink-0" />
                         <span>Auto-scaling infrastructure</span>
                       </li>
                       <li className="flex items-start">
-                        <ArrowRight className="h-5 w-5 text-orange-500 mr-2 flex-shrink-0" />
+                        <ArrowRight className="h-5 w-5 text-green-500 mr-2 flex-shrink-0" />
                         <span>99.99% uptime guarantee</span>
                       </li>
                     </ul>
@@ -152,7 +152,7 @@ export default function FeaturesPage() {
               <div className="bg-white overflow-hidden shadow rounded-lg">
                 <div className="px-4 py-5 sm:p-6">
                   <div className="flex items-center">
-                    <div className="flex-shrink-0 bg-orange-500 rounded-md p-3">
+                    <div className="flex-shrink-0 bg-green-500 rounded-md p-3">
                       <Shield className="h-6 w-6 text-white" />
                     </div>
                     <h3 className="ml-3 text-lg font-medium text-gray-900">
@@ -166,15 +166,15 @@ export default function FeaturesPage() {
                     </p>
                     <ul className="mt-4 space-y-2">
                       <li className="flex items-start">
-                        <ArrowRight className="h-5 w-5 text-orange-500 mr-2 flex-shrink-0" />
+                        <ArrowRight className="h-5 w-5 text-green-500 mr-2 flex-shrink-0" />
                         <span>SOC2 and GDPR compliant</span>
                       </li>
                       <li className="flex items-start">
-                        <ArrowRight className="h-5 w-5 text-orange-500 mr-2 flex-shrink-0" />
+                        <ArrowRight className="h-5 w-5 text-green-500 mr-2 flex-shrink-0" />
                         <span>End-to-end encryption</span>
                       </li>
                       <li className="flex items-start">
-                        <ArrowRight className="h-5 w-5 text-orange-500 mr-2 flex-shrink-0" />
+                        <ArrowRight className="h-5 w-5 text-green-500 mr-2 flex-shrink-0" />
                         <span>Customizable data retention</span>
                       </li>
                     </ul>
@@ -186,7 +186,7 @@ export default function FeaturesPage() {
               <div className="bg-white overflow-hidden shadow rounded-lg">
                 <div className="px-4 py-5 sm:p-6">
                   <div className="flex items-center">
-                    <div className="flex-shrink-0 bg-orange-500 rounded-md p-3">
+                    <div className="flex-shrink-0 bg-green-500 rounded-md p-3">
                       <Database className="h-6 w-6 text-white" />
                     </div>
                     <h3 className="ml-3 text-lg font-medium text-gray-900">
@@ -200,15 +200,15 @@ export default function FeaturesPage() {
                     </p>
                     <ul className="mt-4 space-y-2">
                       <li className="flex items-start">
-                        <ArrowRight className="h-5 w-5 text-orange-500 mr-2 flex-shrink-0" />
+                        <ArrowRight className="h-5 w-5 text-green-500 mr-2 flex-shrink-0" />
                         <span>Usage dashboards</span>
                       </li>
                       <li className="flex items-start">
-                        <ArrowRight className="h-5 w-5 text-orange-500 mr-2 flex-shrink-0" />
+                        <ArrowRight className="h-5 w-5 text-green-500 mr-2 flex-shrink-0" />
                         <span>Performance monitoring</span>
                       </li>
                       <li className="flex items-start">
-                        <ArrowRight className="h-5 w-5 text-orange-500 mr-2 flex-shrink-0" />
+                        <ArrowRight className="h-5 w-5 text-green-500 mr-2 flex-shrink-0" />
                         <span>Custom report generation</span>
                       </li>
                     </ul>
@@ -220,7 +220,7 @@ export default function FeaturesPage() {
               <div className="bg-white overflow-hidden shadow rounded-lg">
                 <div className="px-4 py-5 sm:p-6">
                   <div className="flex items-center">
-                    <div className="flex-shrink-0 bg-orange-500 rounded-md p-3">
+                    <div className="flex-shrink-0 bg-green-500 rounded-md p-3">
                       <Settings className="h-6 w-6 text-white" />
                     </div>
                     <h3 className="ml-3 text-lg font-medium text-gray-900">
@@ -234,15 +234,15 @@ export default function FeaturesPage() {
                     </p>
                     <ul className="mt-4 space-y-2">
                       <li className="flex items-start">
-                        <ArrowRight className="h-5 w-5 text-orange-500 mr-2 flex-shrink-0" />
+                        <ArrowRight className="h-5 w-5 text-green-500 mr-2 flex-shrink-0" />
                         <span>Fine-tuning capabilities</span>
                       </li>
                       <li className="flex items-start">
-                        <ArrowRight className="h-5 w-5 text-orange-500 mr-2 flex-shrink-0" />
+                        <ArrowRight className="h-5 w-5 text-green-500 mr-2 flex-shrink-0" />
                         <span>Custom prompt templates</span>
                       </li>
                       <li className="flex items-start">
-                        <ArrowRight className="h-5 w-5 text-orange-500 mr-2 flex-shrink-0" />
+                        <ArrowRight className="h-5 w-5 text-green-500 mr-2 flex-shrink-0" />
                         <span>Workflow automation tools</span>
                       </li>
                     </ul>
@@ -258,7 +258,7 @@ export default function FeaturesPage() {
       <div className="bg-gray-50 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h2 className="text-base font-semibold tracking-wide uppercase text-orange-600">
+            <h2 className="text-base font-semibold tracking-wide uppercase text-green-600">
               Why Choose Us
             </h2>
             <p className="mt-2 text-3xl font-extrabold text-gray-900 sm:text-4xl">
@@ -296,7 +296,7 @@ export default function FeaturesPage() {
                       Multiple AI Providers
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                      <span className="text-orange-600 font-medium">
+                      <span className="text-green-600 font-medium">
                         ✓ 10+ providers integrated
                       </span>
                     </td>
@@ -311,7 +311,7 @@ export default function FeaturesPage() {
                       API Simplicity
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                      <span className="text-orange-600 font-medium">
+                      <span className="text-green-600 font-medium">
                         ✓ Simple, consistent APIs
                       </span>
                     </td>
@@ -326,7 +326,7 @@ export default function FeaturesPage() {
                       Global Infrastructure
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                      <span className="text-orange-600 font-medium">
+                      <span className="text-green-600 font-medium">
                         ✓ 20+ global regions
                       </span>
                     </td>
@@ -341,7 +341,7 @@ export default function FeaturesPage() {
                       Enterprise Security
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                      <span className="text-orange-600 font-medium">
+                      <span className="text-green-600 font-medium">
                         ✓ Comprehensive compliance
                       </span>
                     </td>
@@ -365,7 +365,7 @@ export default function FeaturesPage() {
             <span className="block">Ready to get started?</span>
             <span className="block">Try our platform today.</span>
           </h2>
-          <p className="mt-4 text-lg leading-6 text-orange-200">
+          <p className="mt-4 text-lg leading-6 text-green-200">
             Join thousands of developers building the next generation of
             AI-powered applications.
           </p>
@@ -373,7 +373,7 @@ export default function FeaturesPage() {
             <div className="inline-flex rounded-md shadow">
               <a
                 href="https://app.zazubot.com/"
-                className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-orange-600 bg-white hover:bg-orange-50"
+                className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-green-600 bg-white hover:bg-green-50"
               >
                 Get started
               </a>
@@ -381,7 +381,7 @@ export default function FeaturesPage() {
             <div className="ml-3 inline-flex">
               <a
                 href="/pricing"
-                className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-orange-500 hover:bg-orange-600"
+                className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-green-500 hover:bg-green-600"
               >
                 Pricing table
               </a>
