@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import Stripes from "@/public/images/LOGO.svg";
+import Stripes from "@/public/logo.svg";
 
 export default function Logo({
   width = 150,

@@ -1,9 +1,11 @@
 import Link from "next/link";
 import Logo from "./logo";
+import Providers from "./providers";
 
 export default function Footer({ border = false }: { border?: boolean }) {
   return (
     <footer>
+      <Providers />
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         {/* Top area: Blocks */}
         <div
@@ -17,10 +19,10 @@ export default function Footer({ border = false }: { border?: boolean }) {
           <div className="space-y-2 sm:col-span-12 lg:col-span-4">
             <div>
               <Logo />
-            </div>
-            {/* <div className="text-sm text-neutral-600">Powered by SFGCO.sa</div> */}
-            <div className="text-sm text-neutral-600">
-              &copy; zazubot.com - All rights reserved.
+              {/* <div className="text-sm text-neutral-600">Powered by SFGCO.sa</div> */}
+              <div className="text-sm text-neutral-600">
+                &copy; zazubot.com - All rights reserved.
+              </div>
             </div>
           </div>
 
@@ -57,10 +59,17 @@ export default function Footer({ border = false }: { border?: boolean }) {
                   className="text-neutral-600 transition hover:text-neutral-900"
                   href="/about"
                 >
-                  About us
+                  About
                 </Link>
               </li>
-
+              <li>
+                <Link
+                  className="text-neutral-600 transition hover:text-neutral-900"
+                  href="/become-a-partner"
+                >
+                  become a partner
+                </Link>
+              </li>
               <li>
                 <Link
                   className="text-neutral-600 transition hover:text-neutral-900"
@@ -76,14 +85,6 @@ export default function Footer({ border = false }: { border?: boolean }) {
           <div className="space-y-2 sm:col-span-6 md:col-span-3 lg:col-span-2">
             <h3 className="text-sm font-medium">Resources</h3>
             <ul className="space-y-2 text-sm">
-              <li>
-                <Link
-                  className="text-neutral-600 transition hover:text-neutral-900"
-                  href="#0"
-                >
-                  Community
-                </Link>
-              </li>
               <li>
                 <Link
                   className="text-neutral-600 transition hover:text-neutral-900"

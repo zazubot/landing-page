@@ -19,10 +19,10 @@ export default function FeaturesPage() {
         <div className="max-w-7xl mx-auto px-4 py-24 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl font-bold text-gray-900 sm:text-5xl md:text-6xl">
-              Features for Modern AI Agents
+              All the features you need
             </h1>
             <p className="mt-3 max-w-md mx-auto text-xl text-gray-600 sm:text-2xl md:max-w-3xl">
-              Everything you need to build intelligent chatbot at scale
+              to hack bots building{" "}
             </p>
           </div>
         </div>
@@ -31,19 +31,6 @@ export default function FeaturesPage() {
       {/* Main Features Section */}
       <div className="py-12 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h2 className="text-base font-semibold tracking-wide uppercase text-green-600">
-              Features
-            </h2>
-            <p className="mt-2 text-3xl font-extrabold text-gray-900 sm:text-4xl">
-              Everything you need to succeed
-            </p>
-            <p className="mt-4 max-w-2xl text-xl text-gray-500 mx-auto">
-              Our platform provides all the tools and capabilities required to
-              build powerful AI-driven applications
-            </p>
-          </div>
-
           <div className="mt-16">
             <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
               {/* Feature 1 */}
@@ -365,28 +352,6 @@ export default function FeaturesPage() {
             <span className="block">Ready to get started?</span>
             <span className="block">Try our platform today.</span>
           </h2>
-          <p className="mt-4 text-lg leading-6 text-green-200">
-            Join thousands of developers building the next generation of
-            AI-powered applications.
-          </p>
-          <div className="mt-8 flex justify-center">
-            <div className="inline-flex rounded-md shadow">
-              <a
-                href="https://app.zazubot.com/"
-                className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-green-600 bg-white hover:bg-green-50"
-              >
-                Get started
-              </a>
-            </div>
-            <div className="ml-3 inline-flex">
-              <a
-                href="/pricing"
-                className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-green-500 hover:bg-green-600"
-              >
-                Pricing table
-              </a>
-            </div>
-          </div>
         </div>
       </div>
     </div>
