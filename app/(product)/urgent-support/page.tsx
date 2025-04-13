@@ -2,12 +2,12 @@
 
 import { Standard } from "@typebot.io/nextjs";
 
-const PricingTable = () => {
+const UrgentSupport = () => {
   return (
     <div className="bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <Standard
-          typebot="zazubot-customer-support"
+          typebot="urgent-support"
           apiHost="https://hi.zazubot.com"
           style={{ width: "undefined", height: "100vh" }}
         />
@@ -16,4 +16,4 @@ const PricingTable = () => {
   );
 };
 
-export default PricingTable;
+export default UrgentSupport;
