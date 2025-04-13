@@ -101,14 +101,6 @@ export default function Footer({ border = false }: { border?: boolean }) {
                   Privacy Policy
                 </Link>
               </li>
-              <li>
-                <Link
-                  className="text-neutral-600 transition hover:text-neutral-900"
-                  href="https://docs.zazubot.com"
-                >
-                  Documetation
-                </Link>
-              </li>
             </ul>
           </div>
 
