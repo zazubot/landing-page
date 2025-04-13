@@ -91,7 +91,7 @@ export default function HeroHome() {
                   data-aos-delay={450}
                 >
                   <a
-                    className="btn-sm bg-neutral-800 text-neutral-200 shadow-sm hover:bg-neutral-900"
+                    className="btn group mb-4 w-full bg-linear-to-t from-neutral-600 to-neutral-500 bg-[length:100%_100%] bg-[bottom] text-white shadow-sm hover:bg-[length:100%_150%] sm:mb-0 sm:w-auto"
                     href="https://docs.zazubot.com/"
                   >
                     <span className="relative inline-flex items-center">

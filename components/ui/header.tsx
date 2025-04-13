@@ -16,7 +16,7 @@ export default function Header() {
             <li>
               <Link
                 href="https://app.zazubot.com"
-                className="btn group mb-4 w-full bg-linear-to-t from-green-600 to-green-500 bg-[length:100%_100%] bg-[bottom] text-white shadow-sm hover:bg-[length:100%_150%] sm:mb-0 sm:w-auto"
+                className="btn-sm bg-green-800 text-neutral-200 shadow-sm hover:bg-green-900"
               >
                 Get started free
               </Link>
