@@ -1,20 +1,17 @@
 import Image from "next/image";
-import PageIllustration from "@/components/page-illustration";
 import Avatar01 from "@/public/images/ai/ElevenLabs.jpeg";
 import Avatar02 from "@/public/images/ai/mistral.jpg";
 import Avatar03 from "@/public/images/ai/sheet.png";
 import Avatar04 from "@/public/images/ai/openai.jpg";
 import Avatar05 from "@/public/images/ai/zendesk.png";
 import Avatar06 from "@/public/images/ai/cal.png";
-import HeroTerminal from "./hero-terminal";
 
 export default function HeroHome() {
   return (
     <section className="relative">
-      <PageIllustration />
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         {/* Hero content */}
-        <div className="pb-12 pt-32 md:pb-20 md:pt-40">
+        <div className="pt-32 md:pt-40">
           {/* Section header */}
           <div className="pb-12 text-center md:pb-16">
             <div
@@ -114,7 +111,7 @@ export default function HeroHome() {
               </div>
             </div>
           </div>
-          <HeroTerminal />
+
           {/* Hero image */}
         </div>
       </div>
