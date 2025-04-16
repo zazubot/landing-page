@@ -11,6 +11,7 @@ import {
   Settings,
 } from "lucide-react";
 import FAQAccordion from "@/components/faq";
+import BusinessCategories from "@/components/business-categories";
 
 export default function FeaturesPage() {
   return (
@@ -22,7 +23,12 @@ export default function FeaturesPage() {
             <h1 className="text-4xl font-bold text-gray-900 sm:text-5xl md:text-6xl">
               Enabling end-to-end customer service automation
             </h1>
+            <p className="mb-8 mt-4 text-lg ">
+              Learn about ZazuBot benefits that’ll make your business stand out.
+              Automate your support, marketing, and sales with AI.
+            </p>
           </div>
+          <BusinessCategories />
         </div>
       </div>
 
