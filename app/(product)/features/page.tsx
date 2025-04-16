@@ -10,6 +10,7 @@ import {
   Database,
   Settings,
 } from "lucide-react";
+import FAQAccordion from "@/components/faq";
 
 export default function FeaturesPage() {
   return (
@@ -19,11 +20,8 @@ export default function FeaturesPage() {
         <div className="max-w-7xl mx-auto px-4 py-24 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl font-bold text-gray-900 sm:text-5xl md:text-6xl">
-              All the features you need
+              Enabling end-to-end customer service automation
             </h1>
-            <p className="mt-3 max-w-md mx-auto text-xl text-gray-600 sm:text-2xl md:max-w-3xl">
-              to hack bots building{" "}
-            </p>
           </div>
         </div>
       </div>
@@ -56,7 +54,7 @@ export default function FeaturesPage() {
                       </li>
                       <li className="flex items-start">
                         <ArrowRight className="h-5 w-5 text-green-500 mr-2 flex-shrink-0" />
-                        <span>SDK support for multiple languages</span>
+                        <span>SDK support for multiple platform</span>
                       </li>
                       <li className="flex items-start">
                         <ArrowRight className="h-5 w-5 text-green-500 mr-2 flex-shrink-0" />
@@ -109,26 +107,26 @@ export default function FeaturesPage() {
                       <Zap className="h-6 w-6 text-white" />
                     </div>
                     <h3 className="ml-3 text-lg font-medium text-gray-900">
-                      Fast & Scalable
+                      Visual Builder
                     </h3>
                   </div>
                   <div className="mt-4 text-gray-500">
                     <p>
-                      Built for performance with lightning-fast response times
-                      and infinite scalability.
+                      Preview and modify your chatbot in an intuitive visual
+                      editor.
                     </p>
                     <ul className="mt-4 space-y-2">
                       <li className="flex items-start">
                         <ArrowRight className="h-5 w-5 text-green-500 mr-2 flex-shrink-0" />
-                        <span>Global edge network</span>
+                        <span>Testing tool</span>
                       </li>
                       <li className="flex items-start">
                         <ArrowRight className="h-5 w-5 text-green-500 mr-2 flex-shrink-0" />
-                        <span>Auto-scaling infrastructure</span>
+                        <span>Flows</span>
                       </li>
                       <li className="flex items-start">
                         <ArrowRight className="h-5 w-5 text-green-500 mr-2 flex-shrink-0" />
-                        <span>99.99% uptime guarantee</span>
+                        <span>Easily test before you launch</span>
                       </li>
                     </ul>
                   </div>
@@ -143,26 +141,26 @@ export default function FeaturesPage() {
                       <Shield className="h-6 w-6 text-white" />
                     </div>
                     <h3 className="ml-3 text-lg font-medium text-gray-900">
-                      Enterprise Security
+                      Templates
                     </h3>
                   </div>
                   <div className="mt-4 text-gray-500">
                     <p>
-                      Industry-leading security and compliance standards to
-                      protect your data.
+                      Choose a ready-to-use template from the library for an
+                      easier start.
                     </p>
                     <ul className="mt-4 space-y-2">
                       <li className="flex items-start">
                         <ArrowRight className="h-5 w-5 text-green-500 mr-2 flex-shrink-0" />
-                        <span>SOC2 and GDPR compliant</span>
+                        <span>Customer Service</span>
                       </li>
                       <li className="flex items-start">
                         <ArrowRight className="h-5 w-5 text-green-500 mr-2 flex-shrink-0" />
-                        <span>End-to-end encryption</span>
+                        <span>Customer Satisfaction</span>
                       </li>
                       <li className="flex items-start">
                         <ArrowRight className="h-5 w-5 text-green-500 mr-2 flex-shrink-0" />
-                        <span>Customizable data retention</span>
+                        <span>Ecommerce - sales</span>
                       </li>
                     </ul>
                   </div>
@@ -177,26 +175,27 @@ export default function FeaturesPage() {
                       <Database className="h-6 w-6 text-white" />
                     </div>
                     <h3 className="ml-3 text-lg font-medium text-gray-900">
-                      Advanced Analytics
+                      Data collection and workflows
                     </h3>
                   </div>
                   <div className="mt-4 text-gray-500">
                     <p>
-                      Gain insights into your AI usage with comprehensive
-                      analytics and reporting tools.
+                      Collect user information ,Create questions, forms, and
+                      surveys,Group users and direct them to different chatbot
+                      flows or export contact information.
                     </p>
                     <ul className="mt-4 space-y-2">
                       <li className="flex items-start">
                         <ArrowRight className="h-5 w-5 text-green-500 mr-2 flex-shrink-0" />
-                        <span>Usage dashboards</span>
+                        <span>A/B Testing</span>
                       </li>
                       <li className="flex items-start">
                         <ArrowRight className="h-5 w-5 text-green-500 mr-2 flex-shrink-0" />
-                        <span>Performance monitoring</span>
+                        <span>Webhooks</span>
                       </li>
                       <li className="flex items-start">
                         <ArrowRight className="h-5 w-5 text-green-500 mr-2 flex-shrink-0" />
-                        <span>Custom report generation</span>
+                        <span>Zapier actions</span>
                       </li>
                     </ul>
                   </div>
@@ -211,26 +210,22 @@ export default function FeaturesPage() {
                       <Settings className="h-6 w-6 text-white" />
                     </div>
                     <h3 className="ml-3 text-lg font-medium text-gray-900">
-                      Customization Options
+                      Reports
                     </h3>
                   </div>
                   <div className="mt-4 text-gray-500">
                     <p>
-                      Tailor the platform to your specific needs with extensive
-                      customization options.
+                      Follow insights on the number of chats and users, and
+                      track the busiest periods.
                     </p>
                     <ul className="mt-4 space-y-2">
                       <li className="flex items-start">
                         <ArrowRight className="h-5 w-5 text-green-500 mr-2 flex-shrink-0" />
-                        <span>Fine-tuning capabilities</span>
+                        <span>Trends in chats and users</span>
                       </li>
                       <li className="flex items-start">
                         <ArrowRight className="h-5 w-5 text-green-500 mr-2 flex-shrink-0" />
-                        <span>Custom prompt templates</span>
-                      </li>
-                      <li className="flex items-start">
-                        <ArrowRight className="h-5 w-5 text-green-500 mr-2 flex-shrink-0" />
-                        <span>Workflow automation tools</span>
+                        <span>Most popular interactions</span>
                       </li>
                     </ul>
                   </div>
@@ -354,6 +349,7 @@ export default function FeaturesPage() {
           </h2>
         </div>
       </div>
+      <FAQAccordion />
     </div>
   );
 }
