@@ -1,5 +1,6 @@
 "use client";
 
+import HeroLocations from "@/components/hero-locations";
 import { Standard } from "@typebot.io/nextjs";
 
 const UrgentSupport = () => {
@@ -12,6 +13,7 @@ const UrgentSupport = () => {
           style={{ width: "undefined", height: "100vh" }}
         />
       </div>
+      <HeroLocations />
     </div>
   );
 };
