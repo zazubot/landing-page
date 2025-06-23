@@ -135,20 +135,22 @@ export default function AboutPage() {
       <div className="bg-green-900">
         <div className="max-w-2xl mx-auto text-center py-16 px-4 sm:py-20 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-extrabold text-white sm:text-4xl">
-            <span className="block">Join our journey</span>
-            <span className="block">Become part of our story</span>
+            <span className="block">Powered by</span>
           </h2>
-          <p className="mt-4 text-lg leading-6 text-green-200">
-            We're always looking for talented individuals who share our vision
-            and values.
-          </p>
+          <div className="powered-by">
+            <img
+              src="/images/sfgco.png"
+              alt="SFGCO Tech Logo"
+              className="powered-by-logo"
+            />
+          </div>
           <div className="mt-8 flex justify-center">
             <div className="inline-flex rounded-md shadow">
               <a
-                href="https://app.zazubot.com"
+                href="https://sfgco.sa"
                 className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-green-600 bg-white hover:bg-green-50"
               >
-                Get started free
+                SFGCO.sa
               </a>
             </div>
           </div>
