@@ -14,8 +14,8 @@ export const metadata = {
     icon: "/favicon.ico",
     shortcut: "/favicon.ico",
     apple: "/images/logo.png",
-    "og:image": "/yourMagicLinkBanner.png",
-    "twitter:image": "/yourMagicLinkBanner.png",
+    // "og:image": "/yourMagicLinkBanner.png",
+    // "twitter:image": "/yourMagicLinkBanner.png",
   },
   openGraph: {
     images: [
