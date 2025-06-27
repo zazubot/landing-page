@@ -21,7 +21,7 @@ export default function Footer({ border = false }: { border?: boolean }) {
               <Logo />
               {/* <div className="text-sm text-neutral-600">Powered by SFGCO.sa</div> */}
               <div className="text-sm text-neutral-600">
-                &copy; zazubot.com - Powered By
+                &copy; Powered By{" "}
                 <span>
                   <a href="https://sfgco.sa/tech" target="_blank">
                     SFGCO.SA
