@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -14,6 +14,8 @@ export default function DefaultLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const [showModal, setShowModal] = useState(false);
+
   useEffect(() => {
     AOS.init({
       once: true,
@@ -38,7 +40,10 @@ export default function DefaultLayout({
   return (
     <>
       <Header />
+
       <main className="grow">{children}</main>
+      {/* Button to show modal */}
+
       <Footer border={true} />
     </>
   );

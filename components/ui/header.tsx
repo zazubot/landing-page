@@ -18,7 +18,15 @@ export default function Header() {
                 href="https://app.zazubot.com"
                 className="btn-sm bg-green-800 text-neutral-200 shadow-sm hover:bg-green-900"
               >
-                Get started free
+                Dashboard
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/pricing"
+                className="btn-sm bg-white text-neutral-800 shadow-sm hover:bg-neutral-50"
+              >
+                Pricing table
               </Link>
             </li>
           </ul>

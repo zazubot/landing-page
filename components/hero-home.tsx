@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import Avatar01 from "@/public/images/ai/ElevenLabs.jpeg";
 import Avatar02 from "@/public/images/ai/mistral.jpg";
@@ -5,8 +7,11 @@ import Avatar03 from "@/public/images/ai/sheet.png";
 import Avatar04 from "@/public/images/ai/openai.jpg";
 import Avatar05 from "@/public/images/ai/zendesk.png";
 import Avatar06 from "@/public/images/ai/cal.png";
+import { useState } from "react";
 
 export default function HeroHome() {
+  const [showModal, setShowModal] = useState(false);
+
   return (
     <section className="relative">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
@@ -88,8 +93,15 @@ export default function HeroHome() {
                   data-aos="zoom-y-out"
                   data-aos-delay={450}
                 >
+                  <button
+                    className="btn w-full  bg-green-800 text-neutral-200 shadow-sm hover:bg-green-900 sm:ml-4 sm:w-auto"
+                    onClick={() => setShowModal(true)}
+                  >
+                    Watch Demo Video
+                  </button>
+
                   <a
-                    className="btn group mb-4 w-full bg-linear-to-t from-neutral-600 to-neutral-500 bg-[length:100%_100%] bg-[bottom] text-white shadow-sm hover:bg-[length:100%_150%] sm:mb-0 sm:w-auto"
+                    className="btn w-full bg-white text-neutral-800 shadow-sm hover:bg-neutral-50 sm:ml-4 sm:w-auto"
                     href="https://docs.zazubot.com/"
                   >
                     <span className="relative inline-flex items-center">
@@ -99,19 +111,36 @@ export default function HeroHome() {
                       </span>
                     </span>
                   </a>
-                  <a
-                    className="btn w-full bg-white text-neutral-800 shadow-sm hover:bg-neutral-50 sm:ml-4 sm:w-auto"
-                    href="/pricing"
-                  >
-                    <span className="relative inline-flex items-center">
-                      Pricing table
-                    </span>
-                  </a>
                 </div>
               </div>
             </div>
           </div>
 
+          {/* Modal */}
+          {showModal && (
+            <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-60">
+              <div className="bg-white rounded-lg shadow-lg p-4 max-w-xl w-full relative">
+                <button
+                  className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-2xl"
+                  onClick={() => setShowModal(false)}
+                  aria-label="Close"
+                >
+                  &times;
+                </button>
+                <div className="aspect-w-16 aspect-h-9 w-full">
+                  <iframe
+                    width="100%"
+                    height="415"
+                    src="https://www.youtube.com/embed/gv8KYqrUSgA?si=RWtB4rsshXcBSGds"
+                    title="Zazubot Build faster, Chat smarter"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  ></iframe>
+                </div>
+              </div>
+            </div>
+          )}
           {/* Hero image */}
         </div>
       </div>
