@@ -147,7 +147,7 @@ export default function AboutPage() {
           <div className="mt-8 flex justify-center">
             <div className="inline-flex rounded-md shadow">
               <a
-                href="https://sfgco.sa"
+                href="https://sfgco.sa/tech/chatboot"
                 className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-green-600 bg-white hover:bg-green-50"
               >
                 SFGCO.sa

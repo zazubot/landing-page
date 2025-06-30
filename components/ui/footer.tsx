@@ -23,7 +23,7 @@ export default function Footer({ border = false }: { border?: boolean }) {
               <div className="text-sm text-neutral-600">
                 &copy; Powered By{" "}
                 <span>
-                  <a href="https://sfgco.sa/tech" target="_blank">
+                  <a href="https://sfgco.sa/tech/chatboot" target="_blank">
                     SFGCO.SA
                   </a>
                 </span>
