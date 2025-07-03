@@ -1,3 +1,4 @@
+import LogoBySFGCO from "@/components/ui/logoBySFGCO";
 import { Users, Target, Award, Heart, Briefcase } from "lucide-react";
 
 export const metadata = {
@@ -72,7 +73,20 @@ export default function AboutPage() {
           </div>
         </div>
       </div>
-
+      <div className="max-w-2xl mx-auto text-center py-16 px-4 sm:py-20 sm:px-6 lg:px-8">
+        <LogoBySFGCO />
+        <p className="mt-4 max-w-2xl text-xl text-gray-500 mx-auto">
+          SFGCO has made a significant investment in Zazubot, reflecting their
+          confidence in the technology’s potential to revolutionize the
+          industry.
+        </p>
+        <p className="mt-4 max-w-2xl text-xl text-gray-500 mx-auto">
+          By supporting Zazubot, they are positioning themselves at the
+          forefront of cutting-edge developments, signaling a long-term strategy
+          to leverage automation and artificial intelligence for continued
+          growth and success.
+        </p>
+      </div>
       {/* Values Section */}
       <div className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -132,30 +146,6 @@ export default function AboutPage() {
       </div>
 
       {/* CTA Section */}
-      <div className="bg-green-900">
-        <div className="max-w-2xl mx-auto text-center py-16 px-4 sm:py-20 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-extrabold text-white sm:text-4xl">
-            <span className="block">Powered by </span>
-          </h2>
-          <div className="powered-by">
-            <img
-              src="/images/sfgco.png"
-              alt="SFGCO Tech Logo"
-              className="powered-by-logo"
-            />
-          </div>
-          <div className="mt-8 flex justify-center">
-            <div className="inline-flex rounded-md shadow">
-              <a
-                href="https://sfgco.sa/tech/chatbot"
-                className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-green-600 bg-white hover:bg-green-50"
-              >
-                SFGCO.sa
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
   );
 }

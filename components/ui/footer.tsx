@@ -1,8 +1,12 @@
 import Link from "next/link";
-import Logo from "./logo";
 import Providers from "./providers";
+import LogoBySFGCO from "./logoBySFGCO";
 
-export default function Footer({ border = false }: { border?: boolean }) {
+export default function Footer({
+  border = false,
+}: {
+  readonly border?: boolean;
+}) {
   return (
     <footer>
       <Providers />
@@ -17,19 +21,7 @@ export default function Footer({ border = false }: { border?: boolean }) {
         >
           {/* 1st block */}
           <div className="space-y-2 sm:col-span-12 lg:col-span-4">
-            <div>
-              <Logo />
-              {/* <div className="text-sm text-neutral-600">Powered by SFGCO.sa</div> */}
-              <div className="text-sm text-neutral-600">
-                &copy; Powered By{" "}
-                <span>
-                  <a href="https://sfgco.sa/tech/chatbot" target="_blank">
-                    SFGCO.SA
-                  </a>
-                </span>
-                .
-              </div>
-            </div>
+            <LogoBySFGCO />
           </div>
 
           {/* 2nd block */}
