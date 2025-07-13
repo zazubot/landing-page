@@ -73,14 +73,14 @@ export default function AboutPage() {
           </div>
         </div>
       </div>
-      <div className="max-w-2xl mx-auto text-center py-16 px-4 sm:py-20 sm:px-6 lg:px-8">
+      <div className="  mx-auto text-center py-16 px-4 sm:py-20 sm:px-6 lg:px-8">
         <LogoBySFGCO />
-        <p className="mt-4 max-w-2xl text-xl text-gray-500 mx-auto">
+        <p className="mt-4 max-w-3xl text-xl text-gray-500 mx-auto">
           SFGCO has made a significant investment in Zazubot, reflecting their
           confidence in the technology’s potential to revolutionize the
           industry.
         </p>
-        <p className="mt-4 max-w-2xl text-xl text-gray-500 mx-auto">
+        <p className="mt-4 max-w-4xl text-xl text-gray-500 mx-auto">
           By supporting Zazubot, they are positioning themselves at the
           forefront of cutting-edge developments, signaling a long-term strategy
           to leverage automation and artificial intelligence for continued
