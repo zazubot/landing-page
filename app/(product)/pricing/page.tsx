@@ -5,15 +5,15 @@ import React, { useState } from "react";
 
 const PricingTable = () => {
   const [selectedPlan, setSelectedPlan] = useState("free");
-  const [billingCycle, setBillingCycle] = useState("monthly");
 
   const plans = [
     {
       id: "free",
       name: "Free",
-      description: "Everything you need to get started",
-      monthlyPrice: 0,
-      yearlyPrice: 0,
+      payment: null,
+      description: "Just For testin",
+      price: 0,
+      duration: "14 days",
       features: [
         { name: "Unlimited ZazuBots", included: true },
         { name: "200 chats/months", included: true },
@@ -29,11 +29,13 @@ const PricingTable = () => {
       ],
     },
     {
-      id: "professional",
-      name: "Professional",
-      description: "Perfect for growing teams",
-      monthlyPrice: 29,
-      yearlyPrice: 290,
+      id: "Monthly",
+      name: "Monthly Plan",
+      payment: "https://secure.clickpay.com.sa/payment/link/46699/242445",
+      description: "Perfect for starter",
+      price: 133,
+      duration: "month",
+
       features: [
         { name: "Unlimited ZazuBots", included: true },
         {
@@ -52,11 +54,13 @@ const PricingTable = () => {
       ],
     },
     {
-      id: "enterprise",
-      name: "Enterprise",
-      description: "For large organizations",
-      monthlyPrice: 99,
-      yearlyPrice: 990,
+      id: "Yearly",
+      name: "Yearly Plan ",
+      payment: "https://secure.clickpay.com.sa/payment/link/46699/242452",
+      description: "Yearly Plan (Best Value)",
+      price: 1440,
+      duration: "year",
+
       features: [
         { name: "Unlimited ZazuBots", included: true },
         { name: "10,000 chats/months", included: true },
@@ -72,11 +76,6 @@ const PricingTable = () => {
       ],
     },
   ];
-
-  const getDiscountPercentage = (monthly: number, yearly: number) => {
-    const discount = ((monthly * 12 - yearly) / (monthly * 12)) * 100;
-    return Math.round(discount);
-  };
 
   return (
     <div className="bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
@@ -97,39 +96,6 @@ const PricingTable = () => {
           </p>
         </div>
 
-        {/* Billing Toggle */}
-        <div className="mt-12 flex justify-center">
-          <div className="relative bg-gray-100 p-1 rounded-lg inline-flex">
-            <button
-              className={`px-4 py-2 text-sm font-medium rounded-md ${
-                billingCycle === "monthly"
-                  ? "bg-white shadow-sm text-gray-900"
-                  : "text-gray-500 hover:text-gray-700"
-              }`}
-              onClick={() => setBillingCycle("monthly")}
-            >
-              Monthly
-            </button>
-            <button
-              className={`px-4 py-2 text-sm font-medium rounded-md ${
-                billingCycle === "yearly"
-                  ? "bg-white shadow-sm text-gray-900"
-                  : "text-gray-500 hover:text-gray-700"
-              }`}
-              onClick={() => setBillingCycle("yearly")}
-            >
-              Yearly
-              <span className="ml-1 bg-green-100 text-green-800 text-xs font-semibold px-2 py-0.5 rounded">
-                {getDiscountPercentage(
-                  plans[0].monthlyPrice,
-                  plans[0].yearlyPrice
-                )}
-                % off
-              </span>
-            </button>
-          </div>
-        </div>
-
         {/* Plan Selection */}
         <div className="mt-12 space-y-4 sm:space-y-0 sm:grid sm:grid-cols-2 sm:gap-6 lg:grid-cols-3 lg:max-w-4xl lg:mx-auto xl:max-w-none">
           {plans.map((plan) => (
@@ -148,13 +114,10 @@ const PricingTable = () => {
                 <p className="mt-2 text-sm text-gray-500">{plan.description}</p>
                 <p className="mt-4">
                   <span className="text-4xl font-extrabold text-gray-900">
-                    $
-                    {billingCycle === "monthly"
-                      ? plan.monthlyPrice
-                      : plan.yearlyPrice}
+                    ${plan.price}
                   </span>
                   <span className="text-base font-medium text-gray-500">
-                    /{billingCycle === "monthly" ? "mo" : "yr"}
+                    / {plan.duration}
                   </span>
                 </p>
                 <button
@@ -163,9 +126,14 @@ const PricingTable = () => {
                       ? "bg-green-600 text-white hover:bg-green-700"
                       : "bg-green-50 text-green-700 hover:bg-green-100"
                   }`}
-                  onClick={() => setSelectedPlan(plan.id)}
+                  onClick={() => {
+                    setSelectedPlan(plan.id);
+                    if (plan.payment) {
+                      window.location.replace(plan.payment);
+                    }
+                  }}
                 >
-                  {selectedPlan === plan.id ? "Current Plan" : "Select Plan"}
+                  {selectedPlan === plan.id ? "Checkout" : "Select Plan"}
                 </button>
               </div>
               <div className="px-6 pt-6 pb-8">
