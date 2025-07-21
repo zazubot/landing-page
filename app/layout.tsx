@@ -9,7 +9,7 @@ const inter = Inter({
 });
 
 export const metadata = {
-  title: "ZAZUBOT",
+  title: "ZazuBot® - The Best AI Chatbot Software for Your Website",
   icons: {
     icon: "/favicon.ico",
     shortcut: "/favicon.ico",
