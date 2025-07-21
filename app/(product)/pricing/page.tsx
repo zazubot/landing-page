@@ -3,6 +3,15 @@
 import FAQAccordion from "@/components/faq";
 import React, { useState } from "react";
 
+// for Pay Links test
+// const payMonth = "https://secure.clickpay.com.sa/payment/link/46699/242445";
+// const payYear = "https://secure.clickpay.com.sa/payment/link/46699/242452";
+
+// for production Live
+
+const payMonth = "https://secure.clickpay.com.sa/payment/link/46742/242921";
+const payYear = "https://secure.clickpay.com.sa/payment/link/46742/242905";
+
 const PricingTable = () => {
   const [selectedPlan, setSelectedPlan] = useState("free");
 
@@ -31,7 +40,7 @@ const PricingTable = () => {
     {
       id: "Monthly",
       name: "Monthly Plan",
-      payment: "https://secure.clickpay.com.sa/payment/link/46699/242445",
+      payment: payMonth,
       description: "Perfect for starter",
       price: 133,
       duration: "month",
@@ -56,7 +65,7 @@ const PricingTable = () => {
     {
       id: "Yearly",
       name: "Yearly Plan ",
-      payment: "https://secure.clickpay.com.sa/payment/link/46699/242452",
+      payment: payYear,
       description: "Yearly Plan (Best Value)",
       price: 1440,
       duration: "year",
