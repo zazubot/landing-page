@@ -14,13 +14,15 @@ export const metadata = {
     icon: "/favicon.ico",
     shortcut: "/favicon.ico",
     apple: "/images/logo.png",
-    // "og:image": "/yourMagicLinkBanner.png",
-    // "twitter:image": "/yourMagicLinkBanner.png",
+    "og:image":
+      "https://eayni-assets.s3.us-east-1.amazonaws.com/zazubot-sfgco-header.jpg",
+    "twitter:image":
+      "https://eayni-assets.s3.us-east-1.amazonaws.com/zazubot-sfgco-header.jpg",
   },
   openGraph: {
     images: [
       {
-        url: "/yourMagicLinkBanner.png",
+        url: "https://eayni-assets.s3.us-east-1.amazonaws.com/zazubot-sfgco-header.jpg",
         width: 1200,
         height: 630,
       },
