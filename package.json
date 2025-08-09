@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@calcom/embed-react": "^1.5.2",
+    "@emailjs/browser": "^4.4.1",
     "@typebot.io/nextjs": "^0.3.76",
     "@types/node": "^22.13.0",
     "@types/react": "19.0.8",
