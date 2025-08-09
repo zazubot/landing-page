@@ -73,7 +73,7 @@ export default function HeroHome() {
               data-aos="zoom-y-out"
               data-aos-delay={150}
             >
-              Hack the bot game
+              Hack the bot game with Agents
               <br className="max-lg:hidden" />
               Build faster, Chat smarter
             </h1>
@@ -113,6 +113,24 @@ export default function HeroHome() {
                   </a>
                 </div>
               </div>
+            </div>
+            {/* {add inter your bussiness email and signup button } */}{" "}
+            <div className="mt-8">
+              <form className="flex flex-col items-center justify-center sm:flex-row">
+                {/* {make the input much bigger} */}
+                <input
+                  type="email"
+                  placeholder="Enter your business email"
+                  className="w-full max-w-xl appearance-none rounded border-2 border-neutral-300 bg-white   text-2xl text-neutral-800 placeholder-neutral-400 shadow-sm focus:border-green-500 focus:outline-none focus:ring-4 focus:ring-green-200"
+                  // style={{ minHeight: "4rem" }}
+                />
+                <button
+                  type="submit"
+                  className="btn mt-4 w-full bg-green-800 text-neutral-200 shadow-sm hover:bg-green-900 sm:ml-4 sm:mt-0 sm:w-auto"
+                >
+                  Sign Up Free
+                </button>
+              </form>
             </div>
           </div>
 
