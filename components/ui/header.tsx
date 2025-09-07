@@ -15,10 +15,10 @@ export default function Header() {
           <ul className="flex flex-1 items-center justify-end gap-3">
             <li>
               <Link
-                href="https://app.zazubot.com"
+                href="/join"
                 className="btn-sm bg-green-800 text-neutral-200 shadow-sm hover:bg-green-900"
               >
-                Dashboard
+                Book a demo
               </Link>
             </li>
             <li>
