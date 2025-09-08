@@ -40,7 +40,6 @@ export default function DefaultLayout({
       <Header />
 
       <main className="grow">{children}</main>
-      {/* Button to show modal */}
 
       <Footer border={true} />
     </>

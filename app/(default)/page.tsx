@@ -19,7 +19,6 @@ export default function Home() {
       <UseCases />
       <FeaturesPlanet />
       <LargeTestimonial />
-
       <FAQAccordion />
     </>
   );

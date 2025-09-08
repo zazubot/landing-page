@@ -5,7 +5,7 @@ import Mada from "@/public/images/providers/Mada.svg";
 import visa from "@/public/images/providers/Visa.png";
 import master from "@/public/images/providers/Master.png";
 
-export default function Providers() {
+export default function Payments() {
   return (
     <div className="pb-12 text-center md:pb-16">
       <div

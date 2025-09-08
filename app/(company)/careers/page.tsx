@@ -4,12 +4,12 @@ export const metadata = {
 
 export default function CareersPage() {
   return (
-    <div className="bg-white min-h-screen">
+    <div className="bg-white">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-600 via-green-700 to-green-900 py-20">
-        <div className="max-w-3xl mx-auto px-4 text-center">
+      <section className="bg-gradient-to-br from-gray-900 via-green-700 to-green-900 py-20">
+        <div className="max-w-3xl mx-auto p-12 text-center">
           <h1 className="text-5xl font-extrabold text-white mb-6">
-            Join Our Team
+            Join Our Team at ZazuBot
           </h1>
           <p className="text-xl text-green-100 mb-8">
             At ZazuBot, we’re building the future of business communication. If
@@ -66,7 +66,7 @@ export default function CareersPage() {
           </p>
           <div className="inline-block bg-green-100 rounded-lg px-6 py-4">
             <span className="text-green-700 font-mono text-lg select-all">
-              info@zazubot.com
+              hr@sfgco.sa
             </span>
           </div>
         </div>

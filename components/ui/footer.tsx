@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Providers from "./providers";
+import Payments from "./Payments";
 import LogoBySFGCO from "./logoBySFGCO";
 import Maroof from "./maroof";
 import Saudibusiness from "./saudibusiness";
@@ -11,7 +11,7 @@ export default function Footer({
 }) {
   return (
     <footer>
-      <Providers />
+      <Payments />
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         {/* Top area: Blocks */}
         <div
@@ -85,6 +85,14 @@ export default function Footer({
           <div className="space-y-2 sm:col-span-6 md:col-span-3 lg:col-span-2">
             <h3 className="text-sm font-medium">Resources</h3>
             <ul className="space-y-2 text-sm">
+              <li>
+                <Link
+                  className="text-neutral-600 transition hover:text-neutral-900"
+                  href="/urgent-support"
+                >
+                  Urgent support
+                </Link>
+              </li>
               <li>
                 <Link
                   className="text-neutral-600 transition hover:text-neutral-900"
