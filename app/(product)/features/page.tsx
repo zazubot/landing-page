@@ -10,7 +10,6 @@ import {
   Database,
   Settings,
 } from "lucide-react";
-import FAQAccordion from "@/components/faq";
 import BusinessCategories from "@/components/business-categories";
 
 export default function FeaturesPage() {
@@ -355,7 +354,6 @@ export default function FeaturesPage() {
           </h2>
         </div>
       </div>
-      <FAQAccordion />
     </div>
   );
 }
