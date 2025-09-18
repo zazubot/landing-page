@@ -5,7 +5,7 @@ import Avatar01 from "@/public/images/ai/ElevenLabs.jpeg";
 import Avatar02 from "@/public/images/ai/mistral.jpg";
 import Avatar03 from "@/public/images/ai/sheet.png";
 import Avatar04 from "@/public/images/ai/openai.jpg";
-import Avatar05 from "@/public/images/ai/zendesk.png";
+import Avatar05 from "@/public/images/ai/whatsapp.png";
 import Avatar06 from "@/public/images/ai/cal.png";
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
