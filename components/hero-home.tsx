@@ -103,9 +103,11 @@ export default function HeroHome() {
               className="mb-6 border-y text-5xl font-bold [border-image:linear-gradient(to_right,transparent,--theme(--color-slate-300/.8),transparent)1] md:text-6xl"
               data-aos="zoom-y-out"
             >
-              <span data-aos-delay={150}> Hack the bot game</span>
+              <span data-aos-delay={150}> Help, support, and sell </span>
               <br className="max-lg:hidden " />
-              <span className="text-green-800">Build faster, Chat smarter</span>
+              <span className="text-green-800">
+                with a data-driven AI Agent
+              </span>
             </h1>
             <div className="mx-auto max-w-3xl">
               <p
