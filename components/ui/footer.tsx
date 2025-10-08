@@ -38,6 +38,14 @@ export default function Footer({
                   Features
                 </Link>
               </li>
+              <li>
+                <Link
+                  className="text-neutral-600 transition hover:text-neutral-900"
+                  href="/join"
+                >
+                  Book a demo
+                </Link>
+              </li>
 
               <li>
                 <Link
