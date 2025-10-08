@@ -7,39 +7,10 @@ import Avatar03 from "@/public/images/ai/sheet.png";
 import Avatar04 from "@/public/images/ai/openai.jpg";
 import Avatar05 from "@/public/images/ai/whatsapp.png";
 import Avatar06 from "@/public/images/ai/cal.png";
-import { useRef, useState } from "react";
-import emailjs from "@emailjs/browser";
+import { useState } from "react";
 
 export default function HeroHome() {
   const [showModal, setShowModal] = useState(false);
-  const form = useRef<HTMLFormElement>(null);
-  const [isLoading, setIsLoading] = useState<boolean>(false);
-  // Function to handle form submission
-  const handleSubmit = (
-    e: React.FormEvent<HTMLFormElement | MouseEvent | HTMLButtonElement>
-  ) => {
-    e.preventDefault();
-    setIsLoading(true);
-    if (form.current) {
-      // Use emailjs to send the form data
-      emailjs
-        .sendForm(
-          "service_762lcihd",
-          "template_q6n4qwu",
-          form.current,
-          "CqLOSwRxQRCVbGlNk"
-        )
-        .then(() => {
-          alert("thanks for your interest, we will contact you soon");
-          window.location.reload();
-        })
-        .catch((error) => {
-          console.error("Email sending error:", error);
-          alert("Failed to send email. Please try again later.");
-        })
-        .finally(() => setIsLoading(false));
-    }
-  };
 
   // Function to handle modal close
 
@@ -145,41 +116,6 @@ export default function HeroHome() {
                   </a>
                 </div>
               </div>
-            </div>
-            {/* {add inter your bussiness email and signup button } */}{" "}
-            <div className="mt-8">
-              <form
-                ref={form}
-                onSubmit={handleSubmit}
-                className="flex flex-col items-center justify-center sm:flex-row"
-              >
-                {/* {make the input much bigger} */}
-                <input
-                  type="text"
-                  required
-                  name="name"
-                  defaultValue="ZazuBot"
-                  id="name"
-                  hidden
-                />
-                <input
-                  type="email"
-                  required
-                  name="email"
-                  id="email"
-                  placeholder="Enter your business email"
-                  className="w-full max-w-xl appearance-none rounded border-2 border-neutral-300 bg-white   text-2xl text-neutral-800 placeholder-neutral-400 shadow-sm focus:border-green-500 focus:outline-none focus:ring-4 focus:ring-green-200"
-                  // style={{ minHeight: "4rem" }}
-                />
-                <button
-                  type="submit"
-                  disabled={isLoading}
-                  onClick={(e) => handleSubmit(e)}
-                  className="btn mt-4 w-full bg-green-800 text-neutral-200 shadow-sm hover:bg-green-900 sm:ml-4 sm:mt-0 sm:w-auto"
-                >
-                  Sign Up Free
-                </button>
-              </form>
             </div>
           </div>
 
