@@ -2,13 +2,13 @@
 
 import FAQAccordion from "@/components/faq";
 import React, { useState } from "react";
+import { getTranslations } from "@/app/[locale]/i18n";
 
 // for Pay Links test
 // const payMonth = "https://secure.clickpay.com.sa/payment/link/46699/242445";
 // const payYear = "https://secure.clickpay.com.sa/payment/link/46699/242452";
 
 // for production Live
-
 const payMonth = "https://secure.clickpay.com.sa/payment/link/46742/242921";
 const payYear = "https://secure.clickpay.com.sa/payment/link/46742/242905";
 
@@ -19,76 +19,21 @@ export default async function PricingTable({
 }) {
   const [selectedPlan, setSelectedPlan] = useState("free");
   const resolvedParams = await params;
-  const plans = [
-    {
-      id: "free",
-      name: "Free",
-      payment: null,
-      description: "Just For testin",
-      price: 0,
-      duration: "14 days",
-      features: [
-        { name: "Unlimited ZazuBots", included: true },
-        { name: "200 chats/months", included: true },
-        { name: "Webhooks", included: true },
-        { name: "Native integration", included: true },
-        { name: "Branding removed", included: false },
-        { name: "Collect files from users", included: false },
-        { name: "Create folders", included: false },
-        { name: "Direct priority support", included: false },
-        { name: "WhatsApp integration", included: false },
-        { name: "Custom domain", included: false },
-        { name: "Priority support", included: false },
-      ],
-    },
-    {
-      id: "Monthly",
-      name: "Monthly Plan",
-      payment: payMonth,
-      description: "Perfect for starter",
-      price: 133,
-      duration: "month",
+  const locale = resolvedParams?.locale === "ar" ? "ar" : "en";
+  const t = getTranslations(locale);
 
-      features: [
-        { name: "Unlimited ZazuBots", included: true },
-        {
-          name: "2,000 chats/months / Extra chats: $10 per 500",
-          included: true,
-        },
-        { name: "Webhooks", included: true },
-        { name: "Native integration", included: true },
-        { name: "Branding removed", included: true },
-        { name: "Collect files from users", included: true },
-        { name: "Create folders", included: true },
-        { name: "Direct priority support", included: false },
-        { name: "WhatsApp integration", included: false },
-        { name: "Custom domain", included: false },
-        { name: "Priority support", included: false },
-      ],
-    },
-    {
-      id: "Yearly",
-      name: "Yearly Plan ",
-      payment: payYear,
-      description: "Yearly Plan (Best Value)",
-      price: 1440,
-      duration: "year",
+  // Map payment links to plans
+  const paymentLinks = {
+    Monthly: payMonth,
+    Yearly: payYear,
+    free: null,
+  };
 
-      features: [
-        { name: "Unlimited ZazuBots", included: true },
-        { name: "10,000 chats/months", included: true },
-        { name: "Webhooks", included: true },
-        { name: "Native integration", included: true },
-        { name: "Branding removed", included: true },
-        { name: "Collect files from users", included: true },
-        { name: "Create folders", included: true },
-        { name: "Direct priority support", included: true },
-        { name: "WhatsApp integration", included: true },
-        { name: "Custom domain", included: true },
-        { name: "Priority support", included: true },
-      ],
-    },
-  ];
+  // Use translated plans and inject payment links
+  const plans = t.landing.pricing.plans.map((plan: any) => ({
+    ...plan,
+    payment: paymentLinks[plan.id as keyof typeof paymentLinks] || null,
+  }));
 
   return (
     <div className="bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
@@ -96,22 +41,17 @@ export default async function PricingTable({
         {/* Heading */}
         <div>
           <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
-            Choose Your Plan
+            {t.landing.pricing.heading}
           </h2>
           <p className="mt-4 text-xl text-gray-600">
-            Flexible plans that scale with you
+            {t.landing.pricing.subheading}
           </p>
-          <p>
-            Whether you're a solo business owner, a growing startup or a large
-            company, Zazu Bot is here to help you build high-performing chat
-            forms for the right price. <br /> Pay for as little or as much usage
-            as you need.
-          </p>
+          <p>{t.landing.pricing.description}</p>
         </div>
 
         {/* Plan Selection */}
         <div className="mt-12 space-y-4 sm:space-y-0 sm:grid sm:grid-cols-2 sm:gap-6 lg:grid-cols-3 lg:max-w-4xl lg:mx-auto xl:max-w-none">
-          {plans.map((plan) => (
+          {plans.map((plan: any) => (
             <div
               key={plan.id}
               className={`border rounded-lg shadow-sm divide-y divide-gray-200 ${
@@ -146,22 +86,89 @@ export default async function PricingTable({
                     }
                   }}
                 >
-                  {selectedPlan === plan.id ? "Checkout" : "Select Plan"}
+                  {selectedPlan === plan.id
+                    ? t.landing.pricing.button.checkout
+                    : t.landing.pricing.button.select}
                 </button>
               </div>
               <div className="px-6 pt-6 pb-8">
                 <h4 className="text-sm font-medium text-gray-900 tracking-wide">
-                  What's included
+                  {t.landing.pricing.included}
                 </h4>
                 <ul className="mt-6 space-y-4">
-                  {plan.features.map((feature, index) => (
+                  {plan.features.map((feature: string, index: number) => (
                     <li key={index} className="flex">
                       <span
                         className={`flex-shrink-0 ${
-                          feature.included ? "text-green-500" : "text-gray-400"
+                          // Included if this feature index is included in this plan (for free plan, first 4 are true, etc.)
+                          plan.id === "free"
+                            ? index < 4
+                              ? "text-green-500"
+                              : "text-gray-400"
+                            : plan.id === "Monthly"
+                            ? index < 7
+                              ? "text-green-500"
+                              : "text-gray-400"
+                            : "text-green-500"
                         }`}
                       >
-                        {feature.included ? (
+                        {plan.id === "free" ? (
+                          index < 4 ? (
+                            <svg
+                              className="h-5 w-5"
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 20 20"
+                              fill="currentColor"
+                            >
+                              <path
+                                fillRule="evenodd"
+                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                clipRule="evenodd"
+                              />
+                            </svg>
+                          ) : (
+                            <svg
+                              className="h-5 w-5"
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 20 20"
+                              fill="currentColor"
+                            >
+                              <path
+                                fillRule="evenodd"
+                                d="M3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                                clipRule="evenodd"
+                              />
+                            </svg>
+                          )
+                        ) : plan.id === "Monthly" ? (
+                          index < 7 ? (
+                            <svg
+                              className="h-5 w-5"
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 20 20"
+                              fill="currentColor"
+                            >
+                              <path
+                                fillRule="evenodd"
+                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                clipRule="evenodd"
+                              />
+                            </svg>
+                          ) : (
+                            <svg
+                              className="h-5 w-5"
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 20 20"
+                              fill="currentColor"
+                            >
+                              <path
+                                fillRule="evenodd"
+                                d="M3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                                clipRule="evenodd"
+                              />
+                            </svg>
+                          )
+                        ) : (
                           <svg
                             className="h-5 w-5"
                             xmlns="http://www.w3.org/2000/svg"
@@ -174,27 +181,22 @@ export default async function PricingTable({
                               clipRule="evenodd"
                             />
                           </svg>
-                        ) : (
-                          <svg
-                            className="h-5 w-5"
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 20 20"
-                            fill="currentColor"
-                          >
-                            <path
-                              fillRule="evenodd"
-                              d="M3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-                              clipRule="evenodd"
-                            />
-                          </svg>
                         )}
                       </span>
                       <span
                         className={`ml-3 text-sm ${
-                          feature.included ? "text-gray-700" : "text-gray-400"
+                          plan.id === "free"
+                            ? index < 4
+                              ? "text-gray-700"
+                              : "text-gray-400"
+                            : plan.id === "Monthly"
+                            ? index < 7
+                              ? "text-gray-700"
+                              : "text-gray-400"
+                            : "text-gray-700"
                         }`}
                       >
-                        {feature.name}
+                        {feature}
                       </span>
                     </li>
                   ))}
@@ -207,7 +209,7 @@ export default async function PricingTable({
         {/* Feature Comparison Table (Mobile hidden, visible on larger screens) */}
         <div className="hidden lg:block mt-16">
           <h3 className="text-xl font-semibold text-gray-900 mb-8 text-center">
-            Compare Features
+            {t.landing.pricing.compare}
           </h3>
           <div className="border rounded-lg shadow overflow-hidden">
             <table className="min-w-full divide-y divide-gray-200">
@@ -217,9 +219,9 @@ export default async function PricingTable({
                     scope="col"
                     className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
                   >
-                    Feature
+                    {t.landing.pricing.feature}
                   </th>
-                  {plans.map((plan) => (
+                  {plans.map((plan: any) => (
                     <th
                       key={plan.id}
                       scope="col"
@@ -235,55 +237,108 @@ export default async function PricingTable({
                 </tr>
               </thead>
               <tbody className="bg-white divide-y divide-gray-200">
-                {plans[0].features.map((feature, featureIdx) => (
-                  <tr
-                    key={featureIdx}
-                    className={featureIdx % 2 === 0 ? "bg-white" : "bg-gray-50"}
-                  >
-                    <td className="px-6 py-4 text-sm font-medium text-gray-900">
-                      {feature.name}
-                    </td>
-                    {plans.map((plan) => (
-                      <td key={plan.id} className="px-6 py-4 text-center">
-                        <span
-                          className={
-                            plan.features[featureIdx].included
-                              ? "text-green-500"
-                              : "text-gray-400"
-                          }
-                        >
-                          {plan.features[featureIdx].included ? (
-                            <svg
-                              className="h-5 w-5 mx-auto"
-                              xmlns="http://www.w3.org/2000/svg"
-                              viewBox="0 0 20 20"
-                              fill="currentColor"
-                            >
-                              <path
-                                fillRule="evenodd"
-                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                                clipRule="evenodd"
-                              />
-                            </svg>
-                          ) : (
-                            <svg
-                              className="h-5 w-5 mx-auto"
-                              xmlns="http://www.w3.org/2000/svg"
-                              viewBox="0 0 20 20"
-                              fill="currentColor"
-                            >
-                              <path
-                                fillRule="evenodd"
-                                d="M3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-                                clipRule="evenodd"
-                              />
-                            </svg>
-                          )}
-                        </span>
+                {plans[0].features.map(
+                  (feature: string, featureIdx: number) => (
+                    <tr
+                      key={featureIdx}
+                      className={
+                        featureIdx % 2 === 0 ? "bg-white" : "bg-gray-50"
+                      }
+                    >
+                      <td className="px-6 py-4 text-sm font-medium text-gray-900">
+                        {feature}
                       </td>
-                    ))}
-                  </tr>
-                ))}
+                      {plans.map((plan: any) => (
+                        <td key={plan.id} className="px-6 py-4 text-center">
+                          <span
+                            className={
+                              plan.id === "free"
+                                ? featureIdx < 4
+                                  ? "text-green-500"
+                                  : "text-gray-400"
+                                : plan.id === "Monthly"
+                                ? featureIdx < 7
+                                  ? "text-green-500"
+                                  : "text-gray-400"
+                                : "text-green-500"
+                            }
+                          >
+                            {plan.id === "free" ? (
+                              featureIdx < 4 ? (
+                                <svg
+                                  className="h-5 w-5 mx-auto"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 20 20"
+                                  fill="currentColor"
+                                >
+                                  <path
+                                    fillRule="evenodd"
+                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                    clipRule="evenodd"
+                                  />
+                                </svg>
+                              ) : (
+                                <svg
+                                  className="h-5 w-5 mx-auto"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 20 20"
+                                  fill="currentColor"
+                                >
+                                  <path
+                                    fillRule="evenodd"
+                                    d="M3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                                    clipRule="evenodd"
+                                  />
+                                </svg>
+                              )
+                            ) : plan.id === "Monthly" ? (
+                              featureIdx < 7 ? (
+                                <svg
+                                  className="h-5 w-5 mx-auto"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 20 20"
+                                  fill="currentColor"
+                                >
+                                  <path
+                                    fillRule="evenodd"
+                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                    clipRule="evenodd"
+                                  />
+                                </svg>
+                              ) : (
+                                <svg
+                                  className="h-5 w-5 mx-auto"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 20 20"
+                                  fill="currentColor"
+                                >
+                                  <path
+                                    fillRule="evenodd"
+                                    d="M3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                                    clipRule="evenodd"
+                                  />
+                                </svg>
+                              )
+                            ) : (
+                              <svg
+                                className="h-5 w-5 mx-auto"
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                              >
+                                <path
+                                  fillRule="evenodd"
+                                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                  clipRule="evenodd"
+                                />
+                              </svg>
+                            )}
+                          </span>
+                        </td>
+                      ))}
+                    </tr>
+                  )
+                )}
               </tbody>
             </table>
           </div>
@@ -292,10 +347,13 @@ export default async function PricingTable({
         {/* CTA */}
         <div className="mt-16 text-center">
           <button className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-green-600 hover:bg-green-700">
-            Get started with {plans.find((p) => p.id === selectedPlan)?.name}
+            {t.landing.pricing.button.cta.replace(
+              "{planName}",
+              plans.find((p: any) => p.id === selectedPlan)?.name
+            )}
           </button>
         </div>
-        <FAQAccordion locale={resolvedParams?.locale === "ar" ? "ar" : "en"} />
+        <FAQAccordion locale={locale} />
       </div>
     </div>
   );

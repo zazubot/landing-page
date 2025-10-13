@@ -145,6 +145,81 @@
           "description": "Boost meetings and show rates with highly interested leads"
         }
       ]
+    },
+    "pricing": {
+      "heading": "Choose Your Plan",
+      "subheading": "Flexible plans that scale with you",
+      "description": "Whether you're a solo business owner, a growing startup or a large company, Zazu Bot is here to help you build high-performing chat forms for the right price. Pay for as little or as much usage as you need.",
+      "plans": [
+        {
+          "id": "free",
+          "name": "Free",
+          "description": "Just For testing",
+          "price": 0,
+          "duration": "14 days",
+          "features": [
+            "Unlimited ZazuBots",
+            "200 chats/months",
+            "Webhooks",
+            "Native integration",
+            "Branding removed",
+            "Collect files from users",
+            "Create folders",
+            "Direct priority support",
+            "WhatsApp integration",
+            "Custom domain",
+            "Priority support"
+          ]
+        },
+        {
+          "id": "Monthly",
+          "name": "Monthly Plan",
+          "description": "Perfect for starter",
+          "price": 133,
+          "duration": "month",
+          "features": [
+            "Unlimited ZazuBots",
+            "2,000 chats/months / Extra chats: $10 per 500",
+            "Webhooks",
+            "Native integration",
+            "Branding removed",
+            "Collect files from users",
+            "Create folders",
+            "Direct priority support",
+            "WhatsApp integration",
+            "Custom domain",
+            "Priority support"
+          ]
+        },
+        {
+          "id": "Yearly",
+          "name": "Yearly Plan",
+          "description": "Yearly Plan (Best Value)",
+          "price": 1440,
+          "duration": "year",
+          "features": [
+            "Unlimited ZazuBots",
+            "10,000 chats/months",
+            "Webhooks",
+            "Native integration",
+            "Branding removed",
+            "Collect files from users",
+            "Create folders",
+            "Direct priority support",
+            "WhatsApp integration",
+            "Custom domain",
+            "Priority support"
+          ]
+        }
+      ],
+      "button": {
+        "select": "Select Plan",
+        "checkout": "Checkout",
+        "cta": "Get started with {planName}"
+      },
+      "included": "What's included",
+      "compare": "Compare Features",
+      "feature": "Feature"
     }
   }
 }

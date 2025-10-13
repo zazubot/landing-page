@@ -43,6 +43,7 @@ export default function RootLayout({
         className={`${inter.variable} bg-neutral-50 font-inter tracking-tight text-neutral-900 antialiased`}
       >
         <div className="flex min-h-screen flex-col overflow-hidden supports-[overflow:clip]:overflow-clip">
+          <div className="mt-20"></div>
           {children}
         </div>
       </body>
