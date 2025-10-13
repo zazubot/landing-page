@@ -1,5 +1,4 @@
 "use client";
-
 import Image from "next/image";
 import Avatar01 from "@/public/images/ai/ElevenLabs.jpeg";
 import Avatar02 from "@/public/images/ai/mistral.jpg";
@@ -8,12 +7,13 @@ import Avatar04 from "@/public/images/ai/openai.jpg";
 import Avatar05 from "@/public/images/ai/whatsapp.png";
 import Avatar06 from "@/public/images/ai/cal.png";
 import { useState } from "react";
+import { getTranslations } from "@/app/[locale]/i18n";
 
-export default function HeroHome() {
+export default function HeroHome({ locale }: { locale: "en" | "ar" }) {
+  const t = getTranslations(locale);
   const [showModal, setShowModal] = useState(false);
-
   // Function to handle modal close
-
+  console.log("locals", locale);
   return (
     <section className="relative">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
@@ -74,7 +74,11 @@ export default function HeroHome() {
               className="mb-6 border-y text-5xl font-bold [border-image:linear-gradient(to_right,transparent,--theme(--color-slate-300/.8),transparent)1] md:text-6xl"
               data-aos="zoom-y-out"
             >
-              <span data-aos-delay={150}> Help, support, and sell </span>
+              <span data-aos-delay={150}>
+                {" "}
+                {t.title}
+                {/* Help, support, and sell{" "} */}
+              </span>
               <br className="max-lg:hidden " />
               <span className="text-green-800">
                 with a data-driven AI Agent
