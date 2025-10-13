@@ -2,6 +2,7 @@ import Link from "next/link";
 import Logo from "./logo";
 import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
+import { getTranslations } from "@/app/[locale]/i18n";
 
 export default function Header() {
   const router = useRouter();
@@ -11,7 +12,7 @@ export default function Header() {
   const pathParts = pathname.split("/");
   const currentLocale = pathParts[1] === "ar" ? "ar" : "en";
   const [locale, setLocale] = useState(currentLocale);
-
+  const t = getTranslations(currentLocale);
   useEffect(() => {
     // On mount, sync locale from localStorage if available
     const savedLocale =
@@ -82,7 +83,7 @@ export default function Header() {
                 href="https://app.zazubot.com"
                 className="btn-sm bg-green-800 text-neutral-200 shadow-sm hover:bg-green-900"
               >
-                Start Now
+                {t.header.startNow}
               </Link>
             </li>
             <li>
@@ -90,7 +91,7 @@ export default function Header() {
                 href="/pricing"
                 className="btn-sm bg-white text-neutral-800 shadow-sm hover:bg-neutral-50"
               >
-                Pricing table
+                {t.header.pricing}
               </Link>
             </li>
           </ul>

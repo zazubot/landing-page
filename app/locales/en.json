@@ -2,6 +2,10 @@
   "title": "ZazuBot® - The Best AI Chatbot Software for Your Bussiness",
   "description": "A user-friendly platform that allows you to seamlessly design, deploy, and integrate advanced chatbots into websites and messaging platforms like WhatsApp, enhancing user engagement and automating communication.",
   "welcome": "Welcome to ZazuBot!",
+  "header": {
+    "startNow": "Start Now",
+    "pricing": "Pricing Table"
+  },
   "landing": {
     "hero": {
       "title1": "Help, support, and sell",
