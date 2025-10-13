@@ -13,14 +13,13 @@ import { getCalApi } from "@calcom/embed-react";
 const SUPPORTED_LOCALES = ["en", "ar"] as const;
 type Locale = (typeof SUPPORTED_LOCALES)[number];
 
-export default async function LocaleLayout({
+export default function LocaleLayout({
   children,
   params,
 }: {
   children: React.ReactNode;
   params: Promise<{ locale: string }>;
 }) {
-  const resolvedParams = await params;
   useEffect(() => {
     AOS.init({
       once: true,
