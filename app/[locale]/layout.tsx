@@ -1,6 +1,6 @@
 "use client";
 
-import { ReactNode, useEffect } from "react";
+import { useEffect } from "react";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -8,7 +8,6 @@ import "aos/dist/aos.css";
 import Header from "@/components/ui/header";
 import Footer from "@/components/ui/footer";
 import { getCalApi } from "@calcom/embed-react";
-import { notFound } from "next/navigation";
 
 // Supported locales
 const SUPPORTED_LOCALES = ["en", "ar"] as const;
@@ -18,11 +17,10 @@ export default async function LocaleLayout({
   children,
   params,
 }: {
-  children: ReactNode;
-  params: { locale: string };
+  children: React.ReactNode;
+  params: Promise<{ locale: string }>;
 }) {
-  const locale = params.locale as Locale;
-
+  const resolvedParams = await params;
   useEffect(() => {
     AOS.init({
       once: true,
@@ -30,7 +28,7 @@ export default async function LocaleLayout({
       duration: 700,
       easing: "ease-out-cubic",
     });
-  });
+  }, []);
 
   useEffect(() => {
     (async function () {
@@ -43,10 +41,6 @@ export default async function LocaleLayout({
       cal("ui", { hideEventTypeDetails: false, layout: "month_view" });
     })();
   }, []);
-
-  if (!SUPPORTED_LOCALES.includes(locale)) {
-    notFound();
-  }
 
   return (
     <>

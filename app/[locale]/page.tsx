@@ -8,13 +8,14 @@ import UseCases from "@/components/use-cases";
 import HeroIntro from "@/components/hero-intro";
 
 export default async function LocaleHome({
-  params = { locale: "en" },
+  params,
 }: {
-  params?: { locale: "en" | "ar" };
+  params: Promise<{ locale: string }>;
 }) {
+  const resolvedParams = await params;
   return (
     <>
-      <Hero locale={params?.locale} />
+      <Hero locale={resolvedParams?.locale === "ar" ? "ar" : "en"} />
       <HeroIntro />
       <UseCases />
       <FeaturesPlanet />
