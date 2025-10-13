@@ -1,8 +1,15 @@
 "use client";
 
 import React from "react";
+import { getTranslations } from "@/app/[locale]/i18n";
+import { usePathname } from "next/navigation";
 
 const PaymentSuccess = () => {
+  const pathname = usePathname();
+  const pathParts = pathname.split("/");
+  const currentLocale = pathParts[1] === "ar" ? "ar" : "en";
+  const t = getTranslations(currentLocale);
+
   return (
     <div className="bg-gray-50 min-h-screen flex flex-col justify-center items-center py-16 px-4">
       <div className="bg-white rounded-xl shadow-lg p-8 max-w-md w-full flex flex-col items-center">
@@ -33,18 +40,17 @@ const PaymentSuccess = () => {
         </div>
         {/* Heading */}
         <h2 className="text-2xl font-bold text-gray-900 mb-2 text-center">
-          Payment Successful!
+          {t.paymentSuccess.title}
         </h2>
         <p className="text-gray-600 text-center mb-4">
-          Thank you for your payment. Your transaction has been completed
-          successfully.
+          {t.paymentSuccess.message}
         </p>
         {/* CTA Button */}
         <a
           href="https://app.zazubot.com"
           className="mt-2 inline-block bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-6 rounded-lg transition"
         >
-          Go to Dashboard
+          {t.paymentSuccess.cta}
         </a>
       </div>
     </div>

@@ -320,5 +320,48 @@
     "urgentSupport": "Urgent support",
     "termsOfService": "Terms of service",
     "privacyPolicy": "Privacy Policy"
+  },
+  "paymentSuccess": {
+    "title": "Payment Successful!",
+    "message": "Thank you for your payment. Your transaction has been completed successfully.",
+    "cta": "Go to Dashboard"
+  },
+  "about": {
+    "metaTitle": "About - ZazuBot",
+    "metaDescription": "we believe that meaningful conversations are the foundation of successful relationships",
+    "heroTitle": "About Us",
+    "heroText": "we believe that meaningful conversations are the foundation of successful relationships. Every day, people chat with friends, family, and colleagues on platforms like WhatsApp, Messenger, and more. It’s natural, engaging, and personal.",
+    "purposeTitle": "Our Purpose",
+    "missionVisionTitle": "Mission & Vision",
+    "missionTitle": "Our Mission",
+    "missionText": "We believe businesses should harness this same dynamic, because where people love to chat, conversions and customer loyalty soar.",
+    "visionTitle": "Our Vision",
+    "visionText": "Go beyond scripted, transactional responses, and enable businesses to craft lively, personalized conversations that truly reflect their brand’s voice.",
+    "sfgcoInvestment": "SFGCO has made a significant investment in Zazubot, reflecting their confidence in the technology’s potential to revolutionize the industry.",
+    "sfgcoSupport": "By supporting Zazubot, they are positioning themselves at the forefront of cutting-edge developments, signaling a long-term strategy to leverage automation and artificial intelligence for continued growth and success.",
+    "valuesTitle": "What We Believe",
+    "valuesSubtitle": "Supercharge your business with ZazuBot Intelligence.",
+    "valuesDescription": "These principles guide everything we do",
+    "value1Title": "Messaging API",
+    "value1Text": "Implement event-based messaging for sync and async communication Use cases live chat apps, chatbots, in-app messaging.",
+    "value2Title": "Omnichannel APIs",
+    "value2Text": "Funnel all channels into a single messaging experience Use cases all-in-one communication, messaging super-apps.",
+    "value3Title": "Website widget",
+    "value3Text": "Monitor and interact with visitors via rich messages and apps Use cases custom chat, website analytics, lead capturing."
+  },
+  "careers": {
+    "metaTitle": "Careers - ZazuBot",
+    "heroTitle": "Join Our Team at ZazuBot",
+    "heroText": "At ZazuBot, we’re building the future of business communication. If you’re passionate about technology, innovation, and making an impact, we want to hear from you!",
+    "whyTitle": "Why Work With Us?",
+    "why1Title": "Innovative Culture",
+    "why1Text": "Work with cutting-edge AI and automation technologies in a collaborative, forward-thinking environment.",
+    "why2Title": "Growth & Learning",
+    "why2Text": "We invest in your professional development and offer opportunities to grow your skills and career.",
+    "why3Title": "Inclusive Team",
+    "why3Text": "Join a diverse, supportive team where your ideas matter and your contributions make a real difference.",
+    "applyTitle": "Ready to Apply?",
+    "applyText": "Send your CV and a short introduction to our team. We’re excited to meet you!",
+    "email": "hr@sfgco.sa"
   }
 }
