@@ -3,12 +3,20 @@ import Payments from "./Payments";
 import LogoBySFGCO from "./logoBySFGCO";
 import Maroof from "./maroof";
 import Saudibusiness from "./saudibusiness";
+import { usePathname } from "next/navigation";
+import { getTranslations } from "@/app/[locale]/i18n";
 
 export default function Footer({
   border = false,
 }: {
   readonly border?: boolean;
 }) {
+  const pathname = usePathname();
+
+  // Extract current locale from path (assumes /en/... or /ar/...)
+  const pathParts = pathname.split("/");
+  const currentLocale = pathParts[1] === "ar" ? "ar" : "en";
+  const t = getTranslations(currentLocale);
   return (
     <footer>
       <Payments />
@@ -28,14 +36,14 @@ export default function Footer({
 
           {/* 2nd block */}
           <div className="space-y-2 sm:col-span-6 md:col-span-3 lg:col-span-2">
-            <h3 className="text-sm font-medium">Product</h3>
+            <h3 className="text-sm font-medium">{t.footer.product}</h3>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link
                   className="text-neutral-600 transition hover:text-neutral-900"
                   href="/features"
                 >
-                  Features
+                  {t.footer.features}
                 </Link>
               </li>
               <li>
@@ -43,7 +51,7 @@ export default function Footer({
                   className="text-neutral-600 transition hover:text-neutral-900"
                   href="/join"
                 >
-                  Book a demo
+                  {t.footer.bookDemo}
                 </Link>
               </li>
 
@@ -52,7 +60,7 @@ export default function Footer({
                   className="text-neutral-600 transition hover:text-neutral-900"
                   href="/pricing"
                 >
-                  Pricing & Plans
+                  {t.footer.pricingPlans}
                 </Link>
               </li>
             </ul>
@@ -60,14 +68,14 @@ export default function Footer({
 
           {/* 3rd block */}
           <div className="space-y-2 sm:col-span-6 md:col-span-3 lg:col-span-2">
-            <h3 className="text-sm font-medium">Company</h3>
+            <h3 className="text-sm font-medium">{t.footer.company}</h3>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link
                   className="text-neutral-600 transition hover:text-neutral-900"
                   href="/about"
                 >
-                  About
+                  {t.footer.about}
                 </Link>
               </li>
               <li>
@@ -75,7 +83,7 @@ export default function Footer({
                   className="text-neutral-600 transition hover:text-neutral-900"
                   href="/become-a-partner"
                 >
-                  become a partner
+                  {t.footer.becomePartner}
                 </Link>
               </li>
               <li>
@@ -83,7 +91,7 @@ export default function Footer({
                   className="text-neutral-600 transition hover:text-neutral-900"
                   href="/careers"
                 >
-                  Careers
+                  {t.footer.careers}
                 </Link>
               </li>
             </ul>
@@ -91,14 +99,14 @@ export default function Footer({
 
           {/* 4th block */}
           <div className="space-y-2 sm:col-span-6 md:col-span-3 lg:col-span-2">
-            <h3 className="text-sm font-medium">Resources</h3>
+            <h3 className="text-sm font-medium">{t.footer.resources}</h3>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link
                   className="text-neutral-600 transition hover:text-neutral-900"
                   href="/urgent-support"
                 >
-                  Urgent support
+                  {t.footer.urgentSupport}
                 </Link>
               </li>
               <li>
@@ -106,7 +114,7 @@ export default function Footer({
                   className="text-neutral-600 transition hover:text-neutral-900"
                   href="/terms-of-service"
                 >
-                  Terms of service
+                  {t.footer.termsOfService}
                 </Link>
               </li>
               <li>
@@ -114,7 +122,7 @@ export default function Footer({
                   className="text-neutral-600 transition hover:text-neutral-900"
                   href="/privacy-policy"
                 >
-                  Privacy Policy
+                  {t.footer.privacyPolicy}
                 </Link>
               </li>
             </ul>
@@ -122,7 +130,7 @@ export default function Footer({
 
           {/* 5th block */}
           <div className="space-y-2 sm:col-span-6 md:col-span-3 lg:col-span-2">
-            <h3 className="text-sm font-medium">Certified</h3>
+            <h3 className="text-sm font-medium">{t.footer.certified}</h3>
             <ul className="flex gap-5 items-center">
               <li>
                 <Maroof />

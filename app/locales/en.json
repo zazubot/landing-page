@@ -225,5 +225,100 @@
       "compare": "Compare Features",
       "feature": "Feature"
     }
+  },
+  "features": {
+    "hero": {
+      "title": "Enabling end-to-end customer service automation",
+      "subtitle": "Learn about ZazuBot benefits that’ll make your business stand out. Automate your support, marketing, and sales with AI."
+    },
+    "cards": [
+      {
+        "title": "Easy-to-use APIs",
+        "desc": "Simple, intuitive APIs that streamline development and reduce implementation time from weeks to days.",
+        "bullet1": "Comprehensive documentation",
+        "bullet2": "SDK support for multiple platform",
+        "bullet3": "Consistent request/response patterns"
+      },
+      {
+        "title": "Multiple AI Providers",
+        "desc": "Access the best AI models from various providers through a single, unified interface.",
+        "bullet1": "Seamless provider switching",
+        "bullet2": "Model-agnostic implementations",
+        "bullet3": "Comparative analytics across providers"
+      },
+      {
+        "title": "Visual Builder",
+        "desc": "Preview and modify your chatbot in an intuitive visual editor.",
+        "bullet1": "Testing tool",
+        "bullet2": "Flows",
+        "bullet3": "Easily test before you launch"
+      },
+      {
+        "title": "Templates",
+        "desc": "Choose a ready-to-use template from the library for an easier start.",
+        "bullet1": "Customer Service",
+        "bullet2": "Customer Satisfaction",
+        "bullet3": "Ecommerce - sales"
+      },
+      {
+        "title": "Data collection and workflows",
+        "desc": "Collect user information, create questions, forms, and surveys, group users and direct them to different chatbot flows or export contact information.",
+        "bullet1": "A/B Testing",
+        "bullet2": "Webhooks",
+        "bullet3": "Zapier actions"
+      },
+      {
+        "title": "Reports",
+        "desc": "Follow insights on the number of chats and users, and track the busiest periods.",
+        "bullet1": "Trends in chats and users",
+        "bullet2": "Most popular interactions"
+      }
+    ],
+    "comparison": {
+      "title": "Why Choose Us",
+      "subtitle": "Compare with Alternatives",
+      "colFeatures": "Features",
+      "colOurs": "Our Platform",
+      "colCompetitors": "Competitors",
+      "row1": {
+        "feature": "Multiple AI Providers",
+        "ours": "✓ 10+ providers integrated",
+        "competitors": "✗ Limited to 1-2 providers"
+      },
+      "row2": {
+        "feature": "API Simplicity",
+        "ours": "✓ Simple, consistent APIs",
+        "competitors": "✗ Complex implementation"
+      },
+      "row3": {
+        "feature": "Global Infrastructure",
+        "ours": "✓ 20+ global regions",
+        "competitors": "✗ Limited regional availability"
+      },
+      "row4": {
+        "feature": "Enterprise Security",
+        "ours": "✓ Comprehensive compliance",
+        "competitors": "~ Partial compliance"
+      }
+    },
+    "cta": {
+      "line1": "Ready to get started?",
+      "line2": "Try our platform today."
+    }
+  },
+  "footer": {
+    "product": "Product",
+    "company": "Company",
+    "resources": "Resources",
+    "certified": "Certified",
+    "features": "Features",
+    "bookDemo": "Book a demo",
+    "pricingPlans": "Pricing & Plans",
+    "about": "About",
+    "becomePartner": "Become a partner",
+    "careers": "Careers",
+    "urgentSupport": "Urgent support",
+    "termsOfService": "Terms of service",
+    "privacyPolicy": "Privacy Policy"
   }
 }

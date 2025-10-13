@@ -11,8 +11,16 @@ import {
   Settings,
 } from "lucide-react";
 import BusinessCategories from "@/components/business-categories";
+import { getTranslations } from "@/app/[locale]/i18n";
 
-export default function FeaturesPage() {
+export default function FeaturesPage({
+  params,
+}: {
+  params: { locale: string };
+}) {
+  const locale = params?.locale === "ar" ? "ar" : "en";
+  const t = getTranslations(locale);
+
   return (
     <div className="bg-white">
       {/* Hero Section */}
@@ -20,12 +28,9 @@ export default function FeaturesPage() {
         <div className="max-w-7xl mx-auto px-4 py-24 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl font-bold text-gray-900 sm:text-5xl md:text-6xl">
-              Enabling end-to-end customer service automation
+              {t.features.hero.title}
             </h1>
-            <p className="mb-8 mt-4 text-lg ">
-              Learn about ZazuBot benefits that’ll make your business stand out.
-              Automate your support, marketing, and sales with AI.
-            </p>
+            <p className="mb-8 mt-4 text-lg "> {t.features.hero.subtitle}</p>
           </div>
           <BusinessCategories />
         </div>
@@ -44,26 +49,23 @@ export default function FeaturesPage() {
                       <Code className="h-6 w-6 text-white" />
                     </div>
                     <h3 className="ml-3 text-lg font-medium text-gray-900">
-                      Easy-to-use APIs
+                      {t.features.cards[0].title}
                     </h3>
                   </div>
                   <div className="mt-4 text-gray-500">
-                    <p>
-                      Simple, intuitive APIs that streamline development and
-                      reduce implementation time from weeks to days.
-                    </p>
+                    <p>{t.features.cards[0].desc}</p>
                     <ul className="mt-4 space-y-2">
                       <li className="flex items-start">
                         <ArrowRight className="h-5 w-5 text-green-500 mr-2 flex-shrink-0" />
-                        <span>Comprehensive documentation</span>
+                        <span>{t.features.cards[0].bullet1}</span>
                       </li>
                       <li className="flex items-start">
                         <ArrowRight className="h-5 w-5 text-green-500 mr-2 flex-shrink-0" />
-                        <span>SDK support for multiple platform</span>
+                        <span>{t.features.cards[0].bullet2}</span>
                       </li>
                       <li className="flex items-start">
                         <ArrowRight className="h-5 w-5 text-green-500 mr-2 flex-shrink-0" />
-                        <span>Consistent request/response patterns</span>
+                        <span>{t.features.cards[0].bullet3}</span>
                       </li>
                     </ul>
                   </div>
@@ -78,26 +80,23 @@ export default function FeaturesPage() {
                       <Layers className="h-6 w-6 text-white" />
                     </div>
                     <h3 className="ml-3 text-lg font-medium text-gray-900">
-                      Multiple AI Providers
+                      {t.features.cards[1].title}
                     </h3>
                   </div>
                   <div className="mt-4 text-gray-500">
-                    <p>
-                      Access the best AI models from various providers through a
-                      single, unified interface.
-                    </p>
+                    <p>{t.features.cards[1].desc}</p>
                     <ul className="mt-4 space-y-2">
                       <li className="flex items-start">
                         <ArrowRight className="h-5 w-5 text-green-500 mr-2 flex-shrink-0" />
-                        <span>Seamless provider switching</span>
+                        <span>{t.features.cards[1].bullet1}</span>
                       </li>
                       <li className="flex items-start">
                         <ArrowRight className="h-5 w-5 text-green-500 mr-2 flex-shrink-0" />
-                        <span>Model-agnostic implementations</span>
+                        <span>{t.features.cards[1].bullet2}</span>
                       </li>
                       <li className="flex items-start">
                         <ArrowRight className="h-5 w-5 text-green-500 mr-2 flex-shrink-0" />
-                        <span>Comparative analytics across providers</span>
+                        <span>{t.features.cards[1].bullet3}</span>
                       </li>
                     </ul>
                   </div>
@@ -112,26 +111,23 @@ export default function FeaturesPage() {
                       <Zap className="h-6 w-6 text-white" />
                     </div>
                     <h3 className="ml-3 text-lg font-medium text-gray-900">
-                      Visual Builder
+                      {t.features.cards[2].title}
                     </h3>
                   </div>
                   <div className="mt-4 text-gray-500">
-                    <p>
-                      Preview and modify your chatbot in an intuitive visual
-                      editor.
-                    </p>
+                    <p>{t.features.cards[2].desc}</p>
                     <ul className="mt-4 space-y-2">
                       <li className="flex items-start">
                         <ArrowRight className="h-5 w-5 text-green-500 mr-2 flex-shrink-0" />
-                        <span>Testing tool</span>
+                        <span>{t.features.cards[2].bullet1}</span>
                       </li>
                       <li className="flex items-start">
                         <ArrowRight className="h-5 w-5 text-green-500 mr-2 flex-shrink-0" />
-                        <span>Flows</span>
+                        <span>{t.features.cards[2].bullet2}</span>
                       </li>
                       <li className="flex items-start">
                         <ArrowRight className="h-5 w-5 text-green-500 mr-2 flex-shrink-0" />
-                        <span>Easily test before you launch</span>
+                        <span>{t.features.cards[2].bullet3}</span>
                       </li>
                     </ul>
                   </div>
@@ -146,26 +142,23 @@ export default function FeaturesPage() {
                       <Shield className="h-6 w-6 text-white" />
                     </div>
                     <h3 className="ml-3 text-lg font-medium text-gray-900">
-                      Templates
+                      {t.features.cards[3].title}
                     </h3>
                   </div>
                   <div className="mt-4 text-gray-500">
-                    <p>
-                      Choose a ready-to-use template from the library for an
-                      easier start.
-                    </p>
+                    <p>{t.features.cards[3].desc}</p>
                     <ul className="mt-4 space-y-2">
                       <li className="flex items-start">
                         <ArrowRight className="h-5 w-5 text-green-500 mr-2 flex-shrink-0" />
-                        <span>Customer Service</span>
+                        <span>{t.features.cards[3].bullet1}</span>
                       </li>
                       <li className="flex items-start">
                         <ArrowRight className="h-5 w-5 text-green-500 mr-2 flex-shrink-0" />
-                        <span>Customer Satisfaction</span>
+                        <span>{t.features.cards[3].bullet2}</span>
                       </li>
                       <li className="flex items-start">
                         <ArrowRight className="h-5 w-5 text-green-500 mr-2 flex-shrink-0" />
-                        <span>Ecommerce - sales</span>
+                        <span>{t.features.cards[3].bullet3}</span>
                       </li>
                     </ul>
                   </div>
@@ -180,27 +173,23 @@ export default function FeaturesPage() {
                       <Database className="h-6 w-6 text-white" />
                     </div>
                     <h3 className="ml-3 text-lg font-medium text-gray-900">
-                      Data collection and workflows
+                      {t.features.cards[4].title}
                     </h3>
                   </div>
                   <div className="mt-4 text-gray-500">
-                    <p>
-                      Collect user information ,Create questions, forms, and
-                      surveys,Group users and direct them to different chatbot
-                      flows or export contact information.
-                    </p>
+                    <p>{t.features.cards[4].desc}</p>
                     <ul className="mt-4 space-y-2">
                       <li className="flex items-start">
                         <ArrowRight className="h-5 w-5 text-green-500 mr-2 flex-shrink-0" />
-                        <span>A/B Testing</span>
+                        <span>{t.features.cards[4].bullet1}</span>
                       </li>
                       <li className="flex items-start">
                         <ArrowRight className="h-5 w-5 text-green-500 mr-2 flex-shrink-0" />
-                        <span>Webhooks</span>
+                        <span>{t.features.cards[4].bullet2}</span>
                       </li>
                       <li className="flex items-start">
                         <ArrowRight className="h-5 w-5 text-green-500 mr-2 flex-shrink-0" />
-                        <span>Zapier actions</span>
+                        <span>{t.features.cards[4].bullet3}</span>
                       </li>
                     </ul>
                   </div>
@@ -215,22 +204,19 @@ export default function FeaturesPage() {
                       <Settings className="h-6 w-6 text-white" />
                     </div>
                     <h3 className="ml-3 text-lg font-medium text-gray-900">
-                      Reports
+                      {t.features.cards[5].title}
                     </h3>
                   </div>
                   <div className="mt-4 text-gray-500">
-                    <p>
-                      Follow insights on the number of chats and users, and
-                      track the busiest periods.
-                    </p>
+                    <p>{t.features.cards[5].desc}</p>
                     <ul className="mt-4 space-y-2">
                       <li className="flex items-start">
                         <ArrowRight className="h-5 w-5 text-green-500 mr-2 flex-shrink-0" />
-                        <span>Trends in chats and users</span>
+                        <span>{t.features.cards[5].bullet1}</span>
                       </li>
                       <li className="flex items-start">
                         <ArrowRight className="h-5 w-5 text-green-500 mr-2 flex-shrink-0" />
-                        <span>Most popular interactions</span>
+                        <span>{t.features.cards[5].bullet2}</span>
                       </li>
                     </ul>
                   </div>
@@ -246,10 +232,10 @@ export default function FeaturesPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h2 className="text-base font-semibold tracking-wide uppercase text-green-600">
-              Why Choose Us
+              {t.features.comparison.title}
             </h2>
             <p className="mt-2 text-3xl font-extrabold text-gray-900 sm:text-4xl">
-              Compare with Alternatives
+              {t.features.comparison.subtitle}
             </p>
           </div>
           <div className="mt-12 overflow-hidden shadow rounded-lg">
@@ -261,80 +247,80 @@ export default function FeaturesPage() {
                       scope="col"
                       className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
                     >
-                      Features
+                      {t.features.comparison.colFeatures}
                     </th>
                     <th
                       scope="col"
                       className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
                     >
-                      Our Platform
+                      {t.features.comparison.colOurs}
                     </th>
                     <th
                       scope="col"
                       className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
                     >
-                      Competitors
+                      {t.features.comparison.colCompetitors}
                     </th>
                   </tr>
                 </thead>
                 <tbody className="bg-white divide-y divide-gray-200">
                   <tr>
                     <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                      Multiple AI Providers
+                      {t.features.comparison.row1.feature}
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                       <span className="text-green-600 font-medium">
-                        ✓ 10+ providers integrated
+                        {t.features.comparison.row1.ours}
                       </span>
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                       <span className="text-red-600">
-                        ✗ Limited to 1-2 providers
+                        {t.features.comparison.row1.competitors}
                       </span>
                     </td>
                   </tr>
                   <tr>
                     <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                      API Simplicity
+                      {t.features.comparison.row2.feature}
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                       <span className="text-green-600 font-medium">
-                        ✓ Simple, consistent APIs
+                        {t.features.comparison.row2.ours}
                       </span>
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                       <span className="text-red-600">
-                        ✗ Complex implementation
+                        {t.features.comparison.row2.competitors}
                       </span>
                     </td>
                   </tr>
                   <tr>
                     <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                      Global Infrastructure
+                      {t.features.comparison.row3.feature}
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                       <span className="text-green-600 font-medium">
-                        ✓ 20+ global regions
+                        {t.features.comparison.row3.ours}
                       </span>
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                       <span className="text-red-600">
-                        ✗ Limited regional availability
+                        {t.features.comparison.row3.competitors}
                       </span>
                     </td>
                   </tr>
                   <tr>
                     <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                      Enterprise Security
+                      {t.features.comparison.row4.feature}
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                       <span className="text-green-600 font-medium">
-                        ✓ Comprehensive compliance
+                        {t.features.comparison.row4.ours}
                       </span>
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                       <span className="text-yellow-600">
-                        ~ Partial compliance
+                        {t.features.comparison.row4.competitors}
                       </span>
                     </td>
                   </tr>
@@ -349,8 +335,8 @@ export default function FeaturesPage() {
       <div className="bg-neutral-900">
         <div className="max-w-2xl mx-auto text-center py-16 px-4 sm:py-20 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-extrabold text-white sm:text-4xl">
-            <span className="block">Ready to get started?</span>
-            <span className="block">Try our platform today.</span>
+            <span className="block">{t.features.cta.line1}</span>
+            <span className="block"> {t.features.cta.line2} </span>
           </h2>
         </div>
       </div>
