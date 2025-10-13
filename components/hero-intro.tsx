@@ -1,49 +1,30 @@
 "use client";
 import React, { useState } from "react";
 import { Play, Info, Heart, ExternalLink, Rss } from "lucide-react";
+import { getTranslations } from "@/app/[locale]/i18n";
 
-export default function HeroIntro() {
+type HeroIntroProps = {
+  locale: "en" | "ar";
+};
+
+const tabIcons = [Info, Rss, Heart, ExternalLink];
+const tabMedia = [
+  { mediaType: "image", mediaUrl: "/images/intro/flow-1.png" },
+  { mediaType: "video", mediaUrl: "/images/intro/multiple-channels.png" },
+  { mediaType: "image", mediaUrl: "/images/intro/template.png" },
+  { mediaType: "image", mediaUrl: "/images/intro/branding.png" },
+];
+
+const HeroIntro: React.FC<HeroIntroProps> = ({ locale }) => {
+  const t = getTranslations(locale);
+  const tabs = t.landing.heroIntro.tabs.map((tab: any, idx: number) => ({
+    ...tab,
+    icon: tabIcons[idx],
+    mediaType: tabMedia[idx].mediaType,
+    mediaUrl: tabMedia[idx].mediaUrl,
+  }));
+
   const [activeTab, setActiveTab] = useState(0);
-
-  const tabs = [
-    {
-      label: "Visual Builder",
-      title:
-        "The fastest way to create AI chatbots on your own terms and without coding.",
-      description:
-        "Comfortably design chatbots using a smooth, drag-and-drop chatbot builder. Manage even the most complex chatbot flows on a single screen, and get full control over the building process.",
-      mediaType: "image",
-      mediaUrl: "/images/intro/flow-1.png",
-      icon: Info,
-    },
-    {
-      label: "Multiple channels",
-      title: "Support customers on multiple channels",
-      description:
-        "Add an AI chatbot to your website, LiveChat, Whatsapp, or Shopify to handle all support cases automatically, 24/7 , Your bot can automatically add new leads to your CRM, send you an email after successful sales and much more, so you will never miss an opportunity. Find out what’s the best routine for your bot..",
-      mediaType: "video",
-      mediaUrl: "/images/intro/multiple-channels.png",
-      icon: Rss,
-    },
-    {
-      label: "Use templates",
-      title: "Ready-to-use templates to build chatbots in minutes",
-      description:
-        "Templates are customizable chatbot Stories that let you launch task-specific chatbots in just a few clicks. Breathe life into your chatbots within minutes.",
-      mediaType: "image",
-      mediaUrl: "/images/intro/template.png",
-      icon: Heart,
-    },
-    {
-      label: "Publish",
-      title: "Publish a chatbot on your website",
-      description:
-        "Our Chat Widget lets you do it without coding , Match Chat Widget to your website’s style. Deliver a consistent brand experience, Decide how and where your chatbot is shown on your website.",
-      mediaType: "image",
-      mediaUrl: "/images/intro/branding.png",
-      icon: ExternalLink,
-    },
-  ];
 
   return (
     <div className="w-full max-w-4xl mx-auto bg-white rounded-lg shadow-lg overflow-hidden">
@@ -112,16 +93,14 @@ export default function HeroIntro() {
                   {tab.title}
                 </h3>
                 <p className="text-gray-600 mb-6">{tab.description}</p>
-                {index === 2 && (
+                {tab.features && Array.isArray(tab.features) && (
                   <div className="space-y-3">
-                    {["free to use", "wide choice", "easy setup"].map(
-                      (feature, i) => (
-                        <div key={i} className="flex items-center">
-                          <div className="h-2 w-2 bg-blue-600 rounded-full mr-2"></div>
-                          <span className="text-gray-700">{feature}</span>
-                        </div>
-                      )
-                    )}
+                    {tab.features.map((feature: string, i: number) => (
+                      <div key={i} className="flex items-center">
+                        <div className="h-2 w-2 bg-blue-600 rounded-full mr-2"></div>
+                        <span className="text-gray-700">{feature}</span>
+                      </div>
+                    ))}
                   </div>
                 )}
               </div>
@@ -131,4 +110,6 @@ export default function HeroIntro() {
       </div>
     </div>
   );
-}
+};
+
+export default HeroIntro;

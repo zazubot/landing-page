@@ -12,9 +12,13 @@ import React, { useState } from "react";
 const payMonth = "https://secure.clickpay.com.sa/payment/link/46742/242921";
 const payYear = "https://secure.clickpay.com.sa/payment/link/46742/242905";
 
-const PricingTable = () => {
+export default async function PricingTable({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
   const [selectedPlan, setSelectedPlan] = useState("free");
-
+  const resolvedParams = await params;
   const plans = [
     {
       id: "free",
@@ -291,10 +295,8 @@ const PricingTable = () => {
             Get started with {plans.find((p) => p.id === selectedPlan)?.name}
           </button>
         </div>
-        <FAQAccordion />
+        <FAQAccordion locale={resolvedParams?.locale === "ar" ? "ar" : "en"} />
       </div>
     </div>
   );
-};
-
-export default PricingTable;
+}

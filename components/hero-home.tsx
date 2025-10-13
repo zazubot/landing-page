@@ -12,8 +12,7 @@ import { getTranslations } from "@/app/[locale]/i18n";
 export default function HeroHome({ locale }: { locale: "en" | "ar" }) {
   const t = getTranslations(locale);
   const [showModal, setShowModal] = useState(false);
-  // Function to handle modal close
-  console.log("locals", locale);
+
   return (
     <section className="relative">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
@@ -76,13 +75,11 @@ export default function HeroHome({ locale }: { locale: "en" | "ar" }) {
             >
               <span data-aos-delay={150}>
                 {" "}
-                {t.title}
+                {t.landing.hero.title1}
                 {/* Help, support, and sell{" "} */}
               </span>
               <br className="max-lg:hidden " />
-              <span className="text-green-800">
-                with a data-driven AI Agent
-              </span>
+              <span className="text-green-800">{t.landing.hero.title2}</span>
             </h1>
             <div className="mx-auto max-w-3xl">
               <p
@@ -90,9 +87,7 @@ export default function HeroHome({ locale }: { locale: "en" | "ar" }) {
                 data-aos="zoom-y-out"
                 data-aos-delay={300}
               >
-                ZazuBot instantly helps your customers using AI-generated
-                responses. Get 24/7 support and ultra-high satisfaction rates.
-                Help, convert, and sell with a data-driven AI chatbot
+                {t.landing.hero.description}
               </p>
               <div className="relative before:absolute before:inset-0 before:border-y before:[border-image:linear-gradient(to_right,transparent,--theme(--color-slate-300/.8),transparent)1]">
                 <div

@@ -1,5 +1,150 @@
 {
-  "title": "ZazuBot® - The Best AI Chatbot Software for Your Website",
+  "title": "ZazuBot® - The Best AI Chatbot Software for Your Bussiness",
   "description": "A user-friendly platform that allows you to seamlessly design, deploy, and integrate advanced chatbots into websites and messaging platforms like WhatsApp, enhancing user engagement and automating communication.",
-  "welcome": "Welcome to ZazuBot!"
+  "welcome": "Welcome to ZazuBot!",
+  "landing": {
+    "hero": {
+      "title1": "Help, support, and sell",
+      "title2": "with a data-driven AI Agent",
+      "description": "ZazuBot instantly helps your customers using AI-generated responses. Get 24/7 support and ultra-high satisfaction rates. Help, convert, and sell with a data-driven AI chatbot"
+    },
+    "features": {
+      "title": "Together, we're hacking the future of conversational AI apps",
+      "features": [
+        {
+          "title": "Marketing",
+          "description": "Let your bot drive the conversation and turn leads into customers."
+        },
+        {
+          "title": "Customer Support",
+          "description": "Deliver 24/7 multichannel support and make your customers happy."
+        },
+        {
+          "title": "Sales",
+          "description": "Boost meetings and show rates with highly interested leads"
+        }
+      ]
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "subtitle": "Find answers to common questions about our service.",
+      "questions": [
+        {
+          "question": "What payment methods do you accept?",
+          "answer": "We accept all major credit cards (Visa, Mastercard, American Express), PayPal, and bank transfers. For enterprise customers, we also offer invoicing options with net-30 payment terms."
+        },
+        {
+          "question": "Can I cancel my subscription at any time?",
+          "answer": "Yes, you can cancel your subscription at any time from your account settings. If you cancel before your billing cycle ends, you'll still have access to your account until the end of the period you've paid for. We don't offer prorated refunds for partial months."
+        },
+        {
+          "question": "Is there a free trial available?",
+          "answer": "Yes, we offer a 14-day free trial on all our plans. No credit card is required to start your trial - you'll only be asked for payment details when you decide to continue with a paid plan."
+        },
+        {
+          "question": "Do you offer discounts for non-profits or educational institutions?",
+          "answer": "Yes, we offer special pricing for qualified non-profit organizations, educational institutions, and students. Please contact our sales team with appropriate documentation to apply for these special rates."
+        },
+        {
+          "question": "Can I change my plan later?",
+          "answer": "Absolutely! You can upgrade or downgrade your plan at any time. When upgrading, the new rate will be prorated for the remainder of your billing cycle. When downgrading, the new rate will apply at the start of your next billing cycle."
+        }
+      ]
+    },
+    "featuresPlanet": {
+      "articles": [
+        {
+          "title": "Generate more qualified leads",
+          "description": "Get leads through conversations and qualify your prospects automatically."
+        },
+        {
+          "title": "Improve customer experience",
+          "description": "Offer personalized recommendations and tailored customer support."
+        },
+        {
+          "title": "Help your customers 24/7",
+          "description": "Offer consistent support across channels and let customers resolve issues whenever they want."
+        },
+        {
+          "title": "Resolve problems faster",
+          "description": "Explain technical problems using visuals and interactive forms to shorten the resolution time."
+        },
+        {
+          "title": "Boost team productivity",
+          "description": "Automate answering repetitive questions to let your team focus on more challenging cases."
+        },
+        {
+          "title": "Get more leads on your site",
+          "description": "Add Chat Widget to your website with a few simple clicks to make it easier for customers to contact you."
+        }
+      ]
+    },
+    "heroIntro": {
+      "tabs": [
+        {
+          "label": "Visual Builder",
+          "title": "The fastest way to create AI chatbots on your own terms and without coding.",
+          "description": "Comfortably design chatbots using a smooth, drag-and-drop chatbot builder. Manage even the most complex chatbot flows on a single screen, and get full control over the building process."
+        },
+        {
+          "label": "Multiple channels",
+          "title": "Support customers on multiple channels",
+          "description": "Add an AI chatbot to your website, LiveChat, Whatsapp, or Shopify to handle all support cases automatically, 24/7 , Your bot can automatically add new leads to your CRM, send you an email after successful sales and much more, so you will never miss an opportunity. Find out what’s the best routine for your bot.."
+        },
+        {
+          "label": "Use templates",
+          "title": "Ready-to-use templates to build chatbots in minutes",
+          "description": "Templates are customizable chatbot Stories that let you launch task-specific chatbots in just a few clicks. Breathe life into your chatbots within minutes.",
+          "features": ["free to use", "wide choice", "easy setup"]
+        },
+        {
+          "label": "Publish",
+          "title": "Publish a chatbot on your website",
+          "description": "Our Chat Widget lets you do it without coding , Match Chat Widget to your website’s style. Deliver a consistent brand experience, Decide how and where your chatbot is shown on your website."
+        }
+      ]
+    },
+    "heroLocations": {
+      "sectionTitle": "Our Presence",
+      "mainTitle": "Global Locations",
+      "locations": [
+        {
+          "country": "Saudi Arabia",
+          "address": "6710 Prince Turkey Street\nAl Yarmouk, Al Khobar 34423\nSaudi Arabia",
+          "note": "Headquarters"
+        }
+      ]
+    },
+    "heroTerminal": {
+      "customer": "Customer:",
+      "customerMessage1": "Hi, I need help with my recent order. I think I was charged incorrectly.",
+      "agent": "Zazubot Support Agent:",
+      "agentMessage1": "Hello! I'm sorry to hear that. I'd be happy to assist you with your order. Could you please provide your order number?",
+      "customerMessage2": "Sure! My order number is 123456.",
+      "agent2": "Support Agent:",
+      "agentMessage2": "Thank you! Let me check that for you. One moment, please.",
+      "agentMessage3": "It looks like you were charged an extra $5 for shipping, but our website had a promotion for free shipping. I apologize for the mistake. I'll issue a refund for that amount right away."
+    },
+    "largeTestimonial": {
+      "sectionTitle": "What Our Clients Are Saying",
+      "subtitle": "Don't just take our word for it - hear from some of our satisfied clients."
+    },
+    "useCases": {
+      "title": "Together, we're hacking the future of conversational AI apps",
+      "cases": [
+        {
+          "title": "Marketing",
+          "description": "Let your bot drive the conversation and turn leads into customers."
+        },
+        {
+          "title": "Support & Product",
+          "description": "Deliver 24/7 multichannel support and make your customers happy."
+        },
+        {
+          "title": "Sales",
+          "description": "Boost meetings and show rates with highly interested leads"
+        }
+      ]
+    }
+  }
 }

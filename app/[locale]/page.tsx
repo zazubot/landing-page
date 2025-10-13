@@ -1,5 +1,3 @@
-import { getTranslations } from "./i18n";
-
 import Hero from "@/components/hero-home";
 import FeaturesPlanet from "@/components/features-planet";
 import LargeTestimonial from "@/components/large-testimonial";
@@ -16,11 +14,13 @@ export default async function LocaleHome({
   return (
     <>
       <Hero locale={resolvedParams?.locale === "ar" ? "ar" : "en"} />
-      <HeroIntro />
-      <UseCases />
-      <FeaturesPlanet />
-      <LargeTestimonial />
-      <FAQAccordion />
+      <HeroIntro locale={resolvedParams?.locale === "ar" ? "ar" : "en"} />
+      <UseCases locale={resolvedParams?.locale === "ar" ? "ar" : "en"} />
+      <FeaturesPlanet locale={resolvedParams?.locale === "ar" ? "ar" : "en"} />
+      <LargeTestimonial
+        locale={resolvedParams?.locale === "ar" ? "ar" : "en"}
+      />
+      <FAQAccordion locale={resolvedParams?.locale === "ar" ? "ar" : "en"} />
     </>
   );
 }

@@ -1,8 +1,8 @@
 import "./css/style.css";
 
-import { Inter } from "next/font/google";
+import { Cairo } from "next/font/google";
 
-const inter = Inter({
+const inter = Cairo({
   subsets: ["latin"],
   variable: "--font-inter",
   display: "swap",
