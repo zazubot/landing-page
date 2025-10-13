@@ -13,12 +13,13 @@ import {
 import BusinessCategories from "@/components/business-categories";
 import { getTranslations } from "@/app/[locale]/i18n";
 
-export default function FeaturesPage({
+export default async function FeaturesPage({
   params,
 }: {
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }) {
-  const locale = params?.locale === "ar" ? "ar" : "en";
+  const resolvedParams = await params;
+  const locale = resolvedParams?.locale === "ar" ? "ar" : "en";
   const t = getTranslations(locale);
 
   return (

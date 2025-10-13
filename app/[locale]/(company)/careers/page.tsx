@@ -1,13 +1,15 @@
 "use client";
 
 import { getTranslations } from "@/app/[locale]/i18n";
-import { usePathname } from "next/navigation";
 
-export default function CareersPage() {
-  const pathname = usePathname();
-  const pathParts = pathname.split("/");
-  const currentLocale = pathParts[1] === "ar" ? "ar" : "en";
-  const t = getTranslations(currentLocale);
+export default async function CareersPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const resolvedParams = await params;
+  const locale = resolvedParams?.locale === "ar" ? "ar" : "en";
+  const t = getTranslations(locale);
 
   return (
     <div className="bg-white">
