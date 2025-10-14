@@ -9,7 +9,7 @@ const inter = Cairo({
 });
 
 export const metadata = {
-  title: "ZazuBot® - The Best AI Chatbot Software for Your Website",
+  title: "ZazuBot® - The Best AI Chatbot Software for Your Bussiness",
   icons: {
     icon: "/favicon.ico",
     shortcut: "/favicon.ico",
