@@ -91,26 +91,39 @@ export default function HeroHome({ locale }: { locale: "en" | "ar" }) {
               </p>
               <div className="relative before:absolute before:inset-0 before:border-y before:[border-image:linear-gradient(to_right,transparent,--theme(--color-slate-300/.8),transparent)1]">
                 <div
-                  className="mx-auto max-w-xs sm:flex sm:max-w-none sm:justify-center"
+                  className="mx-auto max-w-xs sm:flex sm:max-w-none sm:justify-center "
                   data-aos="zoom-y-out"
                   data-aos-delay={450}
                 >
+                  <a
+                    className="btn w-full m-2 bg-green-800 text-neutral-200 shadow-sm hover:bg-green-900 sm:ml-4 sm:w-auto"
+                    href="https://app.zazubot.com"
+                  >
+                    <span className="relative inline-flex items-center">
+                      {t.header.startNow}
+                    </span>
+                  </a>
                   <button
-                    className="btn w-full  bg-green-800 text-neutral-200 shadow-sm hover:bg-green-900 sm:ml-4 sm:w-auto"
+                    className="btn w-full m-2 bg-white text-neutral-800 shadow-sm hover:bg-neutral-50 sm:ml-4 sm:w-auto"
                     onClick={() => setShowModal(true)}
                   >
-                    Watch Demo Video
+                    {t.header.watchDemo}
                   </button>
 
                   <a
-                    className="btn w-full bg-white text-neutral-800 shadow-sm hover:bg-neutral-50 sm:ml-4 sm:w-auto"
+                    className="btn w-full m-2 bg-black text-neutral-50 shadow-sm hover:bg-neutral-800 sm:ml-4 sm:w-auto"
+                    href="/pricing"
+                  >
+                    <span className="relative inline-flex items-center">
+                      {t.header.pricing}
+                    </span>
+                  </a>
+                  <a
+                    className="btn w-full m-2 bg-white text-neutral-800 shadow-sm hover:bg-neutral-50 sm:ml-4 sm:w-auto"
                     href="https://docs.zazubot.com/"
                   >
                     <span className="relative inline-flex items-center">
-                      Documentaions
-                      <span className="ml-1 tracking-normal text-neutral-300 transition-transform group-hover:translate-x-0.5">
-                        -&gt;
-                      </span>
+                      {t.header.documentations}
                     </span>
                   </a>
                 </div>

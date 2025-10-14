@@ -75,26 +75,6 @@ export default function Header() {
               العربية
             </button>
           </div>
-
-          {/* Desktop sign in links */}
-          <ul className="flex flex-1 items-center justify-end gap-3">
-            <li>
-              <Link
-                href="https://app.zazubot.com"
-                className="btn-sm bg-green-800 text-neutral-200 shadow-sm hover:bg-green-900"
-              >
-                {t.header.startNow}
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/pricing"
-                className="btn-sm bg-white text-neutral-800 shadow-sm hover:bg-neutral-50"
-              >
-                {t.header.pricing}
-              </Link>
-            </li>
-          </ul>
         </div>
       </div>
     </header>

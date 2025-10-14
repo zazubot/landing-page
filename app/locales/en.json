@@ -4,7 +4,9 @@
   "welcome": "Welcome to ZazuBot!",
   "header": {
     "startNow": "Start Now",
-    "pricing": "Pricing Table"
+    "pricing": "Pricing Table",
+    "documentations": "Documentations",
+    "watchDemo": "Watch Demo Video"
   },
   "landing": {
     "hero": {
