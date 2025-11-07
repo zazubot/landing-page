@@ -20,10 +20,7 @@ export default function HeroHome({ locale }: { locale: "en" | "ar" }) {
         <div className="pt-32 md:pt-40">
           {/* Section header */}
           <div className="pb-12 text-center md:pb-16">
-            <div
-              className="mb-6 border-y [border-image:linear-gradient(to_right,transparent,--theme(--color-slate-300/.8),transparent)1]"
-              data-aos="zoom-y-out"
-            >
+            <div className="mb-6 " data-aos="zoom-y-out">
               <div className="-mx-0.5 flex justify-center space-x-3">
                 <Image
                   className="box-content rounded-full border-2 border-neutral-50"
@@ -70,7 +67,7 @@ export default function HeroHome({ locale }: { locale: "en" | "ar" }) {
               </div>
             </div>
             <h1
-              className="mb-8 border-y text-5xl font-bold [border-image:linear-gradient(to_right,transparent,--theme(--color-slate-300/.8),transparent)1] md:text-6xl"
+              className="mb-8 border-y text-5xl font-bold  md:text-6xl"
               data-aos="zoom-y-out"
             >
               <span data-aos-delay={250}> {t.landing.hero.title1} </span>
