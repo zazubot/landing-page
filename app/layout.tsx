@@ -1,50 +1,74 @@
-import "./css/style.css";
+import type { Metadata } from "next";
+import { Manrope, Space_Grotesk } from "next/font/google";
 
-import { Cairo } from "next/font/google";
+import { SiteFooter } from "@/components/site-footer";
+import { SiteHeader } from "@/components/site-header";
+import { siteName, siteUrl } from "@/lib/site-content";
 
-const inter = Cairo({
+import "./globals.css";
+
+const bodyFont = Manrope({
   subsets: ["latin"],
-  variable: "--font-inter",
-  display: "swap",
+  variable: "--font-body",
 });
 
-export const metadata = {
-  title: "ZazuBot® - The Best AI Chatbot Software for Your Bussiness",
-  icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon.ico",
-    apple: "/images/logo.png",
-    "og:image":
-      "https://eayni-assets.s3.us-east-1.amazonaws.com/zazubot-sfgco-header.jpg",
-    "twitter:image":
-      "https://eayni-assets.s3.us-east-1.amazonaws.com/zazubot-sfgco-header.jpg",
+const displayFont = Space_Grotesk({
+  subsets: ["latin"],
+  variable: "--font-display",
+});
+
+export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: `${siteName} | AI Chatbot Software for Support, Sales, and Automation`,
+    template: `%s | ${siteName}`,
   },
+  description:
+    "Design, deploy, and integrate advanced AI chatbots into websites and messaging platforms with ZazuBot.",
   openGraph: {
+    type: "website",
+    url: siteUrl,
+    title: `${siteName} | AI Chatbot Software for Support, Sales, and Automation`,
+    description:
+      "Design, deploy, and integrate advanced AI chatbots into websites and messaging platforms with ZazuBot.",
+    siteName,
     images: [
       {
-        url: "https://eayni-assets.s3.us-east-1.amazonaws.com/zazubot-sfgco-header.jpg",
+        url: "/og-image.png",
         width: 1200,
         height: 630,
+        alt: "ZazuBot landing page preview",
       },
     ],
   },
-  description:
-    "A user-friendly platform that allows you to seamlessly design, deploy, and integrate advanced chatbots into websites and messaging platforms like WhatsApp, enhancing user engagement and automating communication.",
+  twitter: {
+    card: "summary_large_image",
+    title: `${siteName} | AI Chatbot Software for Support, Sales, and Automation`,
+    description:
+      "Design, deploy, and integrate advanced AI chatbots into websites and messaging platforms with ZazuBot.",
+    images: ["/og-image.png"],
+  },
+  manifest: "/site.webmanifest",
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({
   children,
-}: {
+}: Readonly<{
   children: React.ReactNode;
-}) {
+}>) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en">
       <body
-        className={`${inter.variable} bg-neutral-50 font-inter tracking-tight text-neutral-900 antialiased`}
+        className={`${bodyFont.variable} ${displayFont.variable} bg-background font-[family-name:var(--font-body)] text-foreground antialiased`}
       >
-        <div className="flex min-h-screen flex-col overflow-hidden supports-[overflow:clip]:overflow-clip">
-          <div className="mt-20"></div>
-          {children}
+        <div className="relative min-h-screen bg-[linear-gradient(180deg,#ffffff_0%,#f7faf9_100%)]">
+          <SiteHeader />
+          <main>{children}</main>
+          <SiteFooter />
         </div>
       </body>
     </html>
