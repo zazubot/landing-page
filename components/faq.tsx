@@ -1,79 +1,80 @@
-"use client";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
-import React, { useState } from "react";
-import { getTranslations } from "@/app/[locale]/i18n";
+const faq = [
+  {
+    question: "What is your return policy?",
+    answer:
+      "You can return unused items in their original packaging within 30 days for a refund or exchange. Contact support for assistance.",
+  },
+  {
+    question: "How do I track my order?",
+    answer:
+      "Track your order using the link provided in your confirmation email, or log into your account to view tracking details.",
+  },
+  {
+    question: "Do you ship internationally?",
+    answer:
+      "Yes, we ship worldwide. Shipping fees and delivery times vary by location, and customs duties may apply for some countries.",
+  },
+  {
+    question: "What payment methods do you accept?",
+    answer:
+      "We accept Visa, MasterCard, American Express, PayPal, Apple Pay, and Google Pay, ensuring secure payment options for all customers.",
+  },
+  {
+    question: "What if I receive a damaged item?",
+    answer:
+      "Please contact our support team within 48 hours of delivery with photos of the damaged item. We’ll arrange a replacement or refund.",
+  },
+  {
+    question: "How can I contact customer support?",
+    answer:
+      "You can reach our support team via email at support@example.com or through the live chat on our website. We're available 24/7 to assist you.",
+  },
+];
 
-type FAQAccordionProps = {
-  locale: "en" | "ar";
-};
-
-const FAQAccordion: React.FC<FAQAccordionProps> = ({ locale }) => {
-  const t = getTranslations(locale);
-
-  const faqs = t.landing.faq.questions;
-
-  const [openIndex, setOpenIndex] = useState(0);
-
-  const toggleAccordion = (index: number) => {
-    setOpenIndex(openIndex === index ? -1 : index);
-  };
-
+const FAQ = () => {
   return (
-    <div className="max-w-3xl mb-4 mx-auto">
-      <div className="text-center mb-12">
-        <h1 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
-          {t.landing.faq.title}
-        </h1>
-        <p className="mt-4 text-xl text-gray-600">{t.landing.faq.subtitle}</p>
-      </div>
+    <div
+      id="faq"
+      className="w-full max-w-(--breakpoint-xl) mx-auto py-8 xs:py-16 px-6"
+    >
+      <h2 className="md:text-center text-3xl xs:text-4xl md:text-5xl leading-[1.15]! font-semibold tracking-tighter">
+        Frequently Asked Questions
+      </h2>
+      <p className="mt-1.5 md:text-center xs:text-lg text-muted-foreground">
+        Quick answers to common questions about our products and services.
+      </p>
 
-      <div className="space-y-4">
-        {faqs.map(
-          (faq: { question: string; answer: string }, index: number) => (
-            <div
-              key={index}
-              className="bg-white rounded-lg shadow-sm overflow-hidden"
+      <div className="min-h-[550px] md:min-h-[320px] xl:min-h-[300px]">
+        <Accordion
+          type="single"
+          collapsible
+          className="mt-8 space-y-4 md:columns-2 gap-4"
+        >
+          {faq.map(({ question, answer }, index) => (
+            <AccordionItem
+              key={question}
+              value={`question-${index}`}
+              className="bg-accent py-1 px-4 rounded-xl border-none mt-0! mb-4! break-inside-avoid"
             >
-              <button
-                className="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none"
-                onClick={() => toggleAccordion(index)}
-              >
-                <span className="text-lg font-medium text-gray-900">
-                  {faq.question}
-                </span>
-                <svg
-                  className={`w-5 h-5 text-gray-500 transform transition-transform duration-200 ${
-                    openIndex === index ? "rotate-180" : ""
-                  }`}
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M19 9l-7 7-7-7"
-                  />
-                </svg>
-              </button>
-              <div
-                className={`transition-all duration-300 ease-in-out ${
-                  openIndex === index
-                    ? "max-h-96 opacity-100"
-                    : "max-h-0 opacity-0"
-                } overflow-hidden`}
-              >
-                <div className="px-6 pb-4 text-base text-gray-600">
-                  {faq.answer}
-                </div>
-              </div>
-            </div>
-          )
-        )}
+              <AccordionTrigger className="py-4 text-start text-lg font-semibold tracking-tight hover:no-underline [&[data-state=open]>svg]:rotate-45">
+                {question}
+              </AccordionTrigger>
+              <AccordionContent className="text-[15px]">
+                {answer}
+              </AccordionContent>
+            </AccordionItem>
+          ))}
+        </Accordion>
       </div>
     </div>
   );
 };
 
-export default FAQAccordion;
+export default FAQ;
