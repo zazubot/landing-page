@@ -1,15 +1,15 @@
 import "./css/style.css";
 
-import { Inter } from "next/font/google";
+import { Cairo } from "next/font/google";
 
-const inter = Inter({
+const inter = Cairo({
   subsets: ["latin"],
   variable: "--font-inter",
   display: "swap",
 });
 
 export const metadata = {
-  title: "ZazuBot® - The Best AI Chatbot Software for Your Website",
+  title: "ZazuBot® - The Best AI Chatbot Software for Your Bussiness",
   icons: {
     icon: "/favicon.ico",
     shortcut: "/favicon.ico",
@@ -43,6 +43,7 @@ export default function RootLayout({
         className={`${inter.variable} bg-neutral-50 font-inter tracking-tight text-neutral-900 antialiased`}
       >
         <div className="flex min-h-screen flex-col overflow-hidden supports-[overflow:clip]:overflow-clip">
+          <div className="mt-20"></div>
           {children}
         </div>
       </body>

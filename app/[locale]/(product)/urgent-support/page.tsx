@@ -3,7 +3,12 @@
 import HeroLocations from "@/components/hero-locations";
 import { Standard } from "@typebot.io/nextjs";
 
-const UrgentSupport = () => {
+export default async function UrgentSupport({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const resolvedParams = await params;
   return (
     <div className=" py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
@@ -13,9 +18,7 @@ const UrgentSupport = () => {
           style={{ width: "undefined", height: "60vh" }}
         />
       </div>
-      <HeroLocations />
+      <HeroLocations locale={resolvedParams?.locale === "ar" ? "ar" : "en"} />
     </div>
   );
-};
-
-export default UrgentSupport;
+}

@@ -1,13 +1,18 @@
+"use client";
+
 import LogoBySFGCO from "@/components/ui/logoBySFGCO";
 import { Users, Target, Award, Heart, Briefcase } from "lucide-react";
+import { getTranslations } from "@/app/[locale]/i18n";
 
-export const metadata = {
-  title: "About - ZazuBot",
-  description:
-    "we believe that meaningful conversations are the foundation of successful relationships",
-};
+export default async function AboutPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const resolvedParams = await params;
+  const locale = resolvedParams?.locale === "ar" ? "ar" : "en";
+  const t = getTranslations(locale);
 
-export default function AboutPage() {
   return (
     <div className="bg-white">
       {/* Hero Section */}
@@ -17,13 +22,10 @@ export default function AboutPage() {
         </div>
         <div className="relative max-w-7xl mx-auto py-24 px-4 sm:py-32 sm:px-6 lg:px-8">
           <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">
-            About Us
+            {t.about.heroTitle}
           </h1>
           <p className="mt-6 text-xl text-green-100 max-w-3xl">
-            we believe that meaningful conversations are the foundation of
-            successful relationships. Every day, people chat with friends,
-            family, and colleagues on platforms like WhatsApp, Messenger, and
-            more. It’s natural, engaging, and personal.
+            {t.about.heroText}
           </p>
         </div>
       </div>
@@ -33,10 +35,10 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h2 className="text-base font-semibold text-green-600 tracking-wide uppercase">
-              Our Purpose
+              {t.about.purposeTitle}
             </h2>
             <p className="mt-1 text-3xl font-extrabold text-gray-900 sm:text-4xl">
-              Mission & Vision
+              {t.about.missionVisionTitle}
             </p>
           </div>
           <div className="mt-12 grid gap-8 md:grid-cols-2">
@@ -46,14 +48,10 @@ export default function AboutPage() {
                   <Target className="h-6 w-6 text-green-600" />
                 </div>
                 <h3 className="ml-3 text-xl font-medium text-gray-900">
-                  Our Mission
+                  {t.about.missionTitle}
                 </h3>
               </div>
-              <p className="text-gray-600">
-                We believe businesses should harness this same dynamic, because
-                where people love to chat, conversions and customer loyalty
-                soar.
-              </p>
+              <p className="text-gray-600">{t.about.missionText}</p>
             </div>
             <div className="bg-white shadow rounded-lg p-6">
               <div className="flex items-center mb-4">
@@ -61,14 +59,10 @@ export default function AboutPage() {
                   <Heart className="h-6 w-6 text-green-600" />
                 </div>
                 <h3 className="ml-3 text-xl font-medium text-gray-900">
-                  Our Vision
+                  {t.about.visionTitle}
                 </h3>
               </div>
-              <p className="text-gray-600">
-                Go beyond scripted, transactional responses, and enable
-                businesses to craft lively, personalized conversations that
-                truly reflect their brand’s voice.
-              </p>
+              <p className="text-gray-600">{t.about.visionText}</p>
             </div>
           </div>
         </div>
@@ -76,15 +70,10 @@ export default function AboutPage() {
       <div className="  mx-auto text-center py-16 px-4 sm:py-20 sm:px-6 lg:px-8">
         <LogoBySFGCO />
         <p className="mt-4 max-w-3xl text-xl text-gray-500 mx-auto">
-          SFGCO has made a significant investment in Zazubot, reflecting their
-          confidence in the technology’s potential to revolutionize the
-          industry.
+          {t.about.sfgcoInvestment}
         </p>
         <p className="mt-4 max-w-4xl text-xl text-gray-500 mx-auto">
-          By supporting Zazubot, they are positioning themselves at the
-          forefront of cutting-edge developments, signaling a long-term strategy
-          to leverage automation and artificial intelligence for continued
-          growth and success.
+          {t.about.sfgcoSupport}
         </p>
       </div>
       {/* Values Section */}
@@ -92,13 +81,13 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h2 className="text-base font-semibold text-green-600 tracking-wide uppercase">
-              What We Believe
+              {t.about.valuesTitle}
             </h2>
             <p className="mt-1 text-3xl font-extrabold text-gray-900 sm:text-4xl">
-              Supercharge your business with ZazuBot Intelligence.
+              {t.about.valuesSubtitle}
             </p>
             <p className="mt-4 max-w-2xl text-xl text-gray-500 mx-auto">
-              These principles guide everything we do
+              {t.about.valuesDescription}
             </p>
           </div>
 
@@ -108,12 +97,9 @@ export default function AboutPage() {
                 <Award className="h-6 w-6 text-green-600" />
               </div>
               <h3 className="mt-4 text-lg font-medium text-gray-900">
-                Messaging API
+                {t.about.value1Title}
               </h3>
-              <p className="mt-2 text-gray-600">
-                Implement event-based messaging for sync and async communication
-                Use cases live chat apps, chatbots, in-app messaging.
-              </p>
+              <p className="mt-2 text-gray-600">{t.about.value1Text}</p>
             </div>
 
             <div className="bg-gray-50 rounded-lg p-6">
@@ -121,12 +107,9 @@ export default function AboutPage() {
                 <Users className="h-6 w-6 text-green-600" />
               </div>
               <h3 className="mt-4 text-lg font-medium text-gray-900">
-                Omnichannel APIs
+                {t.about.value2Title}
               </h3>
-              <p className="mt-2 text-gray-600">
-                Funnel all channels into a single messaging experience Use cases
-                all-in-one communication, messaging super-apps.
-              </p>
+              <p className="mt-2 text-gray-600">{t.about.value2Text}</p>
             </div>
 
             <div className="bg-gray-50 rounded-lg p-6">
@@ -134,12 +117,9 @@ export default function AboutPage() {
                 <Briefcase className="h-6 w-6 text-green-600" />
               </div>
               <h3 className="mt-4 text-lg font-medium text-gray-900">
-                Website widget
+                {t.about.value3Title}
               </h3>
-              <p className="mt-2 text-gray-600">
-                Monitor and interact with visitors via rich messages and apps
-                Use cases custom chat, website analytics, lead capturing.
-              </p>
+              <p className="mt-2 text-gray-600">{t.about.value3Text}</p>
             </div>
           </div>
         </div>

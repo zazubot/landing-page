@@ -1,6 +1,6 @@
 import React from "react";
+import { getTranslations } from "@/app/[locale]/i18n";
 
-// Define the testimonial data structure
 interface Testimonial {
   id: number;
   name: string;
@@ -10,13 +10,12 @@ interface Testimonial {
   quote: string;
 }
 
-// Props for the TestimonialList component
 interface TestimonialListProps {
   testimonials: Testimonial[];
   className?: string;
+  locale: "en" | "ar";
 }
 
-// Individual Testimonial Card component
 const TestimonialCard: React.FC<{ testimonial: Testimonial }> = ({
   testimonial,
 }) => {
@@ -50,21 +49,21 @@ const TestimonialCard: React.FC<{ testimonial: Testimonial }> = ({
   );
 };
 
-// Main TestimonialList component
 const TestimonialList: React.FC<TestimonialListProps> = ({
   testimonials,
   className = "",
+  locale,
 }) => {
+  const t = getTranslations(locale);
   return (
     <div className={`py-12 bg-gray-50 ${className}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
-            What Our Clients Are Saying
+            {t.landing.largeTestimonial.sectionTitle}
           </h2>
           <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
-            Don't just take our word for it - hear from some of our satisfied
-            clients.
+            {t.landing.largeTestimonial.subtitle}
           </p>
         </div>
 
@@ -78,8 +77,7 @@ const TestimonialList: React.FC<TestimonialListProps> = ({
   );
 };
 
-// Example usage with sample data
-const LargeTestimonial: React.FC = () => {
+const LargeTestimonial: React.FC<{ locale: "en" | "ar" }> = ({ locale }) => {
   const sampleTestimonials: Testimonial[] = [
     {
       id: 1,
@@ -136,7 +134,7 @@ const LargeTestimonial: React.FC = () => {
     },
   ];
 
-  return <TestimonialList testimonials={sampleTestimonials} />;
+  return <TestimonialList testimonials={sampleTestimonials} locale={locale} />;
 };
 
 export default LargeTestimonial;

@@ -1,5 +1,4 @@
 "use client";
-
 import Image from "next/image";
 import Avatar01 from "@/public/images/ai/ElevenLabs.jpeg";
 import Avatar02 from "@/public/images/ai/mistral.jpg";
@@ -8,11 +7,11 @@ import Avatar04 from "@/public/images/ai/openai.jpg";
 import Avatar05 from "@/public/images/ai/whatsapp.png";
 import Avatar06 from "@/public/images/ai/cal.png";
 import { useState } from "react";
+import { getTranslations } from "@/app/[locale]/i18n";
 
-export default function HeroHome() {
+export default function HeroHome({ locale }: { locale: "en" | "ar" }) {
+  const t = getTranslations(locale);
   const [showModal, setShowModal] = useState(false);
-
-  // Function to handle modal close
 
   return (
     <section className="relative">
@@ -21,10 +20,7 @@ export default function HeroHome() {
         <div className="pt-32 md:pt-40">
           {/* Section header */}
           <div className="pb-12 text-center md:pb-16">
-            <div
-              className="mb-6 border-y [border-image:linear-gradient(to_right,transparent,--theme(--color-slate-300/.8),transparent)1]"
-              data-aos="zoom-y-out"
-            >
+            <div className="mb-6 " data-aos="zoom-y-out">
               <div className="-mx-0.5 flex justify-center space-x-3">
                 <Image
                   className="box-content rounded-full border-2 border-neutral-50"
@@ -71,47 +67,56 @@ export default function HeroHome() {
               </div>
             </div>
             <h1
-              className="mb-6 border-y text-5xl font-bold [border-image:linear-gradient(to_right,transparent,--theme(--color-slate-300/.8),transparent)1] md:text-6xl"
+              className="mb-8 border-y text-5xl font-bold  md:text-6xl"
               data-aos="zoom-y-out"
             >
-              <span data-aos-delay={150}> Help, support, and sell </span>
-              <br className="max-lg:hidden " />
-              <span className="text-green-800">
-                with a data-driven AI Agent
-              </span>
+              <span data-aos-delay={250}> {t.landing.hero.title1} </span>
+              <br className="max-lg:hidden" />
+              <span className="text-green-800">{t.landing.hero.title2}</span>
             </h1>
             <div className="mx-auto max-w-3xl">
               <p
                 className="mb-8 text-lg text-neutral-700"
                 data-aos="zoom-y-out"
-                data-aos-delay={300}
+                data-aos-delay={500}
               >
-                ZazuBot instantly helps your customers using AI-generated
-                responses. Get 24/7 support and ultra-high satisfaction rates.
-                Help, convert, and sell with a data-driven AI chatbot
+                {t.landing.hero.description}
               </p>
               <div className="relative before:absolute before:inset-0 before:border-y before:[border-image:linear-gradient(to_right,transparent,--theme(--color-slate-300/.8),transparent)1]">
                 <div
-                  className="mx-auto max-w-xs sm:flex sm:max-w-none sm:justify-center"
+                  className="mx-auto  max-w-xs sm:flex sm:max-w-none sm:justify-center "
                   data-aos="zoom-y-out"
-                  data-aos-delay={450}
+                  data-aos-delay={550}
                 >
+                  <a
+                    className="btn w-full m-2 bg-green-800 text-neutral-200 shadow-sm hover:bg-green-900 sm:ml-4 sm:w-auto"
+                    href="https://app.zazubot.com"
+                  >
+                    <span className="relative font-bold inline-flex items-center">
+                      {t.header.startNow}
+                    </span>
+                  </a>
                   <button
-                    className="btn w-full  bg-green-800 text-neutral-200 shadow-sm hover:bg-green-900 sm:ml-4 sm:w-auto"
+                    className="btn hidden sm:block font-bold w-full m-2 bg-white text-neutral-800 shadow-sm hover:bg-neutral-50 sm:ml-4 sm:w-auto "
                     onClick={() => setShowModal(true)}
                   >
-                    Watch Demo Video
+                    {t.header.watchDemo}
                   </button>
 
                   <a
-                    className="btn w-full bg-white text-neutral-800 shadow-sm hover:bg-neutral-50 sm:ml-4 sm:w-auto"
+                    className="btn font-bold w-full m-2 bg-black text-neutral-50 shadow-sm hover:bg-neutral-800 sm:ml-4 sm:w-auto"
+                    href="/pricing"
+                  >
+                    <span className="relative inline-flex items-center">
+                      {t.header.pricing}
+                    </span>
+                  </a>
+                  <a
+                    className="btn font-bold w-full m-2 bg-white text-neutral-800 shadow-sm hover:bg-neutral-50 sm:ml-4 sm:w-auto"
                     href="https://docs.zazubot.com/"
                   >
                     <span className="relative inline-flex items-center">
-                      Documentaions
-                      <span className="ml-1 tracking-normal text-neutral-300 transition-transform group-hover:translate-x-0.5">
-                        -&gt;
-                      </span>
+                      {t.header.documentations}
                     </span>
                   </a>
                 </div>

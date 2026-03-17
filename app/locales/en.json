@@ -1,0 +1,369 @@
+{
+  "title": "ZazuBot® - The Best AI Chatbot Software for Your Bussiness",
+  "description": "A user-friendly platform that allows you to seamlessly design, deploy, and integrate advanced chatbots into websites and messaging platforms like WhatsApp, enhancing user engagement and automating communication.",
+  "welcome": "Welcome to ZazuBot!",
+  "header": {
+    "startNow": "Start Now",
+    "pricing": "Pricing Table",
+    "documentations": "Documentations",
+    "watchDemo": "Watch Demo Video"
+  },
+  "landing": {
+    "hero": {
+      "title1": "Help, support, and sell",
+      "title2": "with a data-driven AI Agent",
+      "description": "ZazuBot instantly helps your customers using AI-generated responses. Get 24/7 support and ultra-high satisfaction rates. Help, convert, and sell with a data-driven AI chatbot"
+    },
+    "features": {
+      "title": "Use the power of AI chatbots and get ahead of 99% of your competitors",
+      "features": [
+        {
+          "title": "Marketing",
+          "description": "Let your bot drive the conversation and turn leads into customers."
+        },
+        {
+          "title": "Customer Support",
+          "description": "Deliver 24/7 multichannel support and make your customers happy."
+        },
+        {
+          "title": "Sales",
+          "description": "Boost meetings and show rates with highly interested leads"
+        }
+      ]
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "subtitle": "Find answers to common questions about our service.",
+      "questions": [
+        {
+          "question": "What payment methods do you accept?",
+          "answer": "We accept all major credit cards (Visa, Mastercard, American Express), PayPal, and bank transfers. For enterprise customers, we also offer invoicing options with net-30 payment terms."
+        },
+        {
+          "question": "Can I cancel my subscription at any time?",
+          "answer": "Yes, you can cancel your subscription at any time from your account settings. If you cancel before your billing cycle ends, you'll still have access to your account until the end of the period you've paid for. We don't offer prorated refunds for partial months."
+        },
+        {
+          "question": "Is there a free trial available?",
+          "answer": "Yes, we offer a 14-day free trial on all our plans. No credit card is required to start your trial - you'll only be asked for payment details when you decide to continue with a paid plan."
+        },
+        {
+          "question": "Do you offer discounts for non-profits or educational institutions?",
+          "answer": "Yes, we offer special pricing for qualified non-profit organizations, educational institutions, and students. Please contact our sales team with appropriate documentation to apply for these special rates."
+        },
+        {
+          "question": "Can I change my plan later?",
+          "answer": "Absolutely! You can upgrade or downgrade your plan at any time. When upgrading, the new rate will be prorated for the remainder of your billing cycle. When downgrading, the new rate will apply at the start of your next billing cycle."
+        }
+      ]
+    },
+    "featuresPlanet": {
+      "articles": [
+        {
+          "title": "Generate more qualified leads",
+          "description": "Get leads through conversations and qualify your prospects automatically."
+        },
+        {
+          "title": "Improve customer experience",
+          "description": "Offer personalized recommendations and tailored customer support."
+        },
+        {
+          "title": "Help your customers 24/7",
+          "description": "Offer consistent support across channels and let customers resolve issues whenever they want."
+        },
+        {
+          "title": "Resolve problems faster",
+          "description": "Explain technical problems using visuals and interactive forms to shorten the resolution time."
+        },
+        {
+          "title": "Boost team productivity",
+          "description": "Automate answering repetitive questions to let your team focus on more challenging cases."
+        },
+        {
+          "title": "Get more leads on your site",
+          "description": "Add Chat Widget to your website with a few simple clicks to make it easier for customers to contact you."
+        }
+      ]
+    },
+    "heroIntro": {
+      "tabs": [
+        {
+          "label": "Visual Builder",
+          "title": "The fastest way to create AI chatbots on your own terms and without coding.",
+          "description": "Comfortably design chatbots using a smooth, drag-and-drop chatbot builder. Manage even the most complex chatbot flows on a single screen, and get full control over the building process."
+        },
+        {
+          "label": "Multiple channels",
+          "title": "Support customers on multiple channels",
+          "description": "Add an AI chatbot to your website, LiveChat, Whatsapp, or Shopify to handle all support cases automatically, 24/7 , Your bot can automatically add new leads to your CRM, send you an email after successful sales and much more, so you will never miss an opportunity. Find out what’s the best routine for your bot.."
+        },
+        {
+          "label": "Use templates",
+          "title": "Ready-to-use templates to build chatbots in minutes",
+          "description": "Templates are customizable chatbot Stories that let you launch task-specific chatbots in just a few clicks. Breathe life into your chatbots within minutes.",
+          "features": ["free to use", "wide choice", "easy setup"]
+        },
+        {
+          "label": "Publish",
+          "title": "Publish a chatbot on your website",
+          "description": "Our Chat Widget lets you do it without coding , Match Chat Widget to your website’s style. Deliver a consistent brand experience, Decide how and where your chatbot is shown on your website."
+        }
+      ]
+    },
+    "heroLocations": {
+      "sectionTitle": "Our Presence",
+      "mainTitle": "Global Locations",
+      "locations": [
+        {
+          "country": "Saudi Arabia",
+          "address": "6710 Prince Turkey Street\nAl Yarmouk, Al Khobar 34423\nSaudi Arabia",
+          "note": "Headquarters"
+        }
+      ]
+    },
+    "heroTerminal": {
+      "customer": "Customer:",
+      "customerMessage1": "Hi, I need help with my recent order. I think I was charged incorrectly.",
+      "agent": "Zazubot Support Agent:",
+      "agentMessage1": "Hello! I'm sorry to hear that. I'd be happy to assist you with your order. Could you please provide your order number?",
+      "customerMessage2": "Sure! My order number is 123456.",
+      "agent2": "Support Agent:",
+      "agentMessage2": "Thank you! Let me check that for you. One moment, please.",
+      "agentMessage3": "It looks like you were charged an extra $5 for shipping, but our website had a promotion for free shipping. I apologize for the mistake. I'll issue a refund for that amount right away."
+    },
+    "largeTestimonial": {
+      "sectionTitle": "What Our Clients Are Saying",
+      "subtitle": "Don't just take our word for it - hear from some of our satisfied clients."
+    },
+    "useCases": {
+      "title": "Use the power of AI chatbots and get ahead of 99% of your competitors",
+      "cases": [
+        {
+          "title": "Marketing",
+          "description": "Let your bot drive the conversation and turn leads into customers."
+        },
+        {
+          "title": "Support & Product",
+          "description": "Deliver 24/7 multichannel support and make your customers happy."
+        },
+        {
+          "title": "Sales",
+          "description": "Boost meetings and show rates with highly interested leads"
+        }
+      ]
+    },
+    "pricing": {
+      "heading": "Choose Your Plan",
+      "subheading": "Flexible plans that scale with you",
+      "description": "Whether you're a solo business owner, a growing startup or a large company, Zazu Bot is here to help you build high-performing chat forms for the right price. Pay for as little or as much usage as you need.",
+      "plans": [
+        {
+          "id": "free",
+          "name": "Free",
+          "description": "Just For testing",
+          "price": 0,
+          "duration": "14 days",
+          "features": [
+            "Unlimited ZazuBots",
+            "200 chats/months",
+            "Webhooks",
+            " Integrate with more than 10 Platforms",
+            "Branding removed",
+            "Collect files from users",
+            "Create folders",
+            "Direct priority support",
+            "WhatsApp integration",
+            "Custom domain",
+            "Priority support"
+          ]
+        },
+        {
+          "id": "Monthly",
+          "name": "Monthly Plan",
+          "description": "Perfect for starter",
+          "price": 133,
+          "duration": "month",
+          "features": [
+            "Unlimited ZazuBots",
+            "2,000 chats/months / Extra chats: $10 per 500",
+            "Webhooks",
+            " Integrate with more than 10 Platforms",
+            "Branding removed",
+            "Collect files from users",
+            "Create folders",
+            "Direct priority support",
+            "WhatsApp integration",
+            "Custom domain",
+            "Priority support"
+          ]
+        },
+        {
+          "id": "Yearly",
+          "name": "Yearly Plan",
+          "description": "Yearly Plan (Best Value)",
+          "price": 1440,
+          "duration": "year",
+          "features": [
+            "Unlimited ZazuBots",
+            "10,000 chats/months",
+            "Webhooks",
+            "Integrate with more than 10 Platforms",
+            "Branding removed",
+            "Collect files from users",
+            "Create folders",
+            "Direct priority support",
+            "WhatsApp integration",
+            "Custom domain",
+            "Priority support"
+          ]
+        }
+      ],
+      "button": {
+        "select": "Select Plan",
+        "checkout": "Checkout",
+        "cta": "Get started with {planName}"
+      },
+      "included": "What's included",
+      "compare": "Compare Features",
+      "feature": "Feature"
+    }
+  },
+  "features": {
+    "hero": {
+      "title": "Enabling end-to-end customer service automation",
+      "subtitle": "Learn about ZazuBot benefits that’ll make your business stand out. Automate your support, marketing, and sales with AI."
+    },
+    "cards": [
+      {
+        "title": "Easy-to-use APIs",
+        "desc": "Simple, intuitive APIs that streamline development and reduce implementation time from weeks to days.",
+        "bullet1": "Comprehensive documentation",
+        "bullet2": "SDK support for multiple platform",
+        "bullet3": "Consistent request/response patterns"
+      },
+      {
+        "title": "Multiple AI Providers",
+        "desc": "Access the best AI models from various providers through a single, unified interface.",
+        "bullet1": "Seamless provider switching",
+        "bullet2": "Model-agnostic implementations",
+        "bullet3": "Comparative analytics across providers"
+      },
+      {
+        "title": "Visual Builder",
+        "desc": "Preview and modify your chatbot in an intuitive visual editor.",
+        "bullet1": "Testing tool",
+        "bullet2": "Flows",
+        "bullet3": "Easily test before you launch"
+      },
+      {
+        "title": "Templates",
+        "desc": "Choose a ready-to-use template from the library for an easier start.",
+        "bullet1": "Customer Service",
+        "bullet2": "Customer Satisfaction",
+        "bullet3": "Ecommerce - sales"
+      },
+      {
+        "title": "Data collection and workflows",
+        "desc": "Collect user information, create questions, forms, and surveys, group users and direct them to different chatbot flows or export contact information.",
+        "bullet1": "A/B Testing",
+        "bullet2": "Webhooks",
+        "bullet3": "Zapier actions"
+      },
+      {
+        "title": "Reports",
+        "desc": "Follow insights on the number of chats and users, and track the busiest periods.",
+        "bullet1": "Trends in chats and users",
+        "bullet2": "Most popular interactions"
+      }
+    ],
+    "comparison": {
+      "title": "Why Choose Us",
+      "subtitle": "Compare with Alternatives",
+      "colFeatures": "Features",
+      "colOurs": "Our Platform",
+      "colCompetitors": "Competitors",
+      "row1": {
+        "feature": "Multiple AI Providers",
+        "ours": "✓ 10+ providers integrated",
+        "competitors": "✗ Limited to 1-2 providers"
+      },
+      "row2": {
+        "feature": "API Simplicity",
+        "ours": "✓ Simple, consistent APIs",
+        "competitors": "✗ Complex implementation"
+      },
+      "row3": {
+        "feature": "Global Infrastructure",
+        "ours": "✓ 20+ global regions",
+        "competitors": "✗ Limited regional availability"
+      },
+      "row4": {
+        "feature": "Enterprise Security",
+        "ours": "✓ Comprehensive compliance",
+        "competitors": "~ Partial compliance"
+      }
+    },
+    "cta": {
+      "line1": "Ready to get started?",
+      "line2": "Try our platform today."
+    }
+  },
+  "footer": {
+    "product": "Product",
+    "company": "Company",
+    "resources": "Resources",
+    "certified": "Certified",
+    "features": "Features",
+    "bookDemo": "Book a demo",
+    "pricingPlans": "Pricing & Plans",
+    "about": "About",
+    "becomePartner": "Become a partner",
+    "careers": "Careers",
+    "urgentSupport": "Urgent support",
+    "termsOfService": "Terms of service",
+    "privacyPolicy": "Privacy Policy"
+  },
+  "paymentSuccess": {
+    "title": "Payment Successful!",
+    "message": "Thank you for your payment. Your transaction has been completed successfully.",
+    "cta": "Go to Dashboard"
+  },
+  "about": {
+    "metaTitle": "About - ZazuBot",
+    "metaDescription": "we believe that meaningful conversations are the foundation of successful relationships",
+    "heroTitle": "About Us",
+    "heroText": "we believe that meaningful conversations are the foundation of successful relationships. Every day, people chat with friends, family, and colleagues on platforms like WhatsApp, Messenger, and more. It’s natural, engaging, and personal.",
+    "purposeTitle": "Our Purpose",
+    "missionVisionTitle": "Mission & Vision",
+    "missionTitle": "Our Mission",
+    "missionText": "We believe businesses should harness this same dynamic, because where people love to chat, conversions and customer loyalty soar.",
+    "visionTitle": "Our Vision",
+    "visionText": "Go beyond scripted, transactional responses, and enable businesses to craft lively, personalized conversations that truly reflect their brand’s voice.",
+    "sfgcoInvestment": "SFGCO has made a significant investment in Zazubot, reflecting their confidence in the technology’s potential to revolutionize the industry.",
+    "sfgcoSupport": "By supporting Zazubot, they are positioning themselves at the forefront of cutting-edge developments, signaling a long-term strategy to leverage automation and artificial intelligence for continued growth and success.",
+    "valuesTitle": "What We Believe",
+    "valuesSubtitle": "Supercharge your business with ZazuBot Intelligence.",
+    "valuesDescription": "These principles guide everything we do",
+    "value1Title": "Messaging API",
+    "value1Text": "Implement event-based messaging for sync and async communication Use cases live chat apps, chatbots, in-app messaging.",
+    "value2Title": "Omnichannel APIs",
+    "value2Text": "Funnel all channels into a single messaging experience Use cases all-in-one communication, messaging super-apps.",
+    "value3Title": "Website widget",
+    "value3Text": "Monitor and interact with visitors via rich messages and apps Use cases custom chat, website analytics, lead capturing."
+  },
+  "careers": {
+    "metaTitle": "Careers - ZazuBot",
+    "heroTitle": "Join Our Team at ZazuBot",
+    "heroText": "At ZazuBot, we’re building the future of business communication. If you’re passionate about technology, innovation, and making an impact, we want to hear from you!",
+    "whyTitle": "Why Work With Us?",
+    "why1Title": "Innovative Culture",
+    "why1Text": "Work with cutting-edge AI and automation technologies in a collaborative, forward-thinking environment.",
+    "why2Title": "Growth & Learning",
+    "why2Text": "We invest in your professional development and offer opportunities to grow your skills and career.",
+    "why3Title": "Inclusive Team",
+    "why3Text": "Join a diverse, supportive team where your ideas matter and your contributions make a real difference.",
+    "applyTitle": "Ready to Apply?",
+    "applyText": "Send your CV and a short introduction to our team. We’re excited to meet you!",
+    "email": "hr@sfgco.sa"
+  }
+}

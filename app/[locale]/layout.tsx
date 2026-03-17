@@ -9,10 +9,16 @@ import Header from "@/components/ui/header";
 import Footer from "@/components/ui/footer";
 import { getCalApi } from "@calcom/embed-react";
 
-export default function DefaultLayout({
+// Supported locales
+const SUPPORTED_LOCALES = ["en", "ar"] as const;
+type Locale = (typeof SUPPORTED_LOCALES)[number];
+
+export default function LocaleLayout({
   children,
+  params,
 }: {
   children: React.ReactNode;
+  params: Promise<{ locale: string }>;
 }) {
   useEffect(() => {
     AOS.init({
@@ -21,7 +27,7 @@ export default function DefaultLayout({
       duration: 700,
       easing: "ease-out-cubic",
     });
-  });
+  }, []);
 
   useEffect(() => {
     (async function () {

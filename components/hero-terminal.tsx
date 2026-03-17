@@ -1,4 +1,12 @@
-export default function HeroTerminal() {
+import { getTranslations } from "@/app/[locale]/i18n";
+
+type HeroTerminalProps = {
+  locale: "en" | "ar";
+};
+
+export default function HeroTerminal({ locale }: HeroTerminalProps) {
+  const t = getTranslations(locale);
+
   return (
     <div
       className="mx-auto max-w-3xl"
@@ -13,43 +21,39 @@ export default function HeroTerminal() {
         </div>
         <div className="font-mono text-neutral-500 [&_span]:opacity-0">
           <span className="animate-[code-1_10s_infinite] text-neutral-200">
-            Customer:
+            {t.landing.heroTerminal.customer}
           </span>
           <span className="animate-[code-2_10s_infinite]">
-            Hi, I need help with my recent order. I think I was charged
-            incorrectly.
+            {t.landing.heroTerminal.customerMessage1}
           </span>
           <br />
           <span className="animate-[code-3_10s_infinite] text-neutral-200">
-            Zazubot Support Agent:
+            {t.landing.heroTerminal.agent}
           </span>{" "}
           <span className="animate-[code-4_10s_infinite]">
-            Hello! I'm sorry to hear that. I'd be happy to assist you with your
-            order. Could you please provide your order number?
+            {t.landing.heroTerminal.agentMessage1}
           </span>
           <br />
           <br />
           <span className="animate-[code-5_10s_infinite] text-neutral-200">
-            Customer:
+            {t.landing.heroTerminal.customer}
           </span>
           <br />
           <span className="animate-[code-6_10s_infinite]">
-            Sure! My order number is 123456.
+            {t.landing.heroTerminal.customerMessage2}
           </span>
           <br />
           <br />
           <span className="animate-[code-7_10s_infinite] text-neutral-200">
-            Support Agent:
+            {t.landing.heroTerminal.agent2}
           </span>
           <br />
           <span className="animate-[code-8_10s_infinite]">
-            Thank you! Let me check that for you. One moment, please.
+            {t.landing.heroTerminal.agentMessage2}
           </span>
           <br />
           <span className="animate-[code-9_10s_infinite]">
-            It looks like you were charged an extra $5 for shipping, but our
-            website had a promotion for free shipping. I apologize for the
-            mistake. I'll issue a refund for that amount right away.
+            {t.landing.heroTerminal.agentMessage3}
           </span>
         </div>
       </div>
