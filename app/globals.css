@@ -29,6 +29,10 @@
   --radius-sm: calc(var(--radius) - 4px);
   --animate-accordion-down: accordion-down 0.2s ease-out;
   --animate-accordion-up: accordion-up 0.2s ease-out;
+  --animate-hero-fade-up: hero-fade-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+  --animate-hero-fade-in: hero-fade-in 0.9s ease-out both;
+  --animate-hero-float: hero-float 7s ease-in-out infinite;
+  --animate-hero-glow: hero-glow 10s ease-in-out infinite;
 
   @keyframes accordion-down {
     from {
@@ -45,6 +49,48 @@
     }
     to {
       height: 0;
+    }
+  }
+
+  @keyframes hero-fade-up {
+    from {
+      opacity: 0;
+      transform: translate3d(0, 28px, 0) scale(0.98);
+    }
+    to {
+      opacity: 1;
+      transform: translate3d(0, 0, 0) scale(1);
+    }
+  }
+
+  @keyframes hero-fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes hero-float {
+    0%,
+    100% {
+      transform: translate3d(0, 0, 0);
+    }
+    50% {
+      transform: translate3d(0, -12px, 0);
+    }
+  }
+
+  @keyframes hero-glow {
+    0%,
+    100% {
+      opacity: 0.5;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.85;
+      transform: scale(1.08);
     }
   }
 }

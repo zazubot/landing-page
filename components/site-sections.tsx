@@ -85,10 +85,12 @@ export function PageHero({
 export function HomeHero() {
   return (
     <section className="relative overflow-hidden bg-[#090b12] text-white">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(127,229,166,0.16),_transparent_26%),radial-gradient(circle_at_bottom_right,_rgba(252,211,77,0.15),_transparent_24%)]" />
+      <div className="absolute inset-0 motion-safe:animate-hero-glow bg-[radial-gradient(circle_at_top_left,_rgba(127,229,166,0.16),_transparent_26%),radial-gradient(circle_at_bottom_right,_rgba(252,211,77,0.15),_transparent_24%)]" />
+      <div className="absolute left-[-8rem] top-16 h-64 w-64 rounded-full bg-[#7fe5a6]/12 blur-3xl motion-safe:animate-hero-glow" />
+      <div className="absolute bottom-[-6rem] right-[-2rem] h-72 w-72 rounded-full bg-amber-300/10 blur-3xl motion-safe:animate-hero-glow [animation-delay:1.8s]" />
       <div className="mx-auto grid max-w-7xl gap-14 px-4 py-20 sm:px-6 lg:grid-cols-[1.1fr_0.9fr] lg:px-8 lg:py-28">
         <div className="relative z-10">
-          <div className="mb-8 flex flex-wrap gap-3">
+          <div className="mb-8 flex flex-wrap gap-3 motion-safe:animate-hero-fade-in">
             {aiAvatars.map((image, index) => (
               <Image
                 key={image}
@@ -96,19 +98,20 @@ export function HomeHero() {
                 alt={`AI provider ${index + 1}`}
                 width={64}
                 height={64}
-                className="h-14 w-14 rounded-full border-2 border-white/15 object-cover shadow-[0_18px_28px_rgba(0,0,0,0.35)]"
+                className="h-14 w-14 rounded-full border-2 border-white/15 object-cover shadow-[0_18px_28px_rgba(0,0,0,0.35)] motion-safe:opacity-0 motion-safe:animate-hero-fade-up"
+                style={{ animationDelay: `${index * 120}ms` }}
               />
             ))}
           </div>
 
-          <h1 className="max-w-4xl font-[family-name:var(--font-display)] text-5xl font-semibold leading-[0.96] tracking-tight sm:text-6xl lg:text-7xl">
+          <h1 className="max-w-4xl text-pretty font-[family-name:var(--font-display)] text-5xl font-semibold leading-[0.96] tracking-tight motion-safe:animate-hero-fade-up sm:text-6xl lg:text-7xl">
             {heroContent.title}
           </h1>
-          <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300">
+          <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300 motion-safe:opacity-0 motion-safe:animate-hero-fade-up [animation-delay:140ms]">
             {heroContent.description}
           </p>
 
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+          <div className="mt-8 flex flex-col gap-3 motion-safe:opacity-0 motion-safe:animate-hero-fade-up sm:flex-row sm:flex-wrap [animation-delay:260ms]">
             <Button
               asChild
               size="lg"
@@ -150,21 +153,24 @@ export function HomeHero() {
         </div>
 
         <div className="relative z-10 flex items-center justify-center">
-          <div className="relative w-full max-w-xl rounded-[2rem] border border-white/10 bg-white/5 p-4 shadow-[0_40px_100px_rgba(0,0,0,0.45)] backdrop-blur">
-            <div className="absolute -left-6 top-8 rounded-[1.5rem] border border-white/10 bg-[#101522] px-4 py-3 text-xs uppercase tracking-[0.22em] text-[#7fe5a6] shadow-lg">
-              Your magic link
-            </div>
-            <div className="absolute -right-4 bottom-8 rounded-[1.5rem] border border-white/10 bg-[#141925] px-4 py-3 text-sm text-slate-300 shadow-lg">
-              AI support online 24/7
-            </div>
-            <div className="overflow-hidden rounded-[1.6rem] border border-white/10 bg-[#0e1118]">
-              <Image
-                src="/images/intro/flow-1.png"
-                alt="ZazuBot workflow builder"
-                width={1280}
-                height={900}
-                className="h-auto w-full"
-              />
+          <div className="relative w-full max-w-xl motion-safe:opacity-0 motion-safe:animate-hero-fade-up [animation-delay:220ms]">
+            <div className="absolute inset-6 rounded-[2rem] bg-[#7fe5a6]/10 blur-3xl motion-safe:animate-hero-glow [animation-delay:900ms]" />
+            <div className="relative rounded-[2rem] border border-white/10 bg-white/5 p-4 shadow-[0_40px_100px_rgba(0,0,0,0.45)] backdrop-blur motion-safe:animate-hero-float">
+              <div className="absolute -left-6 top-8 rounded-[1.5rem] border border-white/10 bg-[#101522] px-4 py-3 text-xs uppercase tracking-[0.22em] text-[#7fe5a6] shadow-lg motion-safe:animate-hero-fade-up [animation-delay:360ms]">
+                Your magic link
+              </div>
+              <div className="absolute -right-4 bottom-8 rounded-[1.5rem] border border-white/10 bg-[#141925] px-4 py-3 text-sm text-slate-300 shadow-lg motion-safe:animate-hero-fade-up [animation-delay:520ms]">
+                AI support online 24/7
+              </div>
+              <div className="overflow-hidden rounded-[1.6rem] border border-white/10 bg-[#0e1118]">
+                <Image
+                  src="/images/intro/flow-1.png"
+                  alt="ZazuBot workflow builder"
+                  width={1280}
+                  height={900}
+                  className="h-auto w-full"
+                />
+              </div>
             </div>
           </div>
         </div>
