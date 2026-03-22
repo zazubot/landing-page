@@ -1,4 +1,5 @@
 import Image from "next/image";
+
 import Link from "next/link";
 import {
   ArrowRight,
@@ -163,13 +164,17 @@ export function HomeHero() {
                 AI support online 24/7
               </div>
               <div className="overflow-hidden rounded-[1.6rem] border border-white/10 bg-[#0e1118]">
-                <Image
-                  src="/images/intro/flow-1.png"
-                  alt="ZazuBot workflow builder"
-                  width={1280}
-                  height={900}
-                  className="h-auto w-full"
-                />
+                <video
+                  src="/videos/drag-drop-MpiYrqEo.mp4"
+                  controls
+                  autoPlay
+                  loop
+                  muted
+                  className="h-auto w-full rounded-[1.6rem] border border-white/10 bg-[#0e1118]"
+                  style={{ objectFit: "cover" }}
+                >
+                  Your browser does not support the video tag.
+                </video>
               </div>
             </div>
           </div>
