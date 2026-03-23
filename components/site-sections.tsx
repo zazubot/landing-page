@@ -161,7 +161,7 @@ export function HomeHero() {
                 Build ,Design and deploy your flow
               </div>
               <div className="absolute -right-4 bottom-8 rounded-[1.5rem] border border-white/10 bg-[#141925] px-4 py-3 text-sm text-slate-300 shadow-lg motion-safe:animate-hero-fade-up [animation-delay:520ms]">
-                It's very easy to use, just drag and drop
+                It is very easy to use, just drag and drop
               </div>
               <div className="overflow-hidden rounded-[1.6rem] border border-white/10 bg-[#0e1118]">
                 <video
