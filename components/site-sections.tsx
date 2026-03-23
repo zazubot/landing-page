@@ -158,15 +158,15 @@ export function HomeHero() {
             <div className="absolute inset-6 rounded-[2rem] bg-[#7fe5a6]/10 blur-3xl motion-safe:animate-hero-glow [animation-delay:900ms]" />
             <div className="relative rounded-[2rem] border border-white/10 bg-white/5 p-4 shadow-[0_40px_100px_rgba(0,0,0,0.45)] backdrop-blur motion-safe:animate-hero-float">
               <div className="absolute -left-6 top-8 rounded-[1.5rem] border border-white/10 bg-[#101522] px-4 py-3 text-xs uppercase tracking-[0.22em] text-[#7fe5a6] shadow-lg motion-safe:animate-hero-fade-up [animation-delay:360ms]">
-                Your magic link
+                Build ,Design and deploy your flow
               </div>
               <div className="absolute -right-4 bottom-8 rounded-[1.5rem] border border-white/10 bg-[#141925] px-4 py-3 text-sm text-slate-300 shadow-lg motion-safe:animate-hero-fade-up [animation-delay:520ms]">
-                AI support online 24/7
+                It's very easy to use, just drag and drop
               </div>
               <div className="overflow-hidden rounded-[1.6rem] border border-white/10 bg-[#0e1118]">
                 <video
                   src="/videos/drag-drop-MpiYrqEo.mp4"
-                  controls
+                  controls={false}
                   autoPlay
                   loop
                   muted
