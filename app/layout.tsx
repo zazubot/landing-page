@@ -3,6 +3,7 @@ import { Manrope, Space_Grotesk } from "next/font/google";
 
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
+import { FloatWidget } from "@/components/float-widget";
 import { siteName, siteUrl } from "@/lib/site-content";
 
 import "./globals.css";
@@ -69,6 +70,7 @@ export default function RootLayout({
           <SiteHeader />
           <main>{children}</main>
           <SiteFooter />
+          <FloatWidget />
         </div>
       </body>
     </html>
