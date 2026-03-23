@@ -47,11 +47,11 @@ export function FloatWidget() {
               ZazuBot – Booking Flow Simulation
             </div>
             <SheetTitle className="max-w-xs font-[family-name:var(--font-display)] text-2xl tracking-tight text-slate-950">
-              i'm here to help you find the best solution for your use case.
+              We are here to help you find the best solution for your use case.
             </SheetTitle>
             <SheetDescription className="max-w-sm text-sm leading-6 text-slate-600">
-              let's have a quick chat to explore how ZazuBot can transform your
-              customer interactions and drive business growth.
+              Book a meeting to explore how ZazuBot can transform your customer
+              interactions and drive business growth.
             </SheetDescription>
           </SheetHeader>
 
