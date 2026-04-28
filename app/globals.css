@@ -1,0 +1,155 @@
+@import "tailwindcss";
+
+@plugin 'tailwindcss-animate';
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
+  --animate-accordion-down: accordion-down 0.2s ease-out;
+  --animate-accordion-up: accordion-up 0.2s ease-out;
+  --animate-hero-fade-up: hero-fade-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+  --animate-hero-fade-in: hero-fade-in 0.9s ease-out both;
+  --animate-hero-float: hero-float 7s ease-in-out infinite;
+  --animate-hero-glow: hero-glow 10s ease-in-out infinite;
+
+  @keyframes accordion-down {
+    from {
+      height: 0;
+    }
+    to {
+      height: var(--radix-accordion-content-height);
+    }
+  }
+
+  @keyframes accordion-up {
+    from {
+      height: var(--radix-accordion-content-height);
+    }
+    to {
+      height: 0;
+    }
+  }
+
+  @keyframes hero-fade-up {
+    from {
+      opacity: 0;
+      transform: translate3d(0, 28px, 0) scale(0.98);
+    }
+    to {
+      opacity: 1;
+      transform: translate3d(0, 0, 0) scale(1);
+    }
+  }
+
+  @keyframes hero-fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes hero-float {
+    0%,
+    100% {
+      transform: translate3d(0, 0, 0);
+    }
+    50% {
+      transform: translate3d(0, -12px, 0);
+    }
+  }
+
+  @keyframes hero-glow {
+    0%,
+    100% {
+      opacity: 0.5;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.85;
+      transform: scale(1.08);
+    }
+  }
+}
+
+:root {
+  --background: hsl(156 26% 97%);
+  --foreground: hsl(223 41% 9%);
+  --card: hsl(0 0% 100%);
+  --card-foreground: hsl(223 41% 9%);
+  --popover: hsl(0 0% 100%);
+  --popover-foreground: hsl(223 41% 9%);
+  --primary: hsl(223 41% 9%);
+  --primary-foreground: hsl(0 0% 100%);
+  --secondary: hsl(150 30% 95%);
+  --secondary-foreground: hsl(223 41% 9%);
+  --muted: hsl(150 20% 94%);
+  --muted-foreground: hsl(215 16% 40%);
+  --accent: hsl(148 69% 86%);
+  --accent-foreground: hsl(223 41% 9%);
+  --destructive: hsl(0 84% 60%);
+  --destructive-foreground: hsl(0 0% 100%);
+  --border: hsl(154 16% 88%);
+  --input: hsl(154 16% 88%);
+  --ring: hsl(149 66% 38%);
+  --radius: 1rem;
+}
+
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
+
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  button {
+    @apply cursor-pointer;
+  }
+
+  ::selection {
+    background: rgba(22, 163, 74, 0.18);
+  }
+}
+
+@layer utilities {
+  .container-shell {
+    @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+}
