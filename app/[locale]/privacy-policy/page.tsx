@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 
 import { PageHero } from "@/components/site-sections";
 
@@ -87,13 +88,22 @@ const sections = [
   },
 ];
 
-export default function PrivacyPolicyPage() {
+export default async function PrivacyPolicyPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+
+  const t = await getTranslations("privacyPolicy");
+
   return (
     <>
       <PageHero
-        eyebrow="Legal"
-        title="Privacy policy"
-        description="Last updated: 10 Mar 2025. This policy explains what data ZazuBot collects, why it is collected, and how it is protected."
+        eyebrow={t("eyebrow")}
+        title={t("heroTitle")}
+        description={t("heroDescription")}
       />
 
       <section className="bg-[#f5f8f7] py-20">

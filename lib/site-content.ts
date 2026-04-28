@@ -204,8 +204,6 @@ export const integrationTiles = [
   { name: "Cal.com", image: "/images/ai/cal.png" },
   { name: "Zapier", image: "/images/ai/zapier.png" },
   { name: "Zendesk", image: "/images/ai/zendesk.png" },
-  { name: "Meta", image: "/images/providers/metalogo.png" },
-  { name: "CST", image: "/images/providers/citc_logo.png" },
 ];
 
 export const pricingPlans: PricingPlan[] = [
@@ -219,15 +217,11 @@ export const pricingPlans: PricingPlan[] = [
     features: [
       "Unlimited ZazuBots",
       "200 chats per month",
-      "Webhooks",
+
       "Integrate with more than 10 platforms",
       "Branding removed",
       "Collect files from users",
       "Create folders",
-      "Direct priority support",
-      "WhatsApp integration",
-      "Custom domain",
-      "Priority support",
     ],
   },
   {
@@ -280,7 +274,7 @@ export const faqItems: FAQItem[] = [
   {
     question: "What payment methods do you accept?",
     answer:
-      "We accept all major credit cards, PayPal, and bank transfers. Enterprise customers can also request invoicing with agreed payment terms.",
+      "We accept all major credit cards, Mada, and bank transfers. Enterprise customers can also request invoicing with agreed payment terms.",
   },
   {
     question: "Can I cancel my subscription at any time?",

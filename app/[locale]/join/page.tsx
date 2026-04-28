@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 
 import { PageHero } from "@/components/site-sections";
 import { TypebotEmbed } from "@/components/typebot-embed";
@@ -9,13 +10,22 @@ export const metadata: Metadata = {
     "Book a ZazuBot demo and see how the platform can automate support, sales, and operational workflows.",
 };
 
-export default function JoinPage() {
+export default async function JoinPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+
+  const t = await getTranslations("join");
+
   return (
     <>
       <PageHero
-        eyebrow="Book a demo"
-        title="See ZazuBot working inside a real workflow."
-        description="Tell us about your use case and the team will walk you through the right automation, channel, and rollout plan."
+        eyebrow={t("eyebrow")}
+        title={t("heroTitle")}
+        description={t("heroDescription")}
       />
 
       <section className="bg-[#f5f8f7] py-20">

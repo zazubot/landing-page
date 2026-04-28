@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 
 import { PageHero } from "@/components/site-sections";
 
@@ -35,13 +36,22 @@ const sections = [
   },
 ];
 
-export default function TermsOfServicePage() {
+export default async function TermsOfServicePage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+
+  const t = await getTranslations("termsOfService");
+
   return (
     <>
       <PageHero
-        eyebrow="Legal"
-        title="Terms of service"
-        description="By using ZazuBot, you agree to the following terms and conditions. Please read them carefully."
+        eyebrow={t("eyebrow")}
+        title={t("heroTitle")}
+        description={t("heroDescription")}
       />
 
       <section className="bg-[#f5f8f7] py-20">

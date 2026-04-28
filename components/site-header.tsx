@@ -1,15 +1,26 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 
 import { Button } from "@/components/ui/button";
-import { primaryNav } from "@/lib/site-content";
+import { Link } from "@/i18n/navigation";
+import { heroContent } from "@/lib/site-content";
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
+  const t = useTranslations("nav");
+  const th = useTranslations("header");
+
+  const navItems = [
+    { href: "/features" as const, label: t("features") },
+    { href: "/integrations" as const, label: t("integrations") },
+    { href: "/pricing" as const, label: t("pricing") },
+    { href: "/about" as const, label: t("about") },
+    { href: "/careers" as const, label: t("careers") },
+  ];
 
   return (
     <header className="sticky top-0 z-50 border-b border-black/5 bg-white/85 backdrop-blur-xl">
@@ -21,13 +32,13 @@ export function SiteHeader() {
               ZazuBot
             </div>
             <div className="text-xs uppercase tracking-[0.24em] text-slate-500">
-              AI Conversations
+              {th("tagline")}
             </div>
           </div>
         </Link>
 
         <nav className="hidden items-center gap-7 lg:flex">
-          {primaryNav.map((item) => (
+          {navItems.map((item) => (
             <Link
               key={item.href}
               href={item.href}
@@ -41,19 +52,19 @@ export function SiteHeader() {
         <div className="hidden items-center gap-3 lg:flex">
           <Button variant="outline" asChild>
             <a
-              href="https://docs.zazubot.com/"
+              href={heroContent.docsUrl}
               target="_blank"
               rel="noreferrer"
             >
-              Docs
+              {t("docs")}
             </a>
           </Button>
           <Button
             asChild
             className="bg-slate-950 text-white hover:bg-slate-800"
           >
-            <a href="https://app.zazubot.com" target="_blank" rel="noreferrer">
-              Start now
+            <a href={heroContent.appUrl} target="_blank" rel="noreferrer">
+              {t("startNow")}
             </a>
           </Button>
         </div>
@@ -61,8 +72,8 @@ export function SiteHeader() {
         <button
           type="button"
           className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-slate-200 text-slate-900 lg:hidden"
-          onClick={() => setOpen((value) => !value)}
-          aria-label={open ? "Close menu" : "Open menu"}
+          onClick={() => setOpen((v) => !v)}
+          aria-label={open ? t("closeMenu") : t("openMenu")}
         >
           {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
         </button>
@@ -71,7 +82,7 @@ export function SiteHeader() {
       {open ? (
         <div className="border-t border-slate-200 bg-white lg:hidden">
           <div className="mx-auto flex max-w-7xl flex-col gap-4 px-4 py-5 sm:px-6">
-            {primaryNav.map((item) => (
+            {navItems.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
@@ -84,11 +95,11 @@ export function SiteHeader() {
             <div className="flex flex-col gap-3 pt-3">
               <Button variant="outline" asChild>
                 <a
-                  href="https://docs.zazubot.com/"
+                  href={heroContent.docsUrl}
                   target="_blank"
                   rel="noreferrer"
                 >
-                  Docs
+                  {t("docs")}
                 </a>
               </Button>
               <Button
@@ -96,11 +107,11 @@ export function SiteHeader() {
                 className="bg-slate-950 text-white hover:bg-slate-800"
               >
                 <a
-                  href="https://app.zazubot.com"
+                  href={heroContent.appUrl}
                   target="_blank"
                   rel="noreferrer"
                 >
-                  Start now
+                  {t("startNow")}
                 </a>
               </Button>
             </div>

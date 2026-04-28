@@ -1,0 +1,406 @@
+{
+  "common": {
+    "hello": "Hello, {name}!",
+    "items": "{count, plural, one {# item} other {# items}}",
+    "startNow": "Start now",
+    "docs": "Docs",
+    "bookDemo": "Book a demo"
+  },
+  "nav": {
+    "features": "Features",
+    "integrations": "Integrations",
+    "pricing": "Pricing",
+    "about": "About",
+    "careers": "Careers",
+    "docs": "Docs",
+    "startNow": "Start now",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
+  },
+  "header": {
+    "tagline": "AI Conversations"
+  },
+  "footer": {
+    "paymentProviders": "Payment providers",
+    "tagline": "Data-driven AI agents for support, sales, and automation.",
+    "product": "Product",
+    "company": "Company",
+    "resources": "Resources",
+    "certified": "Certified",
+    "copyright": "© 2026 ZazuBot. All rights reserved.",
+    "builtFor": "Built for high-conviction support, sales, and automation teams.",
+    "language": "Language",
+    "links": {
+      "features": "Features",
+      "bookDemo": "Book a demo",
+      "pricingPlans": "Pricing and plans",
+      "about": "About",
+      "becomePartner": "Become a partner",
+      "careers": "Careers",
+      "urgentSupport": "Urgent support",
+      "termsOfService": "Terms of service",
+      "privacyPolicy": "Privacy policy"
+    }
+  },
+  "hero": {
+    "eyebrow": "Powered by SFGCO",
+    "title": "Help, support, and sell with a data-driven AI agent.",
+    "description": "ZazuBot instantly helps your customers using AI-generated responses. Get 24/7 support, improve satisfaction, and convert more conversations into qualified leads.",
+    "startNow": "Start now",
+    "watchDemo": "Watch demo",
+    "pricingTable": "Pricing table",
+    "documentation": "Documentation",
+    "buildDesignDeploy": "Build, Design and deploy your flow",
+    "dragDropEasy": "It is very easy to use, just drag and drop"
+  },
+  "intro": {
+    "eyebrow": "Product walkthrough",
+    "title": "Design, publish, and automate every customer touchpoint from one workspace.",
+    "tabs": {
+      "visualBuilder": {
+        "label": "Visual Builder",
+        "title": "Build AI chat journeys on your own terms without writing code.",
+        "description": "Design complex chatbot flows in a smooth drag-and-drop workspace. Manage logic, prompts, routing, and follow-ups from one place with full control over the building process."
+      },
+      "multipleChannels": {
+        "label": "Multiple Channels",
+        "title": "Support customers across website, WhatsApp, live chat, and commerce channels.",
+        "description": "Deploy one AI workflow across your storefront, messaging apps, and CRM triggers. ZazuBot captures leads, resolves support requests, and keeps every channel in sync."
+      },
+      "templates": {
+        "label": "Templates",
+        "title": "Launch with ready-to-use templates and customize them in minutes.",
+        "description": "Start from proven chatbot stories for support, sales, and onboarding. Each template is customizable, so you can adapt the flow to your own brand and process quickly.",
+        "feature0": "Free to use",
+        "feature1": "Wide choice",
+        "feature2": "Easy setup"
+      },
+      "publish": {
+        "label": "Publish",
+        "title": "Match the chat widget to your brand and publish anywhere.",
+        "description": "Control how and where your chatbot appears on your website. Customize colors, launcher styles, and interaction patterns to deliver a consistent branded experience."
+      }
+    }
+  },
+  "useCases": {
+    "eyebrow": "Core outcomes",
+    "title": "Use the power of AI chatbots and get ahead of 99% of your competitors.",
+    "0": {
+      "title": "Marketing",
+      "description": "Let your bot drive the conversation and turn more anonymous traffic into qualified pipeline."
+    },
+    "1": {
+      "title": "Support and Product",
+      "description": "Deliver 24/7 multichannel support with AI workflows that reduce repetitive work for your team."
+    },
+    "2": {
+      "title": "Sales",
+      "description": "Boost meetings and close rates with highly interested leads routed straight to the right rep."
+    }
+  },
+  "benefits": {
+    "eyebrow": "Why teams switch",
+    "title": "Make automation feel native to your business, not bolted on.",
+    "description": "ZazuBot combines AI providers, channel orchestration, workflow logic, and branded delivery into one operating layer.",
+    "0": {
+      "title": "Generate more qualified leads",
+      "description": "Get leads through conversations and qualify prospects automatically before they ever reach sales."
+    },
+    "1": {
+      "title": "Improve customer experience",
+      "description": "Offer personalized recommendations and support flows that adapt to each visitor's context."
+    },
+    "2": {
+      "title": "Help your customers 24/7",
+      "description": "Provide consistent assistance across channels so customers can resolve issues whenever they want."
+    },
+    "3": {
+      "title": "Resolve problems faster",
+      "description": "Use visuals, logic, and interactive forms to shorten resolution time for technical questions."
+    },
+    "4": {
+      "title": "Boost team productivity",
+      "description": "Automate repetitive questions so your team can focus on escalation handling and higher-value work."
+    },
+    "5": {
+      "title": "Get more leads on your site",
+      "description": "Add a chat widget in a few clicks and make it easier for visitors to reach you when intent is highest."
+    }
+  },
+  "integrations": {
+    "eyebrow": "Integrations and channels",
+    "title": "Connect AI providers, messaging apps, scheduling, and automation tools in one place.",
+    "description": "Reuse the same ZazuBot logic across lead capture, support, order tracking, and appointment booking. Connect your workflows without rebuilding the conversation layer each time.",
+    "explore": "Explore integrations",
+    "pageEyebrow": "Connected workflows",
+    "pageTitle": "Support customers on multiple channels and connect every critical tool.",
+    "pageDescription": "Deploy one conversation system across your website, WhatsApp, scheduling flows, AI providers, and downstream automations.",
+    "ecosystemEyebrow": "Workflow ecosystem",
+    "ecosystemTitle": "Build once, publish everywhere.",
+    "ecosystemDescription": "ZazuBot lets your team reuse the same logic, prompts, and routing across AI support, lead capture, appointment booking, and escalations."
+  },
+  "testimonials": {
+    "eyebrow": "Customer proof",
+    "title": "What our clients are saying",
+    "description": "Do not just take our word for it. Teams across support, sales, and education are already shipping conversations on ZazuBot."
+  },
+  "pricing": {
+    "eyebrow": "Pricing and plans",
+    "title": "Choose your plan",
+    "description": "Flexible plans that scale with your team, traffic, and automation needs.",
+    "mostPopular": "Most popular",
+    "checkout": "Checkout",
+    "startFree": "Start free",
+    "per": "/ {duration}",
+    "plans": {
+      "free": {
+        "name": "Free",
+        "description": "Just for testing",
+        "duration": "14 days"
+      },
+      "Monthly": {
+        "name": "Monthly Plan",
+        "description": "Perfect for starters",
+        "duration": "month"
+      },
+      "Yearly": {
+        "name": "Yearly Plan",
+        "description": "Best value for growing teams",
+        "duration": "year"
+      }
+    },
+    "features": {
+      "unlimitedBots": "Unlimited ZazuBots",
+      "chats200": "200 chats per month",
+      "chats2000": "2,000 chats per month",
+      "chats10000": "10,000 chats per month",
+      "extraChats": "Extra chats at $10 per 500",
+      "platforms10": "Integrate with more than 10 platforms",
+      "brandingRemoved": "Branding removed",
+      "collectFiles": "Collect files from users",
+      "createFolders": "Create folders",
+      "webhooks": "Webhooks",
+      "prioritySupport": "Priority support",
+      "directPrioritySupport": "Direct priority support",
+      "whatsapp": "WhatsApp integration",
+      "customDomain": "Custom domain"
+    },
+    "pageEyebrow": "Pricing and plans",
+    "pageTitle": "Flexible plans that scale with your business.",
+    "pageDescription": "Whether you are a solo operator, a growing startup, or an enterprise team, ZazuBot gives you a clear path from testing to production deployment."
+  },
+  "faq": {
+    "eyebrow": "FAQ",
+    "title": "Frequently asked questions",
+    "description": "Find answers to common questions about pricing, subscriptions, and rollout.",
+    "0": {
+      "question": "What payment methods do you accept?",
+      "answer": "We accept all major credit cards, Mada, and bank transfers. Enterprise customers can also request invoicing with agreed payment terms."
+    },
+    "1": {
+      "question": "Can I cancel my subscription at any time?",
+      "answer": "Yes. You can cancel from your account settings at any time and keep access until the end of the paid billing period."
+    },
+    "2": {
+      "question": "Is there a free trial available?",
+      "answer": "Yes. The free plan gives you a 14-day testing window so you can validate flows before upgrading."
+    },
+    "3": {
+      "question": "Do you offer discounts for non-profits or educational institutions?",
+      "answer": "Yes. Contact the sales team with your details and we can discuss special pricing for eligible organizations."
+    },
+    "4": {
+      "question": "Can I change my plan later?",
+      "answer": "Absolutely. You can upgrade or downgrade as your volume changes."
+    }
+  },
+  "cta": {
+    "eyebrow": "Ready to get started?",
+    "title": "Launch the first ZazuBot flow that your team will actually keep using.",
+    "description": "Start with a free test build, connect your channels, and move from scripted support to AI-assisted conversations fast.",
+    "startNow": "Start now",
+    "bookDemo": "Book a demo"
+  },
+  "features": {
+    "eyebrow": "Platform features",
+    "pageTitle": "Enabling end-to-end customer service automation",
+    "pageDescription": "Learn about ZazuBot benefits that make your business stand out. Automate support, marketing, and sales with AI.",
+    "comparisonEyebrow": "Why choose us",
+    "comparisonTitle": "Compare with alternatives",
+    "tableFeature": "Feature",
+    "tablePlatform": "Our platform",
+    "tableCompetitors": "Typical competitors",
+    "cards": {
+      "0": {
+        "title": "Easy-to-use APIs",
+        "description": "Simple, intuitive APIs streamline development and reduce implementation time from weeks to days.",
+        "b0": "Comprehensive documentation",
+        "b1": "SDK support for multiple platforms",
+        "b2": "Consistent request and response patterns"
+      },
+      "1": {
+        "title": "Multiple AI Providers",
+        "description": "Access the best AI models from various providers through a single unified interface.",
+        "b0": "Seamless provider switching",
+        "b1": "Model-agnostic implementations",
+        "b2": "Comparative analytics across providers"
+      },
+      "2": {
+        "title": "Visual Builder",
+        "description": "Preview and modify your chatbot in an intuitive visual editor.",
+        "b0": "Testing tool",
+        "b1": "Flows",
+        "b2": "Launch with confidence"
+      },
+      "3": {
+        "title": "Templates",
+        "description": "Choose a ready-to-use template from the library for an easier start.",
+        "b0": "Customer service",
+        "b1": "Customer satisfaction",
+        "b2": "Ecommerce sales"
+      },
+      "4": {
+        "title": "Data Collection and Workflows",
+        "description": "Collect user information, build forms and surveys, and route contacts into the right flow or export.",
+        "b0": "A/B testing",
+        "b1": "Webhooks",
+        "b2": "Zapier actions"
+      },
+      "5": {
+        "title": "Reports",
+        "description": "Track the number of chats and users, and identify the busiest periods across channels.",
+        "b0": "Usage trends",
+        "b1": "Popular interactions",
+        "b2": "Operational visibility"
+      }
+    },
+    "comparison": {
+      "0": {
+        "feature": "Multiple AI providers",
+        "ours": "10+ providers integrated",
+        "competitors": "Often limited to one or two providers"
+      },
+      "1": {
+        "feature": "API simplicity",
+        "ours": "Simple, consistent APIs",
+        "competitors": "Higher implementation complexity"
+      },
+      "2": {
+        "feature": "Global infrastructure",
+        "ours": "Built for global availability",
+        "competitors": "Limited regional support"
+      },
+      "3": {
+        "feature": "Enterprise security",
+        "ours": "Compliance-first posture",
+        "competitors": "Partial or fragmented coverage"
+      }
+    }
+  },
+  "about": {
+    "heroEyebrow": "Our purpose",
+    "heroTitle": "About ZazuBot",
+    "heroDescription": "We believe meaningful conversations are the foundation of successful relationships. Messaging is where people naturally engage, and businesses should meet them there with the same speed, relevance, and personality.",
+    "missionTitle": "Our mission",
+    "missionText": "Businesses should harness the dynamics of real conversations, because where people love to chat, conversions and customer loyalty grow.",
+    "visionTitle": "Our vision",
+    "visionText": "Move beyond scripted, transactional responses and give businesses the tools to craft lively, personalized conversations that reflect their own voice.",
+    "backingTitle": "Long-term backing for product-led growth.",
+    "partnershipText": "SFGCO has made a significant investment in ZazuBot, reflecting confidence in the platform's potential to transform how support, automation, and AI work together.",
+    "partnershipSupport": "That support positions ZazuBot at the forefront of automation-led growth and gives customers a strong long-term technology partner.",
+    "valuesEyebrow": "What we believe",
+    "valuesTitle": "Supercharge your business with ZazuBot intelligence.",
+    "valuesDescription": "These principles guide everything we build.",
+    "values": {
+      "0": {
+        "title": "Messaging APIs",
+        "description": "Implement event-based messaging for both synchronous and asynchronous communication across live chat, chatbots, and in-app messaging."
+      },
+      "1": {
+        "title": "Omnichannel APIs",
+        "description": "Funnel every channel into a single messaging experience for all-in-one communication and messaging super-apps."
+      },
+      "2": {
+        "title": "Website Widget",
+        "description": "Monitor and engage visitors through rich messages and apps for custom chat, analytics, and lead capture."
+      }
+    }
+  },
+  "careers": {
+    "eyebrow": "Careers",
+    "heroTitle": "Join our team at ZazuBot",
+    "heroDescription": "We are building the future of business communication. If you care about technology, innovation, and making a measurable impact, we want to hear from you.",
+    "whyEyebrow": "Why work with us?",
+    "whyTitle": "Build meaningful software with a team that values speed and substance.",
+    "applyEyebrow": "Ready to apply?",
+    "applyText": "Send your CV and a short introduction to our team. We are excited to meet you.",
+    "reasons": {
+      "0": {
+        "title": "Innovative culture",
+        "description": "Work with AI and automation technologies in a collaborative, forward-thinking environment."
+      },
+      "1": {
+        "title": "Growth and learning",
+        "description": "We invest in professional development and give people room to grow their skills and careers."
+      },
+      "2": {
+        "title": "Inclusive team",
+        "description": "Join a diverse, supportive team where ideas matter and contributions create real product outcomes."
+      }
+    }
+  },
+  "locations": {
+    "eyebrow": "Our presence",
+    "title": "Global locations",
+    "0": {
+      "country": "Saudi Arabia",
+      "address": "6710 Prince Turkey Street\nAl Yarmouk, Al Khobar 34423\nSaudi Arabia",
+      "note": "Headquarters"
+    }
+  },
+  "partner": {
+    "eyebrow": "Partner program",
+    "heroTitle": "Become a solution provider.",
+    "heroDescription": "Join our solutions provider program and grow revenue with ZazuBot content services, process automation, and data governance solutions.",
+    "highlights": {
+      "0": {
+        "title": "Content services",
+        "description": "Package ZazuBot as part of your digital transformation delivery and monetize implementation expertise."
+      },
+      "1": {
+        "title": "Process automation",
+        "description": "Help customers connect chat, forms, and backend systems into one conversion-ready workflow."
+      },
+      "2": {
+        "title": "Data governance",
+        "description": "Bring automation under a compliant, well-managed operating model for enterprise customers."
+      }
+    }
+  },
+  "join": {
+    "eyebrow": "Book a demo",
+    "heroTitle": "See ZazuBot working inside a real workflow.",
+    "heroDescription": "Tell us about your use case and the team will walk you through the right automation, channel, and rollout plan."
+  },
+  "urgentSupport": {
+    "eyebrow": "Urgent support",
+    "heroTitle": "Need immediate help?",
+    "heroDescription": "Use the urgent support flow to send your issue directly to the team, then review our headquarters information below."
+  },
+  "privacyPolicy": {
+    "eyebrow": "Legal",
+    "heroTitle": "Privacy policy",
+    "heroDescription": "Last updated: 10 Mar 2025. This policy explains what data ZazuBot collects, why it is collected, and how it is protected."
+  },
+  "termsOfService": {
+    "eyebrow": "Legal",
+    "heroTitle": "Terms of service",
+    "heroDescription": "By using ZazuBot, you agree to the following terms and conditions. Please read them carefully."
+  },
+  "paymentSuccess": {
+    "title": "Payment successful",
+    "description": "Thank you for your payment. Your transaction has been completed successfully.",
+    "goToDashboard": "Go to dashboard",
+    "backToPricing": "Back to pricing"
+  }
+}
