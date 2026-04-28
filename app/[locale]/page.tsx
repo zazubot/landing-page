@@ -1,3 +1,5 @@
+import { setRequestLocale } from "next-intl/server";
+
 import {
   BenefitsSection,
   CTASection,
@@ -10,7 +12,14 @@ import {
   UseCasesSection,
 } from "@/components/site-sections";
 
-export default function HomePage() {
+export default async function HomePage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+
   return (
     <>
       <HomeHero />

@@ -1,7 +1,8 @@
 import Image from "next/image";
-import Link from "next/link";
+import { useTranslations } from "next-intl";
 
-import { footerColumns } from "@/lib/site-content";
+import { LanguageSwitcher } from "@/components/language-switcher";
+import { Link } from "@/i18n/navigation";
 
 const paymentProviders = [
   { name: "Visa", image: "/images/providers/Visa.png" },
@@ -12,12 +13,32 @@ const paymentProviders = [
 ];
 
 export function SiteFooter() {
+  const t = useTranslations("footer");
+
+  const productLinks = [
+    { href: "/features" as const, label: t("links.features") },
+    { href: "/join" as const, label: t("links.bookDemo") },
+    { href: "/pricing" as const, label: t("links.pricingPlans") },
+  ];
+
+  const companyLinks = [
+    { href: "/about" as const, label: t("links.about") },
+    { href: "/become-a-partner" as const, label: t("links.becomePartner") },
+    { href: "/careers" as const, label: t("links.careers") },
+  ];
+
+  const resourceLinks = [
+    { href: "/urgent-support" as const, label: t("links.urgentSupport") },
+    { href: "/terms-of-service" as const, label: t("links.termsOfService") },
+    { href: "/privacy-policy" as const, label: t("links.privacyPolicy") },
+  ];
+
   return (
     <footer className="border-t border-slate-200 bg-[#0d1320] text-slate-200">
       <div className="border-b border-white/10">
-        <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-center gap-8 px-4 py-6 sm:px-6 lg:px-8 lg:justify-between">
+        <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-center gap-8 px-4 py-6 sm:px-6 lg:justify-between lg:px-8">
           <div className="text-xs font-semibold uppercase tracking-[0.28em] text-slate-400">
-            Payment providers
+            {t("paymentProviders")}
           </div>
           <div className="flex flex-wrap items-center justify-center gap-6">
             {paymentProviders.map((provider) => (
@@ -51,17 +72,17 @@ export function SiteFooter() {
               <div className="font-[family-name:var(--font-display)] text-xl font-semibold">
                 ZazuBot
               </div>
-              <div className="text-sm text-slate-400">
-                Data-driven AI agents for support, sales, and automation.
-              </div>
+              <div className="text-sm text-slate-400">{t("tagline")}</div>
             </div>
           </div>
         </div>
 
         <div>
-          <div className="mb-4 text-sm font-semibold text-white">Product</div>
+          <div className="mb-4 text-sm font-semibold text-white">
+            {t("product")}
+          </div>
           <div className="space-y-3">
-            {footerColumns.product.map((item) => (
+            {productLinks.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
@@ -74,9 +95,11 @@ export function SiteFooter() {
         </div>
 
         <div>
-          <div className="mb-4 text-sm font-semibold text-white">Company</div>
+          <div className="mb-4 text-sm font-semibold text-white">
+            {t("company")}
+          </div>
           <div className="space-y-3">
-            {footerColumns.company.map((item) => (
+            {companyLinks.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
@@ -89,9 +112,11 @@ export function SiteFooter() {
         </div>
 
         <div>
-          <div className="mb-4 text-sm font-semibold text-white">Resources</div>
+          <div className="mb-4 text-sm font-semibold text-white">
+            {t("resources")}
+          </div>
           <div className="space-y-3">
-            {footerColumns.resources.map((item) => (
+            {resourceLinks.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
@@ -104,7 +129,9 @@ export function SiteFooter() {
         </div>
 
         <div>
-          <div className="mb-4 text-sm font-semibold text-white">Certified</div>
+          <div className="mb-4 text-sm font-semibold text-white">
+            {t("certified")}
+          </div>
           <div className="flex items-center gap-4 rounded-[1.5rem] border border-white/10 bg-white/5 p-4">
             <Image
               src="/images/cert/maroof.svg"
@@ -125,11 +152,12 @@ export function SiteFooter() {
       </div>
 
       <div className="border-t border-white/10">
-        <div className="mx-auto flex max-w-7xl flex-col gap-3 px-4 py-5 text-sm text-slate-400 sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:px-8">
-          <div>© 2026 ZazuBot. All rights reserved.</div>
-          <div>
-            Built for high-conviction support, sales, and automation teams.
+        <div className="mx-auto flex max-w-7xl flex-col gap-4 px-4 py-6 sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:px-8">
+          <div className="flex flex-col gap-1 text-sm text-slate-400">
+            <div>{t("copyright")}</div>
+            <div>{t("builtFor")}</div>
           </div>
+          <LanguageSwitcher />
         </div>
       </div>
     </footer>

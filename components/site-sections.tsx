@@ -1,6 +1,4 @@
 import Image from "next/image";
-
-import Link from "next/link";
 import {
   ArrowRight,
   BriefcaseBusiness,
@@ -15,6 +13,7 @@ import {
   Workflow,
   Zap,
 } from "lucide-react";
+import { getTranslations } from "next-intl/server";
 
 import { IntroTabs } from "@/components/intro-tabs";
 import { Badge } from "@/components/ui/badge";
@@ -26,22 +25,16 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { Link } from "@/i18n/navigation";
 import {
-  aboutContent,
   aiAvatars,
-  benefitArticles,
-  careersContent,
-  faqItems,
-  featurePageContent,
-  heroContent,
   integrationTiles,
   introTabs,
-  locations,
   orbitLogos,
   pricingPlans,
   testimonials,
-  useCases,
 } from "@/lib/site-content";
+import type { IntroTab } from "@/lib/site-content";
 
 const featureIcons = [
   Workflow,
@@ -53,6 +46,7 @@ const featureIcons = [
 ];
 const aboutIcons = [Sparkles, Globe, Workflow];
 const careerIcons = [Zap, GraduationCap, HeartHandshake];
+const partnerIcons = [BriefcaseBusiness, Workflow, ShieldCheck];
 
 export function PageHero({
   eyebrow,
@@ -83,7 +77,9 @@ export function PageHero({
   );
 }
 
-export function HomeHero() {
+export async function HomeHero() {
+  const t = await getTranslations("hero");
+
   return (
     <section className="relative overflow-hidden bg-[#090b12] text-white">
       <div className="absolute inset-0 motion-safe:animate-hero-glow bg-[radial-gradient(circle_at_top_left,_rgba(127,229,166,0.16),_transparent_26%),radial-gradient(circle_at_bottom_right,_rgba(252,211,77,0.15),_transparent_24%)]" />
@@ -105,11 +101,15 @@ export function HomeHero() {
             ))}
           </div>
 
+          <div className="mb-3 text-sm font-semibold uppercase tracking-[0.24em] text-[#7fe5a6] motion-safe:animate-hero-fade-up">
+            {t("eyebrow")}
+          </div>
+
           <h1 className="max-w-4xl text-pretty font-[family-name:var(--font-display)] text-5xl font-semibold leading-[0.96] tracking-tight motion-safe:animate-hero-fade-up sm:text-6xl lg:text-7xl">
-            {heroContent.title}
+            {t("title")}
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300 motion-safe:opacity-0 motion-safe:animate-hero-fade-up [animation-delay:140ms]">
-            {heroContent.description}
+            {t("description")}
           </p>
 
           <div className="mt-8 flex flex-col gap-3 motion-safe:opacity-0 motion-safe:animate-hero-fade-up sm:flex-row sm:flex-wrap [animation-delay:260ms]">
@@ -118,8 +118,8 @@ export function HomeHero() {
               size="lg"
               className="bg-[#7fe5a6] text-slate-950 hover:bg-[#6cd491]"
             >
-              <a href={heroContent.appUrl} target="_blank" rel="noreferrer">
-                {heroContent.startNowLabel}
+              <a href="https://app.zazubot.com" target="_blank" rel="noreferrer">
+                {t("startNow")}
               </a>
             </Button>
             <Button
@@ -128,8 +128,12 @@ export function HomeHero() {
               variant="outline"
               className="border-white/15 bg-white/5 text-white hover:bg-white/10 hover:text-white"
             >
-              <a href={heroContent.demoUrl} target="_blank" rel="noreferrer">
-                {heroContent.watchDemoLabel}
+              <a
+                href="https://www.youtube.com/watch?v=gv8KYqrUSgA"
+                target="_blank"
+                rel="noreferrer"
+              >
+                {t("watchDemo")}
               </a>
             </Button>
             <Button
@@ -138,7 +142,7 @@ export function HomeHero() {
               variant="outline"
               className="border-white/15 bg-transparent text-white hover:bg-white/10 hover:text-white"
             >
-              <Link href="/pricing">{heroContent.pricingLabel}</Link>
+              <Link href="/pricing">{t("pricingTable")}</Link>
             </Button>
             <Button
               asChild
@@ -146,8 +150,12 @@ export function HomeHero() {
               variant="ghost"
               className="text-slate-200 hover:bg-white/10 hover:text-white"
             >
-              <a href={heroContent.docsUrl} target="_blank" rel="noreferrer">
-                {heroContent.docsLabel}
+              <a
+                href="https://docs.zazubot.com/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                {t("documentation")}
               </a>
             </Button>
           </div>
@@ -158,10 +166,10 @@ export function HomeHero() {
             <div className="absolute inset-6 rounded-[2rem] bg-[#7fe5a6]/10 blur-3xl motion-safe:animate-hero-glow [animation-delay:900ms]" />
             <div className="relative rounded-[2rem] border border-white/10 bg-white/5 p-4 shadow-[0_40px_100px_rgba(0,0,0,0.45)] backdrop-blur motion-safe:animate-hero-float">
               <div className="absolute -left-6 top-8 rounded-[1.5rem] border border-white/10 bg-[#101522] px-4 py-3 text-xs uppercase tracking-[0.22em] text-[#7fe5a6] shadow-lg motion-safe:animate-hero-fade-up [animation-delay:360ms]">
-                Build ,Design and deploy your flow
+                {t("buildDesignDeploy")}
               </div>
               <div className="absolute -right-4 bottom-8 rounded-[1.5rem] border border-white/10 bg-[#141925] px-4 py-3 text-sm text-slate-300 shadow-lg motion-safe:animate-hero-fade-up [animation-delay:520ms]">
-                It is very easy to use, just drag and drop
+                {t("dragDropEasy")}
               </div>
               <div className="overflow-hidden rounded-[1.6rem] border border-white/10 bg-[#0e1118]">
                 <video
@@ -184,41 +192,73 @@ export function HomeHero() {
   );
 }
 
-export function IntroSection() {
+export async function IntroSection() {
+  const t = await getTranslations("intro");
+
+  const tabKeys = [
+    "visualBuilder",
+    "multipleChannels",
+    "templates",
+    "publish",
+  ] as const;
+
+  const tabs: IntroTab[] = introTabs.map((tab, i) => {
+    const key = tabKeys[i];
+    return {
+      image: tab.image,
+      label: t(`tabs.${key}.label`),
+      title: t(`tabs.${key}.title`),
+      description: t(`tabs.${key}.description`),
+      features:
+        key === "templates"
+          ? [
+              t("tabs.templates.feature0"),
+              t("tabs.templates.feature1"),
+              t("tabs.templates.feature2"),
+            ]
+          : undefined,
+    };
+  });
+
   return (
     <section className="bg-[#090b12] px-4 pb-20 sm:px-6 lg:px-8 lg:pb-24">
       <div className="mx-auto max-w-7xl">
         <div className="mb-10 max-w-3xl">
           <div className="text-sm font-semibold uppercase tracking-[0.24em] text-[#7fe5a6]">
-            Product walkthrough
+            {t("eyebrow")}
           </div>
           <h2 className="mt-4 font-[family-name:var(--font-display)] text-3xl font-semibold tracking-tight text-white sm:text-4xl">
-            Design, publish, and automate every customer touchpoint from one
-            workspace.
+            {t("title")}
           </h2>
         </div>
-        <IntroTabs tabs={introTabs} />
+        <IntroTabs tabs={tabs} />
       </div>
     </section>
   );
 }
 
-export function UseCasesSection() {
+export async function UseCasesSection() {
+  const t = await getTranslations("useCases");
+
+  const items = Array.from({ length: 3 }, (_, i) => ({
+    title: t(`${i}.title`),
+    description: t(`${i}.description`),
+  }));
+
   return (
     <section className="bg-white py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
           <div className="text-sm font-semibold uppercase tracking-[0.24em] text-emerald-700">
-            Core outcomes
+            {t("eyebrow")}
           </div>
           <h2 className="mt-4 font-[family-name:var(--font-display)] text-3xl font-semibold tracking-tight text-slate-950 sm:text-4xl">
-            Use the power of AI chatbots and get ahead of 99% of your
-            competitors.
+            {t("title")}
           </h2>
         </div>
 
         <div className="mt-12 grid gap-6 lg:grid-cols-3">
-          {useCases.map((item, index) => (
+          {items.map((item, index) => (
             <Card
               key={item.title}
               className="overflow-hidden rounded-[2rem] border-slate-200 shadow-none"
@@ -244,29 +284,34 @@ export function UseCasesSection() {
   );
 }
 
-export function BenefitsSection() {
+export async function BenefitsSection() {
+  const t = await getTranslations("benefits");
+
+  const articles = Array.from({ length: 6 }, (_, i) => ({
+    title: t(`${i}.title`),
+    description: t(`${i}.description`),
+  }));
+
   return (
     <section className="bg-[#f5f8f7] py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mb-12 flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
           <div className="max-w-2xl">
             <div className="text-sm font-semibold uppercase tracking-[0.24em] text-emerald-700">
-              Why teams switch
+              {t("eyebrow")}
             </div>
             <h2 className="mt-4 font-[family-name:var(--font-display)] text-3xl font-semibold tracking-tight text-slate-950 sm:text-4xl">
-              Make automation feel native to your business, not bolted on.
+              {t("title")}
             </h2>
           </div>
           <p className="max-w-xl text-base leading-7 text-slate-600">
-            ZazuBot combines AI providers, channel orchestration, workflow
-            logic, and branded delivery into one operating layer.
+            {t("description")}
           </p>
         </div>
 
         <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
-          {benefitArticles.map((article, index) => {
+          {articles.map((article, index) => {
             const Icon = featureIcons[index];
-
             return (
               <Card
                 key={article.title}
@@ -294,22 +339,21 @@ export function BenefitsSection() {
   );
 }
 
-export function IntegrationsShowcase() {
+export async function IntegrationsShowcase() {
+  const t = await getTranslations("integrations");
+
   return (
     <section className="overflow-hidden bg-white py-20">
       <div className="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:grid-cols-[0.95fr_1.05fr] lg:px-8">
         <div>
           <div className="text-sm font-semibold uppercase tracking-[0.24em] text-emerald-700">
-            Integrations and channels
+            {t("eyebrow")}
           </div>
           <h2 className="mt-4 font-[family-name:var(--font-display)] text-3xl font-semibold tracking-tight text-slate-950 sm:text-4xl">
-            Connect AI providers, messaging apps, scheduling, and automation
-            tools in one place.
+            {t("title")}
           </h2>
           <p className="mt-6 text-base leading-8 text-slate-600">
-            Reuse the same ZazuBot logic across lead capture, support, order
-            tracking, and appointment booking. Connect your workflows without
-            rebuilding the conversation layer each time.
+            {t("description")}
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             {orbitLogos.slice(0, 5).map((image) => (
@@ -333,7 +377,7 @@ export function IntegrationsShowcase() {
               className="bg-slate-950 text-white hover:bg-slate-800"
             >
               <Link href="/integrations">
-                Explore integrations
+                {t("explore")}
                 <ArrowRight className="h-4 w-4" />
               </Link>
             </Button>
@@ -366,20 +410,21 @@ export function IntegrationsShowcase() {
   );
 }
 
-export function TestimonialsSection() {
+export async function TestimonialsSection() {
+  const t = await getTranslations("testimonials");
+
   return (
     <section className="bg-[#0d1320] py-20 text-white">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
           <div className="text-sm font-semibold uppercase tracking-[0.24em] text-[#7fe5a6]">
-            Customer proof
+            {t("eyebrow")}
           </div>
           <h2 className="mt-4 font-[family-name:var(--font-display)] text-3xl font-semibold tracking-tight sm:text-4xl">
-            What our clients are saying
+            {t("title")}
           </h2>
           <p className="mt-4 text-base leading-7 text-slate-300">
-            Do not just take our word for it. Teams across support, sales, and
-            education are already shipping conversations on ZazuBot.
+            {t("description")}
           </p>
         </div>
 
@@ -418,143 +463,202 @@ export function TestimonialsSection() {
   );
 }
 
-export function PricingSection() {
+export async function PricingSection() {
+  const t = await getTranslations("pricing");
+
   return (
     <section className="bg-white py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
           <div className="text-sm font-semibold uppercase tracking-[0.24em] text-emerald-700">
-            Pricing and plans
+            {t("eyebrow")}
           </div>
           <h2 className="mt-4 font-[family-name:var(--font-display)] text-3xl font-semibold tracking-tight text-slate-950 sm:text-4xl">
-            Choose your plan
+            {t("title")}
           </h2>
           <p className="mt-4 text-base leading-7 text-slate-600">
-            Flexible plans that scale with your team, traffic, and automation
-            needs.
+            {t("description")}
           </p>
         </div>
 
         <div className="mt-12 grid gap-6 lg:grid-cols-3">
-          {pricingPlans.map((plan) => (
-            <Card
-              key={plan.id}
-              className={[
-                "rounded-[2rem] border-slate-200 shadow-none",
-                plan.featured
-                  ? "border-slate-950 bg-slate-950 text-white"
-                  : "bg-[#f8fbfa]",
-              ].join(" ")}
-            >
-              <CardHeader>
-                {plan.featured ? (
-                  <Badge className="w-fit rounded-full bg-white text-slate-950">
-                    Most popular
-                  </Badge>
-                ) : null}
-                <CardTitle
-                  className={plan.featured ? "text-white" : "text-slate-950"}
-                >
-                  {plan.name}
-                </CardTitle>
-                <div
-                  className={
-                    plan.featured ? "text-slate-300" : "text-slate-600"
-                  }
-                >
-                  {plan.description}
-                </div>
-                <div className="pt-3">
-                  <span className="font-[family-name:var(--font-display)] text-5xl font-semibold">
-                    ${plan.price}
-                  </span>
-                  <span
+          {pricingPlans.map((plan) => {
+            const planName = t(`plans.${plan.id}.name`);
+            const planDesc = t(`plans.${plan.id}.description`);
+            const planDuration = t(`plans.${plan.id}.duration`);
+
+            const featureKeys: Record<string, string[]> = {
+              free: [
+                "unlimitedBots",
+                "chats200",
+                "platforms10",
+                "brandingRemoved",
+                "collectFiles",
+                "createFolders",
+              ],
+              Monthly: [
+                "unlimitedBots",
+                "chats2000",
+                "extraChats",
+                "webhooks",
+                "platforms10",
+                "brandingRemoved",
+                "collectFiles",
+                "createFolders",
+                "directPrioritySupport",
+                "whatsapp",
+                "customDomain",
+                "prioritySupport",
+              ],
+              Yearly: [
+                "unlimitedBots",
+                "chats10000",
+                "webhooks",
+                "platforms10",
+                "brandingRemoved",
+                "collectFiles",
+                "createFolders",
+                "directPrioritySupport",
+                "whatsapp",
+                "customDomain",
+                "prioritySupport",
+              ],
+            };
+
+            const planFeatures = (featureKeys[plan.id] ?? []).map((key) =>
+              t(`features.${key}`)
+            );
+
+            return (
+              <Card
+                key={plan.id}
+                className={[
+                  "rounded-[2rem] border-slate-200 shadow-none",
+                  plan.featured
+                    ? "border-slate-950 bg-slate-950 text-white"
+                    : "bg-[#f8fbfa]",
+                ].join(" ")}
+              >
+                <CardHeader>
+                  {plan.featured ? (
+                    <Badge className="w-fit rounded-full bg-white text-slate-950">
+                      {t("mostPopular")}
+                    </Badge>
+                  ) : null}
+                  <CardTitle
+                    className={plan.featured ? "text-white" : "text-slate-950"}
+                  >
+                    {planName}
+                  </CardTitle>
+                  <div
                     className={
                       plan.featured ? "text-slate-300" : "text-slate-600"
                     }
                   >
-                    {" "}
-                    / {plan.duration}
-                  </span>
-                </div>
-              </CardHeader>
-              <CardContent className="space-y-5">
-                <div className="space-y-3">
-                  {plan.features.map((feature) => (
-                    <div
-                      key={feature}
-                      className="flex items-start gap-3 text-sm leading-6"
+                    {planDesc}
+                  </div>
+                  <div className="pt-3">
+                    <span className="font-[family-name:var(--font-display)] text-5xl font-semibold">
+                      ${plan.price}
+                    </span>
+                    <span
+                      className={
+                        plan.featured ? "text-slate-300" : "text-slate-600"
+                      }
                     >
-                      <Check
-                        className={
-                          plan.featured
-                            ? "mt-0.5 h-4 w-4 text-[#7fe5a6]"
-                            : "mt-0.5 h-4 w-4 text-emerald-700"
-                        }
-                      />
-                      <span
-                        className={
-                          plan.featured ? "text-slate-200" : "text-slate-700"
-                        }
+                      {" "}
+                      {t("per", { duration: planDuration })}
+                    </span>
+                  </div>
+                </CardHeader>
+                <CardContent className="space-y-5">
+                  <div className="space-y-3">
+                    {planFeatures.map((feature) => (
+                      <div
+                        key={feature}
+                        className="flex items-start gap-3 text-sm leading-6"
                       >
-                        {feature}
-                      </span>
-                    </div>
-                  ))}
-                </div>
-                <Button
-                  asChild
-                  className={
-                    plan.featured
-                      ? "w-full bg-white text-slate-950 hover:bg-slate-100"
-                      : "w-full bg-slate-950 text-white hover:bg-slate-800"
-                  }
-                >
-                  {plan.paymentUrl ? (
-                    <a href={plan.paymentUrl} target="_blank" rel="noreferrer">
-                      Checkout
-                    </a>
-                  ) : (
-                    <a
-                      href="https://app.zazubot.com"
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      Start free
-                    </a>
-                  )}
-                </Button>
-              </CardContent>
-            </Card>
-          ))}
+                        <Check
+                          className={
+                            plan.featured
+                              ? "mt-0.5 h-4 w-4 text-[#7fe5a6]"
+                              : "mt-0.5 h-4 w-4 text-emerald-700"
+                          }
+                        />
+                        <span
+                          className={
+                            plan.featured ? "text-slate-200" : "text-slate-700"
+                          }
+                        >
+                          {feature}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                  <Button
+                    asChild
+                    className={
+                      plan.featured
+                        ? "w-full bg-white text-slate-950 hover:bg-slate-100"
+                        : "w-full bg-slate-950 text-white hover:bg-slate-800"
+                    }
+                  >
+                    {plan.paymentUrl ? (
+                      <a
+                        href={plan.paymentUrl}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        {t("checkout")}
+                      </a>
+                    ) : (
+                      <a
+                        href="https://app.zazubot.com"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        {t("startFree")}
+                      </a>
+                    )}
+                  </Button>
+                </CardContent>
+              </Card>
+            );
+          })}
         </div>
       </div>
     </section>
   );
 }
 
-export function FAQSection() {
+export async function FAQSection() {
+  const t = await getTranslations("faq");
+
+  const items = Array.from({ length: 5 }, (_, i) => ({
+    question: t(`${i}.question`),
+    answer: t(`${i}.answer`),
+  }));
+
   return (
     <section className="bg-[#f5f8f7] py-20">
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
           <div className="text-sm font-semibold uppercase tracking-[0.24em] text-emerald-700">
-            FAQ
+            {t("eyebrow")}
           </div>
           <h2 className="mt-4 font-[family-name:var(--font-display)] text-3xl font-semibold tracking-tight text-slate-950 sm:text-4xl">
-            Frequently asked questions
+            {t("title")}
           </h2>
           <p className="mt-4 text-base leading-7 text-slate-600">
-            Find answers to common questions about pricing, subscriptions, and
-            rollout.
+            {t("description")}
           </p>
         </div>
 
         <Card className="mt-12 rounded-[2rem] border-white bg-white shadow-[0_20px_45px_rgba(15,23,42,0.06)]">
           <CardContent className="p-6 sm:p-8">
             <Accordion type="single" collapsible>
-              {faqItems.map((item) => (
-                <AccordionItem key={item.question} value={item.question}>
+              {items.map((item, i) => (
+                <AccordionItem key={item.question} value={`faq-${i}`}>
                   <AccordionTrigger className="text-base text-slate-950 hover:no-underline">
                     {item.question}
                   </AccordionTrigger>
@@ -571,7 +675,9 @@ export function FAQSection() {
   );
 }
 
-export function CTASection() {
+export async function CTASection() {
+  const t = await getTranslations("cta");
+
   return (
     <section className="bg-white py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -579,15 +685,13 @@ export function CTASection() {
           <div className="grid gap-10 lg:grid-cols-[1fr_auto] lg:items-center">
             <div>
               <div className="text-sm font-semibold uppercase tracking-[0.24em] text-[#7fe5a6]">
-                Ready to get started?
+                {t("eyebrow")}
               </div>
               <h2 className="mt-4 font-[family-name:var(--font-display)] text-3xl font-semibold tracking-tight sm:text-4xl">
-                Launch the first ZazuBot flow that your team will actually keep
-                using.
+                {t("title")}
               </h2>
               <p className="mt-4 max-w-2xl text-base leading-7 text-slate-300">
-                Start with a free test build, connect your channels, and move
-                from scripted support to AI-assisted conversations fast.
+                {t("description")}
               </p>
             </div>
             <div className="flex flex-col gap-3 sm:flex-row lg:flex-col">
@@ -601,7 +705,7 @@ export function CTASection() {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  Start now
+                  {t("startNow")}
                 </a>
               </Button>
               <Button
@@ -610,7 +714,7 @@ export function CTASection() {
                 variant="outline"
                 className="border-white/15 bg-white/5 text-white hover:bg-white/10 hover:text-white"
               >
-                <Link href="/join">Book a demo</Link>
+                <Link href="/join">{t("bookDemo")}</Link>
               </Button>
             </div>
           </div>
@@ -620,12 +724,19 @@ export function CTASection() {
   );
 }
 
-export function FeatureCardsGrid() {
+export async function FeatureCardsGrid() {
+  const t = await getTranslations("features");
+
+  const cards = Array.from({ length: 6 }, (_, i) => ({
+    title: t(`cards.${i}.title`),
+    description: t(`cards.${i}.description`),
+    bullets: Array.from({ length: 3 }, (_, j) => t(`cards.${i}.b${j}`)),
+  }));
+
   return (
     <div className="grid gap-6 lg:grid-cols-3">
-      {featurePageContent.cards.map((card, index) => {
+      {cards.map((card, index) => {
         const Icon = featureIcons[index];
-
         return (
           <Card
             key={card.title}
@@ -662,15 +773,23 @@ export function FeatureCardsGrid() {
   );
 }
 
-export function ComparisonTable() {
+export async function ComparisonTable() {
+  const t = await getTranslations("features");
+
+  const rows = Array.from({ length: 4 }, (_, i) => ({
+    feature: t(`comparison.${i}.feature`),
+    ours: t(`comparison.${i}.ours`),
+    competitors: t(`comparison.${i}.competitors`),
+  }));
+
   return (
     <div className="overflow-hidden rounded-[2rem] border border-slate-200 bg-white shadow-[0_18px_45px_rgba(15,23,42,0.06)]">
       <div className="grid grid-cols-[1.1fr_1fr_1fr] border-b border-slate-200 bg-slate-50 px-6 py-4 text-sm font-semibold text-slate-700">
-        <div>Feature</div>
-        <div>Our platform</div>
-        <div>Typical competitors</div>
+        <div>{t("tableFeature")}</div>
+        <div>{t("tablePlatform")}</div>
+        <div>{t("tableCompetitors")}</div>
       </div>
-      {featurePageContent.comparisonRows.map((row) => (
+      {rows.map((row) => (
         <div
           key={row.feature}
           className="grid grid-cols-[1.1fr_1fr_1fr] gap-4 border-b border-slate-100 px-6 py-5 text-sm leading-7 text-slate-600 last:border-b-0"
@@ -684,7 +803,14 @@ export function ComparisonTable() {
   );
 }
 
-export function AboutSections() {
+export async function AboutSections() {
+  const t = await getTranslations("about");
+
+  const values = Array.from({ length: 3 }, (_, i) => ({
+    title: t(`values.${i}.title`),
+    description: t(`values.${i}.description`),
+  }));
+
   return (
     <div className="space-y-20 py-20">
       <section>
@@ -692,21 +818,21 @@ export function AboutSections() {
           <Card className="rounded-[2rem] border-slate-200 bg-white shadow-none">
             <CardHeader>
               <CardTitle className="text-2xl text-slate-950">
-                {aboutContent.missionTitle}
+                {t("missionTitle")}
               </CardTitle>
             </CardHeader>
             <CardContent className="text-base leading-8 text-slate-600">
-              {aboutContent.missionText}
+              {t("missionText")}
             </CardContent>
           </Card>
           <Card className="rounded-[2rem] border-slate-200 bg-white shadow-none">
             <CardHeader>
               <CardTitle className="text-2xl text-slate-950">
-                {aboutContent.visionTitle}
+                {t("visionTitle")}
               </CardTitle>
             </CardHeader>
             <CardContent className="text-base leading-8 text-slate-600">
-              {aboutContent.visionText}
+              {t("visionText")}
             </CardContent>
           </Card>
         </div>
@@ -727,13 +853,13 @@ export function AboutSections() {
               </div>
               <div>
                 <h2 className="font-[family-name:var(--font-display)] text-3xl font-semibold tracking-tight text-slate-950">
-                  Long-term backing for product-led growth.
+                  {t("backingTitle")}
                 </h2>
                 <p className="mt-4 text-base leading-8 text-slate-600">
-                  {aboutContent.partnershipText}
+                  {t("partnershipText")}
                 </p>
                 <p className="mt-4 text-base leading-8 text-slate-600">
-                  {aboutContent.partnershipSupport}
+                  {t("partnershipSupport")}
                 </p>
               </div>
             </div>
@@ -745,20 +871,19 @@ export function AboutSections() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
             <div className="text-sm font-semibold uppercase tracking-[0.24em] text-emerald-700">
-              {aboutContent.valuesTitle}
+              {t("valuesEyebrow")}
             </div>
             <h2 className="mt-4 font-[family-name:var(--font-display)] text-3xl font-semibold tracking-tight text-slate-950 sm:text-4xl">
-              {aboutContent.valuesSubtitle}
+              {t("valuesTitle")}
             </h2>
             <p className="mt-4 text-base leading-7 text-slate-600">
-              {aboutContent.valuesDescription}
+              {t("valuesDescription")}
             </p>
           </div>
 
           <div className="mt-12 grid gap-6 lg:grid-cols-3">
-            {aboutContent.values.map((value, index) => {
+            {values.map((value, index) => {
               const Icon = aboutIcons[index];
-
               return (
                 <Card
                   key={value.title}
@@ -785,25 +910,30 @@ export function AboutSections() {
   );
 }
 
-export function CareersSections() {
+export async function CareersSections() {
+  const t = await getTranslations("careers");
+
+  const reasons = Array.from({ length: 3 }, (_, i) => ({
+    title: t(`reasons.${i}.title`),
+    description: t(`reasons.${i}.description`),
+  }));
+
   return (
     <div className="space-y-16 py-20">
       <section>
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
             <div className="text-sm font-semibold uppercase tracking-[0.24em] text-emerald-700">
-              {careersContent.whyTitle}
+              {t("whyEyebrow")}
             </div>
             <h2 className="mt-4 font-[family-name:var(--font-display)] text-3xl font-semibold tracking-tight text-slate-950 sm:text-4xl">
-              Build meaningful software with a team that values speed and
-              substance.
+              {t("whyTitle")}
             </h2>
           </div>
 
           <div className="mt-12 grid gap-6 lg:grid-cols-3">
-            {careersContent.reasons.map((reason, index) => {
+            {reasons.map((reason, index) => {
               const Icon = careerIcons[index];
-
               return (
                 <Card
                   key={reason.title}
@@ -831,16 +961,16 @@ export function CareersSections() {
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <div className="rounded-[2.5rem] border border-slate-200 bg-[#f5f8f7] p-10 text-center">
             <div className="text-sm font-semibold uppercase tracking-[0.24em] text-emerald-700">
-              {careersContent.applyTitle}
+              {t("applyEyebrow")}
             </div>
             <p className="mx-auto mt-4 max-w-2xl text-lg leading-8 text-slate-600">
-              {careersContent.applyText}
+              {t("applyText")}
             </p>
             <a
-              href={`mailto:${careersContent.email}`}
+              href="mailto:hr@sfgco.sa"
               className="mt-8 inline-flex rounded-full bg-slate-950 px-6 py-3 font-medium text-white transition hover:bg-slate-800"
             >
-              {careersContent.email}
+              hr@sfgco.sa
             </a>
           </div>
         </div>
@@ -849,20 +979,28 @@ export function CareersSections() {
   );
 }
 
-export function LocationsSection() {
+export async function LocationsSection() {
+  const t = await getTranslations("locations");
+
+  const items = Array.from({ length: 1 }, (_, i) => ({
+    country: t(`${i}.country`),
+    address: t(`${i}.address`),
+    note: t(`${i}.note`),
+  }));
+
   return (
     <section className="bg-white py-16">
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <div className="text-sm font-semibold uppercase tracking-[0.24em] text-emerald-700">
-            Our presence
+            {t("eyebrow")}
           </div>
           <h2 className="mt-4 font-[family-name:var(--font-display)] text-3xl font-semibold tracking-tight text-slate-950 sm:text-4xl">
-            Global locations
+            {t("title")}
           </h2>
         </div>
         <div className="mt-10 grid gap-6">
-          {locations.map((location) => (
+          {items.map((location) => (
             <Card
               key={location.country}
               className="rounded-[2rem] border-slate-200 bg-[#f8fbfa] shadow-none"
@@ -891,48 +1029,37 @@ export function LocationsSection() {
   );
 }
 
-export function PartnerProgramHighlights() {
-  const highlights = [
-    {
-      title: "Content services",
-      description:
-        "Package ZazuBot as part of your digital transformation delivery and monetize implementation expertise.",
-      icon: BriefcaseBusiness,
-    },
-    {
-      title: "Process automation",
-      description:
-        "Help customers connect chat, forms, and backend systems into one conversion-ready workflow.",
-      icon: Workflow,
-    },
-    {
-      title: "Data governance",
-      description:
-        "Bring automation under a compliant, well-managed operating model for enterprise customers.",
-      icon: ShieldCheck,
-    },
-  ];
+export async function PartnerProgramHighlights() {
+  const t = await getTranslations("partner");
+
+  const highlights = Array.from({ length: 3 }, (_, i) => ({
+    title: t(`highlights.${i}.title`),
+    description: t(`highlights.${i}.description`),
+  }));
 
   return (
     <div className="grid gap-6 lg:grid-cols-3">
-      {highlights.map((item) => (
-        <Card
-          key={item.title}
-          className="rounded-[1.75rem] border-slate-200 bg-white shadow-none"
-        >
-          <CardHeader>
-            <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-emerald-100 text-emerald-700">
-              <item.icon className="h-5 w-5" />
-            </div>
-            <CardTitle className="text-xl text-slate-950">
-              {item.title}
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="text-sm leading-7 text-slate-600">
-            {item.description}
-          </CardContent>
-        </Card>
-      ))}
+      {highlights.map((item, index) => {
+        const Icon = partnerIcons[index];
+        return (
+          <Card
+            key={item.title}
+            className="rounded-[1.75rem] border-slate-200 bg-white shadow-none"
+          >
+            <CardHeader>
+              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-emerald-100 text-emerald-700">
+                <Icon className="h-5 w-5" />
+              </div>
+              <CardTitle className="text-xl text-slate-950">
+                {item.title}
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="text-sm leading-7 text-slate-600">
+              {item.description}
+            </CardContent>
+          </Card>
+        );
+      })}
     </div>
   );
 }

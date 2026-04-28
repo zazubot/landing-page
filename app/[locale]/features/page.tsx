@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 
 import {
   ComparisonTable,
@@ -7,7 +8,6 @@ import {
   IntegrationsShowcase,
   PageHero,
 } from "@/components/site-sections";
-import { featurePageContent } from "@/lib/site-content";
 
 export const metadata: Metadata = {
   title: "Features",
@@ -15,13 +15,22 @@ export const metadata: Metadata = {
     "Explore the ZazuBot feature set for AI providers, visual building, analytics, workflows, and customer service automation.",
 };
 
-export default function FeaturesPage() {
+export default async function FeaturesPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+
+  const t = await getTranslations("features");
+
   return (
     <>
       <PageHero
-        eyebrow="Platform features"
-        title={featurePageContent.heroTitle}
-        description={featurePageContent.heroSubtitle}
+        eyebrow={t("eyebrow")}
+        title={t("pageTitle")}
+        description={t("pageDescription")}
       />
 
       <div className="bg-[#f5f8f7] py-20">
@@ -36,10 +45,10 @@ export default function FeaturesPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mb-10 max-w-3xl">
             <div className="text-sm font-semibold uppercase tracking-[0.24em] text-emerald-700">
-              Why choose us
+              {t("comparisonEyebrow")}
             </div>
             <h2 className="mt-4 font-[family-name:var(--font-display)] text-3xl font-semibold tracking-tight text-slate-950 sm:text-4xl">
-              Compare with alternatives
+              {t("comparisonTitle")}
             </h2>
           </div>
           <ComparisonTable />

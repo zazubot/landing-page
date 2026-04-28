@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 
 import {
   CTASection,
@@ -14,13 +15,22 @@ export const metadata: Metadata = {
     "See how ZazuBot connects AI providers, messaging apps, booking tools, and automation layers into one workflow.",
 };
 
-export default function IntegrationsPage() {
+export default async function IntegrationsPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+
+  const t = await getTranslations("integrations");
+
   return (
     <>
       <PageHero
-        eyebrow="Connected workflows"
-        title="Support customers on multiple channels and connect every critical tool."
-        description="Deploy one conversation system across your website, WhatsApp, scheduling flows, AI providers, and downstream automations."
+        eyebrow={t("pageEyebrow")}
+        title={t("pageTitle")}
+        description={t("pageDescription")}
       />
 
       <IntegrationsShowcase />
@@ -29,15 +39,13 @@ export default function IntegrationsPage() {
         <div className="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:grid-cols-[1fr_1fr] lg:px-8">
           <div>
             <div className="text-sm font-semibold uppercase tracking-[0.24em] text-emerald-700">
-              Workflow ecosystem
+              {t("ecosystemEyebrow")}
             </div>
             <h2 className="mt-4 font-[family-name:var(--font-display)] text-3xl font-semibold tracking-tight text-slate-950 sm:text-4xl">
-              Build once, publish everywhere.
+              {t("ecosystemTitle")}
             </h2>
             <p className="mt-6 text-base leading-8 text-slate-600">
-              ZazuBot lets your team reuse the same logic, prompts, and routing
-              across AI support, lead capture, appointment booking, and
-              escalations.
+              {t("ecosystemDescription")}
             </p>
             <div className="mt-8 grid grid-cols-3 gap-4 sm:grid-cols-4">
               {orbitLogos.map((logo) => (

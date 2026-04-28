@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 
 import {
   CTASection,
@@ -13,13 +14,22 @@ export const metadata: Metadata = {
     "Compare ZazuBot pricing plans for testing, monthly deployment, and annual growth commitments.",
 };
 
-export default function PricingPage() {
+export default async function PricingPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+
+  const t = await getTranslations("pricing");
+
   return (
     <>
       <PageHero
-        eyebrow="Pricing and plans"
-        title="Flexible plans that scale with your business."
-        description="Whether you are a solo operator, a growing startup, or an enterprise team, ZazuBot gives you a clear path from testing to production deployment."
+        eyebrow={t("pageEyebrow")}
+        title={t("pageTitle")}
+        description={t("pageDescription")}
       />
       <PricingSection />
       <FAQSection />
