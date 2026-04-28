@@ -24,7 +24,7 @@ const faq = [
   {
     question: "What payment methods do you accept?",
     answer:
-      "We accept Visa, MasterCard, American Express, PayPal, Apple Pay, and Google Pay, ensuring secure payment options for all customers.",
+      "We accept Visa, MasterCard, American Express, Mada, Apple Pay, and Google Pay, ensuring secure payment options for all customers.",
   },
   {
     question: "What if I receive a damaged item?",
