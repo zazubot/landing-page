@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Manrope, Space_Grotesk } from "next/font/google";
+import { Noto_Kufi_Arabic } from "next/font/google";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
@@ -12,13 +12,15 @@ import { siteName, siteUrl } from "@/lib/site-content";
 
 import "@/app/globals.css";
 
-const bodyFont = Manrope({
+const bodyFont = Noto_Kufi_Arabic({
   subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
   variable: "--font-body",
 });
 
-const displayFont = Space_Grotesk({
+const displayFont = Noto_Kufi_Arabic({
   subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
   variable: "--font-display",
 });
 
