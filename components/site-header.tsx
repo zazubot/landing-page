@@ -3,23 +3,32 @@
 import Image from "next/image";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 
 import { Button } from "@/components/ui/button";
-import { Link } from "@/i18n/navigation";
+import { Link, useRouter, usePathname } from "@/i18n/navigation";
 import { heroContent } from "@/lib/site-content";
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
   const t = useTranslations("nav");
   const th = useTranslations("header");
+  const locale = useLocale();
+  const router = useRouter();
+  const pathname = usePathname();
+
+  function toggleLocale() {
+    router.replace(pathname, { locale: locale === "en" ? "ar" : "en" });
+  }
 
   const navItems = [
     { href: "/features" as const, label: t("features") },
     { href: "/integrations" as const, label: t("integrations") },
     { href: "/pricing" as const, label: t("pricing") },
-    { href: "/about" as const, label: t("about") },
-    { href: "/careers" as const, label: t("careers") },
+    {
+      href: "https://docs.zazubot.com" as const,
+      label: t("docs"),
+    },
   ];
 
   return (
@@ -50,14 +59,8 @@ export function SiteHeader() {
         </nav>
 
         <div className="hidden items-center gap-3 lg:flex">
-          <Button variant="outline" asChild>
-            <a
-              href={heroContent.docsUrl}
-              target="_blank"
-              rel="noreferrer"
-            >
-              {t("docs")}
-            </a>
+          <Button variant="outline" onClick={toggleLocale}>
+            {locale === "en" ? "العربية" : "English"}
           </Button>
           <Button
             asChild
@@ -93,24 +96,14 @@ export function SiteHeader() {
               </Link>
             ))}
             <div className="flex flex-col gap-3 pt-3">
-              <Button variant="outline" asChild>
-                <a
-                  href={heroContent.docsUrl}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  {t("docs")}
-                </a>
+              <Button variant="outline" onClick={toggleLocale}>
+                {locale === "en" ? "العربية" : "English"}
               </Button>
               <Button
                 asChild
                 className="bg-slate-950 text-white hover:bg-slate-800"
               >
-                <a
-                  href={heroContent.appUrl}
-                  target="_blank"
-                  rel="noreferrer"
-                >
+                <a href={heroContent.appUrl} target="_blank" rel="noreferrer">
                   {t("startNow")}
                 </a>
               </Button>

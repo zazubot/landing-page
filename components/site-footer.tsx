@@ -7,7 +7,7 @@ import { Link } from "@/i18n/navigation";
 const paymentProviders = [
   { name: "Visa", image: "/images/providers/Visa.png" },
   { name: "Mastercard", image: "/images/providers/Master.png" },
-  { name: "Mada", image: "/images/providers/Mada.svg" },
+  // { name: "Mada", image: "/images/providers/Mada.svg" },
   { name: "Apple Pay", image: "/images/providers/apple-pay.png" },
   { name: "Bank transfer", image: "/images/providers/bank_transfer.webp" },
 ];

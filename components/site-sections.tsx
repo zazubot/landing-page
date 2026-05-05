@@ -118,7 +118,11 @@ export async function HomeHero() {
               size="lg"
               className="bg-[#7fe5a6] text-slate-950 hover:bg-[#6cd491]"
             >
-              <a href="https://app.zazubot.com" target="_blank" rel="noreferrer">
+              <a
+                href="https://app.zazubot.com"
+                target="_blank"
+                rel="noreferrer"
+              >
                 {t("startNow")}
               </a>
             </Button>
@@ -134,28 +138,6 @@ export async function HomeHero() {
                 rel="noreferrer"
               >
                 {t("watchDemo")}
-              </a>
-            </Button>
-            <Button
-              asChild
-              size="lg"
-              variant="outline"
-              className="border-white/15 bg-transparent text-white hover:bg-white/10 hover:text-white"
-            >
-              <Link href="/pricing">{t("pricingTable")}</Link>
-            </Button>
-            <Button
-              asChild
-              size="lg"
-              variant="ghost"
-              className="text-slate-200 hover:bg-white/10 hover:text-white"
-            >
-              <a
-                href="https://docs.zazubot.com/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                {t("documentation")}
               </a>
             </Button>
           </div>
@@ -526,7 +508,7 @@ export async function PricingSection() {
             };
 
             const planFeatures = (featureKeys[plan.id] ?? []).map((key) =>
-              t(`features.${key}`)
+              t(`features.${key}`),
             );
 
             return (
