@@ -53,6 +53,22 @@
     "buildDesignDeploy": "Build, Design and deploy your flow",
     "dragDropEasy": "It is very easy to use, just drag and drop"
   },
+  "listenSection": {
+    "eyebrow": "Hear ZazuBot Speak",
+    "title": "ZazuBot speaks your customers' Arabic dialect",
+    "description": "Select an Arabic dialect and hear how ZazuBot naturally converses with your customers — familiar, fluent, and on-brand.",
+    "playButton": "Play sample",
+    "pauseButton": "Pause",
+    "nowPlaying": "Now playing",
+    "chooseDialect": "Choose a dialect and press play",
+    "dialects": {
+      "egyptian": "Egyptian",
+      "saudi": "Saudi",
+      "gulf": "Gulf",
+      "levantine": "Levantine",
+      "moroccan": "Moroccan"
+    }
+  },
   "intro": {
     "eyebrow": "Product walkthrough",
     "title": "Design, publish, and automate every customer touchpoint from one workspace.",

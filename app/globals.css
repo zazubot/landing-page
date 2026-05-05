@@ -33,6 +33,7 @@
   --animate-hero-fade-in: hero-fade-in 0.9s ease-out both;
   --animate-hero-float: hero-float 7s ease-in-out infinite;
   --animate-hero-glow: hero-glow 10s ease-in-out infinite;
+  --animate-sound-bar: sound-bar 0.7s ease-in-out infinite alternate;
 
   @keyframes accordion-down {
     from {
@@ -91,6 +92,15 @@
     50% {
       opacity: 0.85;
       transform: scale(1.08);
+    }
+  }
+
+  @keyframes sound-bar {
+    from {
+      transform: scaleY(0.25);
+    }
+    to {
+      transform: scaleY(1);
     }
   }
 }

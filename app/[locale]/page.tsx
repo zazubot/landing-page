@@ -7,6 +7,7 @@ import {
   HomeHero,
   IntegrationsShowcase,
   IntroSection,
+  ListenToZazuBotSection,
   PricingSection,
   TestimonialsSection,
   UseCasesSection,
@@ -15,7 +16,7 @@ import {
 export default async function HomePage({
   params,
 }: {
-  params: Promise<{ locale: string }>;
+  readonly params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
   setRequestLocale(locale);
@@ -23,6 +24,7 @@ export default async function HomePage({
   return (
     <>
       <HomeHero />
+      <ListenToZazuBotSection />
       <IntroSection />
       <UseCasesSection />
       <IntegrationsShowcase />

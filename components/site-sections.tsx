@@ -16,6 +16,7 @@ import {
 import { getTranslations } from "next-intl/server";
 
 import { IntroTabs } from "@/components/intro-tabs";
+import { ListenToZazuBotPlayer } from "@/components/listen-section";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -72,6 +73,46 @@ export function PageHero({
         <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-600">
           {description}
         </p>
+      </div>
+    </section>
+  );
+}
+
+export async function ListenToZazuBotSection() {
+  const t = await getTranslations("listenSection");
+
+  return (
+    <section className="bg-[#090b12] py-20 text-white">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-3xl text-center">
+          <div className="text-sm font-semibold uppercase tracking-[0.24em] text-[#7fe5a6]">
+            {t("eyebrow")}
+          </div>
+          <h2 className="mt-4 font-[family-name:var(--font-display)] text-3xl font-semibold tracking-tight sm:text-4xl">
+            {t("title")}
+          </h2>
+          <p className="mt-4 text-base leading-7 text-slate-300">
+            {t("description")}
+          </p>
+        </div>
+
+        <div className="mt-12">
+          <ListenToZazuBotPlayer
+            translations={{
+              playButton: t("playButton"),
+              pauseButton: t("pauseButton"),
+              nowPlaying: t("nowPlaying"),
+              chooseDialect: t("chooseDialect"),
+              dialects: {
+                egyptian: t("dialects.egyptian"),
+                saudi: t("dialects.saudi"),
+                gulf: t("dialects.gulf"),
+                levantine: t("dialects.levantine"),
+                moroccan: t("dialects.moroccan"),
+              },
+            }}
+          />
+        </div>
       </div>
     </section>
   );
