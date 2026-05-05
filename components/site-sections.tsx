@@ -108,7 +108,7 @@ export async function ListenToZazuBotSection() {
                 saudi: t("dialects.saudi"),
                 gulf: t("dialects.gulf"),
                 levantine: t("dialects.levantine"),
-                moroccan: t("dialects.moroccan"),
+                // moroccan: t("dialects.moroccan"),
               },
             }}
           />
