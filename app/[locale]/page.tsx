@@ -1,26 +1,38 @@
-import Hero from "@/components/hero-home";
-import FeaturesPlanet from "@/components/features-planet";
-import LargeTestimonial from "@/components/large-testimonial";
-import FAQAccordion from "@/components/faq";
-import UseCases from "@/components/use-cases";
-import HeroIntro from "@/components/hero-intro";
+import { setRequestLocale } from "next-intl/server";
 
-export default async function LocaleHome({
+import {
+  BenefitsSection,
+  CTASection,
+  FAQSection,
+  HomeHero,
+  IntegrationsShowcase,
+  IntroSection,
+  ListenToZazuBotSection,
+  PricingSection,
+  TestimonialsSection,
+  UseCasesSection,
+} from "@/components/site-sections";
+
+export default async function HomePage({
   params,
 }: {
-  params: Promise<{ locale: string }>;
+  readonly params: Promise<{ locale: string }>;
 }) {
-  const resolvedParams = await params;
+  const { locale } = await params;
+  setRequestLocale(locale);
+
   return (
     <>
-      <Hero locale={resolvedParams?.locale === "ar" ? "ar" : "en"} />
-      <HeroIntro locale={resolvedParams?.locale === "ar" ? "ar" : "en"} />
-      <UseCases locale={resolvedParams?.locale === "ar" ? "ar" : "en"} />
-      <FeaturesPlanet locale={resolvedParams?.locale === "ar" ? "ar" : "en"} />
-      <LargeTestimonial
-        locale={resolvedParams?.locale === "ar" ? "ar" : "en"}
-      />
-      <FAQAccordion locale={resolvedParams?.locale === "ar" ? "ar" : "en"} />
+      <HomeHero />
+      <ListenToZazuBotSection />
+      <IntroSection />
+      <UseCasesSection />
+      <IntegrationsShowcase />
+      <BenefitsSection />
+      <TestimonialsSection />
+      <PricingSection />
+      <FAQSection />
+      <CTASection />
     </>
   );
 }

@@ -1,53 +1,100 @@
-"use client";
+import type { Metadata } from "next";
+import { Noto_Kufi_Arabic } from "next/font/google";
+import { NextIntlClientProvider } from "next-intl";
+import { getMessages, setRequestLocale } from "next-intl/server";
+import { notFound } from "next/navigation";
 
-import { useEffect } from "react";
+import { SiteFooter } from "@/components/site-footer";
+import { SiteHeader } from "@/components/site-header";
+import { FloatWidget } from "@/components/float-widget";
+import { routing } from "@/i18n/routing";
+import { siteName, siteUrl } from "@/lib/site-content";
 
-import AOS from "aos";
-import "aos/dist/aos.css";
+import "@/app/globals.css";
 
-import Header from "@/components/ui/header";
-import Footer from "@/components/ui/footer";
-import { getCalApi } from "@calcom/embed-react";
+const bodyFont = Noto_Kufi_Arabic({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-body",
+});
 
-// Supported locales
-const SUPPORTED_LOCALES = ["en", "ar"] as const;
-type Locale = (typeof SUPPORTED_LOCALES)[number];
+const displayFont = Noto_Kufi_Arabic({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-display",
+});
 
-export default function LocaleLayout({
+export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: `${siteName} | AI Chatbot Software for Support, Sales, and Automation`,
+    template: `%s | ${siteName}`,
+  },
+  description:
+    "Design, deploy, and integrate advanced AI chatbots into websites and messaging platforms with ZazuBot.",
+  openGraph: {
+    type: "website",
+    url: siteUrl,
+    title: `${siteName} | AI Chatbot Software for Support, Sales, and Automation`,
+    description:
+      "Design, deploy, and integrate advanced AI chatbots into websites and messaging platforms with ZazuBot.",
+    siteName,
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "ZazuBot landing page preview",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${siteName} | AI Chatbot Software for Support, Sales, and Automation`,
+    description:
+      "Design, deploy, and integrate advanced AI chatbots into websites and messaging platforms with ZazuBot.",
+    images: ["/og-image.png"],
+  },
+  manifest: "/site.webmanifest",
+  robots: { index: true, follow: true },
+};
+
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
+
+export default async function LocaleLayout({
   children,
   params,
-}: {
+}: Readonly<{
   children: React.ReactNode;
   params: Promise<{ locale: string }>;
-}) {
-  useEffect(() => {
-    AOS.init({
-      once: true,
-      disable: "phone",
-      duration: 700,
-      easing: "ease-out-cubic",
-    });
-  }, []);
+}>) {
+  const { locale } = await params;
 
-  useEffect(() => {
-    (async function () {
-      const cal = await getCalApi({ namespace: "zazubot" });
-      cal("floatingButton", {
-        calLink: "ahmedkhaled4d/zazubot",
-        config: { layout: "month_view" },
-        buttonText: "Book a Free Consultation",
-      });
-      cal("ui", { hideEventTypeDetails: false, layout: "month_view" });
-    })();
-  }, []);
+  if (!routing.locales.includes(locale as (typeof routing.locales)[number])) {
+    notFound();
+  }
+
+  setRequestLocale(locale);
+
+  const messages = await getMessages();
+  const dir = locale === "ar" ? "rtl" : "ltr";
 
   return (
-    <>
-      <Header />
-
-      <main className="grow">{children}</main>
-
-      <Footer border={true} />
-    </>
+    <html lang={locale} dir={dir}>
+      <body
+        className={`${bodyFont.variable} ${displayFont.variable} bg-background font-[family-name:var(--font-body)] text-foreground antialiased`}
+      >
+        <NextIntlClientProvider messages={messages}>
+          <div className="relative min-h-screen bg-[linear-gradient(180deg,#ffffff_0%,#f7faf9_100%)]">
+            <SiteHeader />
+            <main>{children}</main>
+            <SiteFooter />
+            <FloatWidget />
+          </div>
+        </NextIntlClientProvider>
+      </body>
+    </html>
   );
 }
